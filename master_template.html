@@ -56,7 +56,14 @@
         <!--Body5 Variables-->
         <meta mktoModuleScope="true" class="mktoNumber" id="checker-right-top-space" mktoName="Top Space" default="35" />
         <meta mktoModuleScope="true" class="mktoNumber" id="checker-right-bottom-space" mktoName="Bottom Space" default="35" />
-        
+      
+      
+      <!-- Sponsor - Two Column Variables -->
+      <meta class="mktoBoolean" id="ACRshowSponsorRule" mktoName="Show Rule" default="false" false_value="" true_value="border-top: 1px solid #bcbec0;" false_value_name="Hide Rule" true_value_name="Show Rule" mktoModuleScope="true">
+      <meta class="mktoString" id="ACRTwoColumnSponsorLeftURL" mktoName="Left Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
+      <meta class="mktoString" id="ACRTwoColumnSponsorRightURL" mktoName="Right Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
+      
+      <meta class="mktoString" id="headlineFullWidthImageURL" mktoName="Headline URL" default="#ADDLINK" mktomodulescope="true">
       
         <!--END OF MARKETO VARIABLES--> 
       
@@ -319,6 +326,10 @@
                     text-align: center !important;
                 }
               
+              .acr-sponsor-td-row {
+                border-top: none !important;
+              }
+              
               /* Added for Checkerboard */
             .checkerboard_inner_table {width: 90% !important;}
             *[class].checkerboard_inner_table {width: 90% !important;}
@@ -506,7 +517,9 @@
                      <table border="0" cellspacing="0" cellpadding="0" width="100%" class="mktoModule" id="fullWidthImg" mktoName="Full Width Image" role="presentation">
                         <tr>
                             <td align="center" valign="top" style="background-color: #ffffff;">
+                              <a href="${headlineFullWidthImageURL}">
                               <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_600x200.jpg" alt="headline image" width="600" class="mktoImg" id="fullWidthImage" mktoName="Image" mktoLockImgStyle="true" style="color: #444444; display: block; font-family: 'Open Sans', arial, helvetica, sans-serif; font-weight: 600; font-size: 14px; height: auto; line-height: 1.2; width: 100% !important; text-align: center; text-transform: uppercase; vertical-align: middle;"/>
+                                </a>
                             </td>
                         </tr>
                     </table>  
@@ -1049,6 +1062,38 @@
 </tr>
 </table>
 <!--END EXTENDED FOUR COLUMNS LAYOUT-->
+              
+<!--ACR SPONSOR TWO COLUMN WRAPPER-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRsponsorTwoColumn" mktoName="ACR Sponsor 2 Column Block">
+    <tr>
+        <td class="white-background acr-sponsor-td-row" style="background-color: #fff; ${ACRshowSponsorRule} ">
+                        <!--TWO COLUMN LAYOUT ROW-->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background" role="presentation">
+                            <tr>
+                                <!--IMAGE COLUMN-->
+                                <td class="column-2 stack-column " style="width: 50%; background-color: #ffffff; vertical-align:top;" align="center">
+                                  <a href="${ACRTwoColumnSponsorLeftURL}">
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="2 Column Image" width="150" height="100" style="display: block; " class="mktoImg" id="sponsorTwoColumnLeft" mktoName="Image" mktoLockImgStyle="true"/>
+                                    </a>
+                                </td>
+                                <!--END IMAGE COLUMN-->
+
+                                <!--TEXT COLUMN-->
+                                <td class="column-2 stack-column" style="width: 50%; background-color: #ffffff; vertical-align: top;" align="center">
+                                  <a href="${ACRTwoColumnSponsorRightURL}">
+                                     <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="2 Column Image" width="150" height="100" style="display: block; " class="mktoImg" id="sponsorTwoColumnRight" mktoName="Image" mktoLockImgStyle="true"/>
+                                    </a>
+                                </td>
+                                <!--END TEXT COLUMN-->
+                            </tr>
+                        </table>
+                        <!--TWO COLUMN LAYOUT ROW-->
+        </td>
+    </tr>
+</table>
+<!--END ACR SPONSOR TWO COLUMN WRAPPER-->
+
+              
 <!-- UWAA CTA EVENT-TWO-COLUMN-WRAPPER -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="uwaaTwoColumnCTA" mktoName="ACR Two Column Call To Action">
     <tr>
