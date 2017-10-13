@@ -58,11 +58,29 @@
         <meta mktoModuleScope="true" class="mktoNumber" id="checker-right-bottom-space" mktoName="Bottom Space" default="35" />
       
       
+
+    <!-- Sponsor - One Column Variables -->
+      <meta class="mktoBoolean" id="ACRshowSponsorRuleOneColumn" mktoName="Show Rule" default="false" false_value="" true_value="border-top: 1px solid #bcbec0;" false_value_name="Hide Rule" true_value_name="Show Rule" mktoModuleScope="true">
+      <meta class="mktoString" id="ACROneColumnSponsorURL" mktoName="Image Link URL" default="#ADDLINK" mktomodulescope="true">
+
+
+
       <!-- Sponsor - Two Column Variables -->
-      <meta class="mktoBoolean" id="ACRshowSponsorRule" mktoName="Show Rule" default="false" false_value="" true_value="border-top: 1px solid #bcbec0;" false_value_name="Hide Rule" true_value_name="Show Rule" mktoModuleScope="true">
+      <meta class="mktoBoolean" id="ACRshowSponsorRuleTwoColumns" mktoName="Show Rule" default="false" false_value="" true_value="border-top: 1px solid #bcbec0;" false_value_name="Hide Rule" true_value_name="Show Rule" mktoModuleScope="true">
       <meta class="mktoString" id="ACRTwoColumnSponsorLeftURL" mktoName="Left Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
       <meta class="mktoString" id="ACRTwoColumnSponsorRightURL" mktoName="Right Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
       
+      
+
+      <!-- Sponsor - Three Column Variables -->
+      <meta class="mktoBoolean" id="ACRshowSponsorRuleThreeColumns" mktoName="Show Rule" default="false" false_value="" true_value="border-top: 1px solid #bcbec0;" false_value_name="Hide Rule" true_value_name="Show Rule" mktoModuleScope="true">
+      <meta class="mktoString" id="ACRThreeColumnSponsorLeftURL" mktoName="Left Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
+      <meta class="mktoString" id="ACRThreeColumnSponsorCenterURL" mktoName="Center Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
+      <meta class="mktoString" id="ACRThreeColumnSponsorRightURL" mktoName="Right Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
+      
+      
+
+
       <meta class="mktoString" id="headlineFullWidthImageURL" mktoName="Headline URL" default="#ADDLINK" mktomodulescope="true">
       
         <!--END OF MARKETO VARIABLES--> 
@@ -1062,11 +1080,34 @@
 </tr>
 </table>
 <!--END EXTENDED FOUR COLUMNS LAYOUT-->
+
+<!--ACR SPONSOR ONE COLUMN WRAPPER-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRsponsorONEColumn" mktoName="ACR Sponsor 1 Column Block">
+    <tr>
+        <td class="white-background acr-sponsor-td-row" style="background-color: #fff; ${ACRshowSponsorRuleOneColumn} ">
+                        <!--ONE COLUMN LAYOUT ROW-->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background" role="presentation">
+                            <tr>
+                                <!--IMAGE COLUMN-->
+                                <td class="stack-column " style="width: 100%; background-color: #ffffff; vertical-align:top;" align="center">
+                                  <a href="${ACROneColumnSponsorURL}">
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="2 Column Image" width="150" height="100" style="display: block; " class="mktoImg" id="sponsorOneColumn" mktoName="Image" mktoLockImgStyle="true"/>
+                                    </a>
+                                </td>
+                                <!--END IMAGE COLUMN-->
+
+                            </tr>
+                        </table>
+                        <!--ONE COLUMN LAYOUT ROW-->
+        </td>
+    </tr>
+</table>
+<!--END ACR SPONSOR ONE COLUMN WRAPPER-->
               
 <!--ACR SPONSOR TWO COLUMN WRAPPER-->
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRsponsorTwoColumn" mktoName="ACR Sponsor 2 Column Block">
     <tr>
-        <td class="white-background acr-sponsor-td-row" style="background-color: #fff; ${ACRshowSponsorRule} ">
+        <td class="white-background acr-sponsor-td-row" style="background-color: #fff; ${ACRshowSponsorRuleTwoColumns} ">
                         <!--TWO COLUMN LAYOUT ROW-->
                         <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background" role="presentation">
                             <tr>
@@ -1092,6 +1133,44 @@
     </tr>
 </table>
 <!--END ACR SPONSOR TWO COLUMN WRAPPER-->
+
+<!--ACR SPONSOR THREE COLUMN WRAPPER-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRsponsorThreeColumn" mktoName="ACR Sponsor 3 Column Block">
+    <tr>
+        <td class="white-background acr-sponsor-td-row" style="background-color: #fff; ${ACRshowSponsorRuleThreeColumns} ">
+                        <!--THREE COLUMN LAYOUT ROW-->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background" role="presentation">
+                            <tr>
+                                <!--IMAGE COLUMN-->
+                                <td class="column-3 stack-column " style="width: 33.3%; background-color: #ffffff; vertical-align:top;" align="center">
+                                  <a href="${ACRThreeColumnSponsorLeftURL}">
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="3 Column Image" width="150" height="100" style="display: block; " class="mktoImg" id="sponsorThreeColumnLeft" mktoName="Image" mktoLockImgStyle="true"/>
+                                    </a>
+                                </td>
+                                <!--END IMAGE COLUMN-->
+
+                                <!--IMAGE COLUMN-->
+                                <td class="column-3 stack-column " style="width: 33.3%; background-color: #ffffff; vertical-align:top;" align="center">
+                                  <a href="${ACRThreeColumnSponsorCenterURL}">
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="3 Column Image" width="150" height="100" style="display: block; " class="mktoImg" id="sponsorThreeColumnCenter" mktoName="Image" mktoLockImgStyle="true"/>
+                                    </a>
+                                </td>
+                                <!--END IMAGE COLUMN-->
+
+                                <!--TEXT COLUMN-->
+                                <td class="column-3 stack-column" style="width: 33.3%; background-color: #ffffff; vertical-align: top;" align="center">
+                                  <a href="${ACRThreeColumnSponsorRightURL}">
+                                     <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="3 Column Image" width="150" height="100" style="display: block; " class="mktoImg" id="sponsorThreeColumnRight" mktoName="Image" mktoLockImgStyle="true"/>
+                                    </a>
+                                </td>
+                                <!--END TEXT COLUMN-->
+                            </tr>
+                        </table>
+                        <!--THREE COLUMN LAYOUT ROW-->
+        </td>
+    </tr>
+</table>
+<!--END ACR SPONSOR THREE COLUMN WRAPPER-->
 
               
 <!-- UWAA CTA EVENT-TWO-COLUMN-WRAPPER -->
@@ -1169,9 +1248,9 @@
                                                                 <td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                                                             </tr>
                                                             <tr>
-                                                                <td valign="top" style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px; color: #3d3d3d; font-weight: normal; text-align: left;">
+                                                                <td valign="top" style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size: 13px; line-height: 18px; color: #3d3d3d; font-weight: normal; text-align: left;line-height: 22.1px;">
                                                                     <div class="mktoText" id="body4-text" mktoName="Text">
-                                                                        <p style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px; color: #3d3d3d; font-weight: normal; text-align: left;margin:0px;padding:0px;">Cras sed mollis erat.
+                                                                        <p style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size: 13px; line-height: 18px; color: #3d3d3d; font-weight: normal; text-align: left;margin:0px;padding:0px;line-height: 22.1px;">Cras sed mollis erat.
                                                                             In tristique elei fend elit, sit amets per enim rutrum vitae nibh.
                                                                             Nulla elementum dapibus odio.
                                                                             Quisque ornare elit et nibh lacinia tincidunt maenas ultricies.
@@ -1204,7 +1283,7 @@
                                                             <tr>
                                                                 <td valign="top" style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size:15px; line-height:21px; color: #3d3d3d; font-weight: bold; text-align: left;">
                                                                     <div class="mktoText" id="body5-heading" mktoName="Heading">
-                                                                        <h5 style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size:15px; line-height:21px;color: #3d3d3d;font-weight: bold; text-align: left;margin:0px;padding:0px;">Sample Title</h5>
+                                                                        <h5 style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size:15px; line-height:21px;color: #3d3d3d;font-weight: bold; text-align: left;margin:0px;padding:0px;line-height: 22.1px;">Sample Title</h5>
                                                                     </div>
                                                                 </td>
                                                             </tr>
@@ -1212,9 +1291,9 @@
                                                                 <td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                                                             </tr>
                                                             <tr>
-                                                                <td valign="top" style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px; color: #3d3d3d; font-weight: normal; text-align: left;">
+                                                                <td valign="top" style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size: 13px; line-height: 18px; color: #3d3d3d; font-weight: normal; text-align: left;">
                                                                     <div class="mktoText" id="body5-text" mktoName="Text">
-                                                                        <p style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px; color: #3d3d3d; font-weight: normal; text-align: left;margin:0px;padding:0px;">Cras sed mollis erat.
+                                                                        <p style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size: 13px; line-height: 18px; color: #3d3d3d; font-weight: normal; text-align: left;margin:0px;padding:0px;line-height: 22.1px;">Cras sed mollis erat.
                                                                             In tristique elei fend elit, sit amets per enim rutrum vitae nibh.
                                                                             Nulla elementum dapibus odio.
                                                                             Quisque ornare elit et nibh lacinia tincidunt maenas ultricies.
