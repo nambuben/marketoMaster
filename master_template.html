@@ -15,7 +15,7 @@
         <meta class="mktoString" id="footerCenterLinkText" mktoname="Center Link Text" default="GET THE APP" mktomodulescope="true">
         <meta class="mktoString" id="footerCenterLinkURL" mktoname="Center Link URL" default="https://www.washington.edu/alumni/membership/get-the-app/" bmktomodulescope="true">
         <meta class="mktoString" id="footerRightLinkText" mktoname="Right Link Text" default="MORE HUSKY EVENTS" mktomodulescope="true">
-        <meta class="mktoString" id="footerRightLinkURL" mktoname="Rigwht Link URL" default="https://www.washington.edu/alumni/events/" mktomodulescope="true">        
+        <meta class="mktoString" id="footerRightLinkURL" mktoname="Right Link URL" default="https://www.washington.edu/alumni/events/" mktomodulescope="true">        
         <meta class="mktoString" id="preferenceCenterText" mktoName="Update Preferences Text" default="Update Your Preferences" mktomodulescope="true">
       
       <meta class="mktoList" id="acrLineHeight" mktoName="Line Height Adjustment" values="22.1px,18.2px">  
@@ -35,6 +35,11 @@
         <meta class="mktoString" id="eventDate" mktoName="Event Date" default="Date">
         <meta class="mktoString" id="eventTime" mktoName="Event Time" default="Time">
         <meta class="mktoString" id="eventLocation" mktoName="Event Location" default="Location">
+
+        <!--ACR Basic Event Information Block -->
+      <meta class="mktoList" id="eventModuleBasicBackground" mktoName="Basic Event Information Block Color" values="#b7a5u7a, #444444" mktomodulescope="true">
+        <meta class="mktoString" id="eventBasicText" mktoName="Text Block" default="INSERT TEXT HERE" mktomodulescope="true">
+
       
       <!--ACR Two Column CTA Block -->
         <meta class="mktoList" id="twoColumnCTAButtonAreaBackground" mktoName="Two Column CTA Background" values="#FFFFFF,#b7a57a,#4b2e83," mktomodulescope="true">
@@ -77,11 +82,18 @@
       <meta class="mktoString" id="ACRThreeColumnSponsorLeftURL" mktoName="Left Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
       <meta class="mktoString" id="ACRThreeColumnSponsorCenterURL" mktoName="Center Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
       <meta class="mktoString" id="ACRThreeColumnSponsorRightURL" mktoName="Right Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
-      
-      
 
 
       <meta class="mktoString" id="headlineFullWidthImageURL" mktoName="Headline URL" default="#ADDLINK" mktomodulescope="true">
+
+
+      <!-- Headline with Small Image Module -->
+      <meta class="mktoList" id="headlineModuleBackground" mktoName="Headline w/Small Photo Background Color" values="#444444, #FFFFFF,#b7a57a,#4b2e83," mktomodulescope="true">  
+      <meta class="mktoList" id="headlineModuleTextColor" mktoName="Headline w/Small Photo Text Color" values="#FFFFFF,#b7a57a,#4b2e83," mktomodulescope="true">  
+
+        <!-- HR Padding -->
+      <meta mktoModuleScope="true" class="mktoNumber" id="hr-top-margin" mktoName="Top Margin" default="10" />
+      <meta mktoModuleScope="true" class="mktoNumber" id="hr-bottom-margin" mktoName="Bottom Margin" default="10" />
       
         <!--END OF MARKETO VARIABLES--> 
       
@@ -436,8 +448,8 @@
                         <table border="0" cellspacing="0" cellpadding="0" width="100%" class="purple-header mktoModule" id="purpleHeader" mktoName="Purple Header" role="presentation">
                             <tr>
                                 <td valign="top" style="background-color: #4b2e83; padding: 12px 0;">
-                                    <div class="mktoImg" id="uwaaBrandHeaderImg" mktoName="UWAA Header Logo" mktoImgLink="#ADDLINK" mktoLockImgSize="false" mktoLockImgStyle="true">
-                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/Logo_UWAA.png" alt="University of Washington | Boundless For Washington" width="134"  style="display: block; text-align: left; font-family: 'Open Sans', arial, helvetica, sans-serif; font-weight: 700; font-size: 14px; line-height: 1.2; text-transform: uppercase; color: #ffffff; vertical-align: middle; letter-spacing: 1px; border: none;"/>
+                                    <div class="mktoImg" id="uwaaBrandHeaderImg" mktoName="UWAA Header Logo" mktoImgLink="http://www.uw.edu/alumni" mktoLockImgSize="false" mktoLockImgStyle="true">                                        
+                                            <img src="https://explore.uw.edu/rs/131-AQO-225/images/Logo_UWAA.png" alt="University of Washington Alumni Association" width="134"  style="display: block; text-align: left; font-family: 'Open Sans', arial, helvetica, sans-serif; font-weight: 700; font-size: 14px; line-height: 1.2; text-transform: uppercase; color: #ffffff; vertical-align: middle; letter-spacing: 1px; border: none;"/>                                        
                                     </div>
                                 </td>
                             </tr>
@@ -460,7 +472,7 @@
                                 <td valign="top" class="unit-logo" style="background-color: #fff; padding: 10px 15px;" align="right">
                                     
                                     <div class="mktoImg" id="unitLogoImg" mktoName="Unit Logo" mktoImgLink="#ADDLINK" mktoLockImgSize="false" mktoLockImgStyle="true">
-                                        <img src="http://explore.uw.edu/rs/131-AQO-225/images/SampleLogo_CEI.jpg" alt="LOGO" style="color: #444444; display: block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 800; line-height: 1.2; text-align: right; text-transform: uppercase; vertical-align: middle; max-width: 300px;"/>
+                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/membergram_header_image.gif" alt="LOGO" style="color: #444444; display: block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 800; line-height: 1.2; text-align: right; text-transform: uppercase; vertical-align: middle; max-width: 300px;"/>
                                     </div>
                                    
                                 </td>
@@ -492,6 +504,22 @@
                             </tr>
                         </table>
                         <!--END NEWSLETTER-ISSUE-DATE-->
+
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="headlineWithThumbnail" mktoname="Headline w/ Thumbnail Image" role="presentation">
+<tbody>
+<tr>
+<td class="text main-headline" style="background-color: ${headlineModuleBackground}; color:${headlineModuleTextColor}; text-align: center; width: 500px; padding: 0px 4px;">
+<div class="mktoText" id="headlineRichText" mktoname="Headline w/ Photo Text Area">
+<div style="margin-left: 10px; text-align: left;">
+                                        <span style="font-family: 'Open Sans', arial, sans-serif; font-size: 24px; line-height: 1.2;">Executive Director's Message</span>
+                                      </div>
+</div>
+</td>
+<td align="center" valign="top" style="background-color: #6f7376;  width: 100px;"> <img src="https://explore.uw.edu/rs/131-AQO-225/images/Paul_Rucker_100x100.jpg" width="100" style="color: #ffffff; display: block; vertical-align: middle; width: 100%;" class="mktoImg" 
+id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnail Image" mktolockimgsize="true" mktolockimgstyle="true" /> </td>
+</tr>
+</tbody>
+</table>
                        
             <!-- TWO COLUMN HEADLINE IMAGE -->
 
@@ -554,12 +582,24 @@
                         </table>
                         <!--END Event Information Block-->
 
+                        <!--Event Information Block-->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="eventBasicInformationBlock" mktoName="Basic Event Information Block">
+                        <tr>
+
+                <td align="center" valign="top" class="text" style="background-color: ${eventModuleBasicBackground}; color: #ffffff; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 16px; font-weight: 400; line-height: 21px; padding: 12px 15px; text-align: center; vertical-align: middle;">
+                            <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">${eventBasicText}</span>
+                        </td>
+                        </tr>
+                        </table>
+                        <!--END Event Information Block-->
+
+
                          <!--NEWSLETTER-SECTION-HEADLINE-->
                         <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="newsletterSectionHeadline" mktoName="Section Headline" role="presentation">
                             <tr>
                                 <td class="text section-headline" style="background-color: #ffffff; color: #4b2e83; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 24px; font-weight: 400; line-height: 1.1; padding: 10px 10px 15px 10px; text-align: left; vertical-align: middle;">
                                     <div class="mktoText" id="sectionHeadline" mktoName="Section Headline">
-                                        Headline for newsletter section
+                                        <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">Headline for newsletter section</span>
                                     </div>
                                 </td>
                             </tr>
@@ -723,7 +763,7 @@
                         <td class="text callout-head" style="background-color: #e8e3d3; color: #4b2e84; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 20px; font-weight: 600; line-height: 1.2; padding: 15px 25px 5px 25px; text-align: center; text-transform: uppercase; vertical-align: middle;">
                           <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">  
                           <div class="mktoText" id="lightGoldHeader" mktoName="Header">
-                                Very Short Call Out Message
+                                <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">Very Short Call Out Message</span>
                             </div>
                           </span>
                         </td>
@@ -734,7 +774,8 @@
                         <td class="text callout-paragraph" style="background-color: #e8e3d3; color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18px; padding: 0 25px 20px 15px; text-align: center; vertical-align: middle;">
                           <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">  
                           <div class="mktoText" id="lightGoldParagraph" mktoName="Paragraph">
-                                Venis ea eosae occulpari odit volum. Quiati diorerc hiliquam, sernatquibus sent, que poriorem sustet aut voluptas cium re nait en dit is doleng at thist ud anta proa.
+                            <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">
+                                Venis ea eosae occulpari odit volum. Quiati diorerc hiliquam, sernatquibus sent, que poriorem sustet aut voluptas cium re nait en dit is doleng at thist ud anta proa.</span>
                             </div>
                           </span>
                         </td>
@@ -1080,6 +1121,167 @@
 </tr>
 </table>
 <!--END EXTENDED FOUR COLUMNS LAYOUT-->
+<!--EXTENDED FOUR COLUMNS - NO DATE LAYOUT-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="ACRExpandedNoDateFourColumnBlock" mktoName="ACR 4 Columns Block - Extended Details w/ no Date">
+<tr>
+<td style="background-color: #ffffff;">
+  <!--@MARK removed 10px of padding-top -->
+    
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        
+    <!--ROW 1 - 4 COLUMN STACK WRAPPER-->    
+    <td align="center" class="column-2 stack-column" style="background-color: #ffffff; width: 50%; vertical-align: top;">
+        
+        <!--ROW 1 - 4 COLUMN WRAPPER-->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+    <!--COLUMN #1 - 4 COLUMN-->
+    <td align="center" class="text column-4" style="background-color: #ffffff; width: 25%; padding: 0 0 10px 0; vertical-align: top;">
+        <!--TABLE WRAPPER-->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+        <tr>
+        <td align="center">
+          <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_130x150.jpg" alt="{alt}" style="display: block; background-color: #ffffff; width: 130px; height: auto; border: 2px solid #ffffff; color: #444; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; text-align: left;" class="mktoImg" id="ACRfourColNoDateImgOne" mktoName="4 Column - Image 1" mktoLockImgStyle="true"/>
+        </td>        
+        <tr>
+            <td align="center" class="text item-head" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 0 2px 1px 12px; text-align: left; vertical-align: middle;">
+                <span style="font-family:'Open Sans', arial, helvetica, sans-serif;"><div class="mktoText" id="ACRfourColNoDateItemHeadTitleOne" mktoName="4 Column - Title 1">
+               Atisquis maxime it andwugh
+            </div></span>
+                                        
+            </td>
+        </tr>
+        </tr>
+        <tr>
+                    <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.2px; padding: 5px 10px 0px 10px; text-align: left; vertical-align: middle;">
+                        <span style="font-family:'Open Sans', arial, helvetica, sans-serif;"><div class="mktoText" id="ACRfourColNoDateItemCopyOne" mktoName="4 Column - Copy 1">
+                                                     Venis ea eosae occulpari odit volum. Tcium re niat en dit is doleng at proa. <a href="#ADDLINK" class="text" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>  
+            </div></span>
+                        
+                    </td>
+                </tr>
+       
+        </table>
+    </td>
+    <!--END COLUMN #1 - 4 COLUMN-->
+    
+     <!--COLUMN #2 - 4 COLUMN-->
+     <td align="center" class="text column-4" style="background-color: #ffffff; width: 25%; padding: 0 0 10px 0; vertical-align: top;">
+        <!--TABLE WRAPPER-->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+        <tr>
+        <td align="center">
+          <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_130x150.jpg" alt="{alt}" style="display: block; background-color: #ffffff; width: 130px; height: auto; border: 2px solid #ffffff; color: #444; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; text-align: left;" class="mktoImg" id="ACRfourColNoDateImgTwo" mktoName="4 Column - Image 2" mktoLockImgStyle="true"/>
+        </td>        
+        <tr>
+            <td align="center" class="text item-head" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 0 2px 1px 12px; text-align: left; vertical-align: middle;">
+                <span style="font-family:'Open Sans', arial, helvetica, sans-serif;"><div class="mktoText" id="ACRfourColNoDateItemHeadTitleTwo" mktoName="4 Column - Title 2">
+               Atisquis maxime it andwugh
+            </div></span>
+                                        
+            </td>
+        </tr>        
+        <tr>
+                    <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.2px; padding: 5px 10px 0px 10px; text-align: left; vertical-align: middle;">
+                        <span style="font-family:'Open Sans', arial, helvetica, sans-serif;"><div class="mktoText" id="ACRfourColNoDateItemCopyTwo" mktoName="4 Column - Copy 2">
+               
+                                                     Venis ea eosae occulpari odit volum. Tcium re niat en dit is doleng at proa. <a href="#ADDLINK" class="text" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>  
+            </div></span>
+                        
+                    </td>
+                </tr>
+        
+        </table>
+    </td>
+    <!--END COLUMN #2 - 4 COLUMN-->
+    </tr>
+    </table>
+    <!--END ROW 1 - 4 COLUMN WRAPPER-->
+
+    </td>
+    <!--ROW 1 - 4 COLUMN STACK WRAPPER-->    
+    
+    
+    <!--ROW 2 - 4 COLUMN STACK WRAPPER-->    
+    <td align="center" class="column-2 stack-column" style="background-color: #ffffff; width: 50%; vertical-align: top;">
+        
+        <!--ROW 2 - 4 COLUMN WRAPPER-->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+     <!--COLUMN #3 - 4 COLUMN-->
+    <td align="center" class="text column-4" style="background-color: #ffffff; width: 25%; padding: 0 0 10px 0; vertical-align: top;">
+        <!--TABLE WRAPPER-->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+        <tr>
+        <td align="center">
+          <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_130x150.jpg" alt="{alt}" style="display: block; background-color: #ffffff; width: 130px; height: auto; border: 2px solid #ffffff; color: #444; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; text-align: left;" class="mktoImg" id="ACRfourColNoDateImgThree" mktoName="4 Column - Image 3" mktoLockImgStyle="true"/>
+        </td>        
+        <tr>
+            <td align="center" class="text item-head" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 0 2px 1px 12px; text-align: left; vertical-align: middle;">
+                <span style="font-family:'Open Sans', arial, helvetica, sans-serif;"><div class="mktoText" id="ACRfourColNoDateItemHeadTitleThree" mktoName="4 Column - Title 3">
+               Atisquis maxime it andwugh
+            </div></span>
+                                        
+            </td>
+        </tr>        
+        <tr>
+                    <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.2px; padding: 5px 10px 0px 10px; text-align: left; vertical-align: middle;">
+                        <span style="font-family:'Open Sans', arial, helvetica, sans-serif;"><div class="mktoText" id="ACRfourColNoDateItemCopyThree" mktoName="4 Column - Copy 3">
+               
+                                                     Venis ea eosae occulpari odit volum. Tcium re niat en dit is doleng at proa. <a href="#ADDLINK" class="text" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>  
+            </div></span>
+                        
+                    </td>
+                </tr>
+        
+        </table>
+    </td>
+    <!--END COLUMN #3 - 4 COLUMN-->
+    
+    <!--COLUMN #4 - 4 COLUMN-->
+    <td align="center" class="text column-4" style="background-color: #ffffff; width: 25%; padding: 0 0 10px 0; vertical-align: top;">
+        <!--TABLE WRAPPER-->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+        <tr>
+        <td align="center">
+          <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_130x150.jpg" alt="{alt}" style="display: block; background-color: #ffffff; width: 130px; height: auto; border: 2px solid #ffffff; color: #444; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; text-align: left;" class="mktoImg" id="ACRfourColNoDateImgFour" mktoName="4 Column - Image 4" mktoLockImgStyle="true"/>
+        </td>        
+        <tr>
+            <td align="center" class="text item-head" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 0 2px 1px 12px; text-align: left; vertical-align: middle;">
+                <span style="font-family:'Open Sans', arial, helvetica, sans-serif;"><div class="mktoText" id="ACRfourColNoDateItemHeadTitleFour" mktoName="4 Column - Title 4">
+               Atisquis maxime it andwugh
+            </div></span>
+                                        
+            </td>        
+        </tr>
+        <tr>
+                    <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.2px; padding: 5px 10px 0px 10px; text-align: left; vertical-align: middle;">
+                        <span style="font-family:'Open Sans', arial, helvetica, sans-serif;"><div class="mktoText" id="ACRfourColNoDateItemCopyFour" mktoName="4 Column - Copy 4">
+               
+                                                     Venis ea eosae occulpari odit volum. Tcium re niat en dit is doleng at proa. <a href="#ADDLINK" class="text" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>  
+            </div></span>
+                        
+                    </td>
+                </tr>
+        
+        </table>
+    </td>
+    <!--END COLUMN #4 - 4 COLUMN-->
+    </tr>
+    </table>
+    <!--END ROW 2 - 4 COLUMN WRAPPER-->
+
+    </td>    
+     <!--END ROW 2 - 4 COLUMN STACK WRAPPER-->
+        
+    </tr>
+    </table>  
+
+</td>
+</tr>
+</table>
+<!--END EXTENDED FOUR COLUMNS - NO DATE LAYOUT-->
 
 <!--ACR SPONSOR ONE COLUMN WRAPPER-->
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRsponsorONEColumn" mktoName="ACR Sponsor 1 Column Block">
@@ -1091,7 +1293,7 @@
                                 <!--IMAGE COLUMN-->
                                 <td class="stack-column " style="width: 100%; background-color: #ffffff; vertical-align:top;" align="center">
                                   <a href="${ACROneColumnSponsorURL}">
-                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="2 Column Image" width="150" height="100" style="display: block; " class="mktoImg" id="sponsorOneColumn" mktoName="Image" mktoLockImgStyle="true"/>
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="2 Column Image" width="150" style="display: block; " class="mktoImg" id="sponsorOneColumn" mktoName="Image" mktoLockImgStyle="true"/>
                                     </a>
                                 </td>
                                 <!--END IMAGE COLUMN-->
@@ -1114,7 +1316,7 @@
                                 <!--IMAGE COLUMN-->
                                 <td class="column-2 stack-column " style="width: 50%; background-color: #ffffff; vertical-align:top;" align="center">
                                   <a href="${ACRTwoColumnSponsorLeftURL}">
-                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="2 Column Image" width="150" height="100" style="display: block; " class="mktoImg" id="sponsorTwoColumnLeft" mktoName="Image" mktoLockImgStyle="true"/>
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="2 Column Image" width="150" style="display: block; " class="mktoImg" id="sponsorTwoColumnLeft" mktoName="Image" mktoLockImgStyle="true"/>
                                     </a>
                                 </td>
                                 <!--END IMAGE COLUMN-->
@@ -1122,7 +1324,7 @@
                                 <!--TEXT COLUMN-->
                                 <td class="column-2 stack-column" style="width: 50%; background-color: #ffffff; vertical-align: top;" align="center">
                                   <a href="${ACRTwoColumnSponsorRightURL}">
-                                     <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="2 Column Image" width="150" height="100" style="display: block; " class="mktoImg" id="sponsorTwoColumnRight" mktoName="Image" mktoLockImgStyle="true"/>
+                                     <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="2 Column Image" width="150" style="display: block; " class="mktoImg" id="sponsorTwoColumnRight" mktoName="Image" mktoLockImgStyle="true"/>
                                     </a>
                                 </td>
                                 <!--END TEXT COLUMN-->
@@ -1144,7 +1346,7 @@
                                 <!--IMAGE COLUMN-->
                                 <td class="column-3 stack-column " style="width: 33.3%; background-color: #ffffff; vertical-align:top;" align="center">
                                   <a href="${ACRThreeColumnSponsorLeftURL}">
-                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="3 Column Image" width="150" height="100" style="display: block; " class="mktoImg" id="sponsorThreeColumnLeft" mktoName="Image" mktoLockImgStyle="true"/>
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="3 Column Image" width="150" style="display: block; " class="mktoImg" id="sponsorThreeColumnLeft" mktoName="Image" mktoLockImgStyle="true"/>
                                     </a>
                                 </td>
                                 <!--END IMAGE COLUMN-->
@@ -1152,7 +1354,7 @@
                                 <!--IMAGE COLUMN-->
                                 <td class="column-3 stack-column " style="width: 33.3%; background-color: #ffffff; vertical-align:top;" align="center">
                                   <a href="${ACRThreeColumnSponsorCenterURL}">
-                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="3 Column Image" width="150" height="100" style="display: block; " class="mktoImg" id="sponsorThreeColumnCenter" mktoName="Image" mktoLockImgStyle="true"/>
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="3 Column Image" width="150" style="display: block; " class="mktoImg" id="sponsorThreeColumnCenter" mktoName="Image" mktoLockImgStyle="true"/>
                                     </a>
                                 </td>
                                 <!--END IMAGE COLUMN-->
@@ -1160,7 +1362,7 @@
                                 <!--TEXT COLUMN-->
                                 <td class="column-3 stack-column" style="width: 33.3%; background-color: #ffffff; vertical-align: top;" align="center">
                                   <a href="${ACRThreeColumnSponsorRightURL}">
-                                     <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="3 Column Image" width="150" height="100" style="display: block; " class="mktoImg" id="sponsorThreeColumnRight" mktoName="Image" mktoLockImgStyle="true"/>
+                                     <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="3 Column Image" width="150" style="display: block; " class="mktoImg" id="sponsorThreeColumnRight" mktoName="Image" mktoLockImgStyle="true"/>
                                     </a>
                                 </td>
                                 <!--END TEXT COLUMN-->
@@ -1204,7 +1406,7 @@
             <!--CALL TO ACTION BUTTON - TEXT COLUMN-->
             <table border="0" cellspacing="0" cellpadding="0" role="presentation">
                 <tr>
-                    <td align="center" bgcolor="#${twoColumnCTAButtonColor}" class="text" style="font-size: 16px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 800; height: 40px; max-width: 300px; padding: 0 15px;"><a href="${twoColumnCTAButtonURL}" target="_blank" style="color: ${twoColumnCTAButtonAreaBackground}; text-decoration: none; border: 1px solid #${twoColumnCTAButtonColor}; display: inline-block; text-transform: uppercase;">${twoColumnCTAButtonText}</a>
+                    <td align="center" bgcolor="#${twoColumnCTAButtonColor}" class="text" style="font-size: 16px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 800; height: 40px; max-width: 300px; padding: 0 15px;"><a href="${twoColumnCTAButtonURL}" target="_blank" style="color: ${twoColumnCTAButtonAreaBackground}; text-decoration: none; border: 1px solid #${twoColumnCTAButtonColor}; display: inline-block; text-transform: uppercase;"><span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">${twoColumnCTAButtonText}</span></a>
                     </td>
                     <td align="center">
                         <a href="${twoColumnCTAButtonURL}">
@@ -1408,7 +1610,7 @@
                                 <center>
                               <table border="0" cellspacing="0" cellpadding="0" role="presentation">
                                     <tr>
-                                        <td align="center" bgcolor="#${ACRCTAButtonColor}" class="text" style="font-size: 16px; font-family: 'Open Sans', Arial, Helvetica,sans-serif; font-weight: 800; height: 40px; max-width: 300px; padding: 0 15px;"><a href="${ACRCTAButtonURL}" target="_blank" style="color:${ACRCTAButtonBackgroundColor}; text-decoration: none; border: 1px solid #${ACRCTAButtonColor}; display: inline-block; text-transform: uppercase;">${ACRCTAButtonText}</a>
+                                        <td align="center" bgcolor="#${ACRCTAButtonColor}" class="text" style="font-size: 16px; font-family: 'Open Sans', Arial, Helvetica,sans-serif; font-weight: 800; height: 40px; max-width: 300px; padding: 0 15px;"><a href="${ACRCTAButtonURL}" target="_blank" style="color:${ACRCTAButtonBackgroundColor}; text-decoration: none; border: 1px solid #${ACRCTAButtonColor}; display: inline-block; text-transform: uppercase;"><span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">${ACRCTAButtonText}</span></a>
                                         </td>
                                         <td align="center">
                                             <a href="${ACRCTAButtonURL}">
@@ -1430,7 +1632,7 @@
                                 <center>
                               <table border="0" cellspacing="0" cellpadding="0" role="presentation">
                                 <tr>
-                                  <td align="center" bgcolor="#e8e3d3" class="text" style="font-size: 16px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 800; height: 40px; max-width: 300px; padding: 0 15px;"><a href="${whitebkgCTAButtonURL}" target="_blank" style="color: #515050; text-decoration: none; border: 1px solid #e8e3d3; display: inline-block; text-transform: uppercase;">${whitebkgCTAButtonText}</a>
+                                  <td align="center" bgcolor="#e8e3d3" class="text" style="font-size: 16px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 800; height: 40px; max-width: 300px; padding: 0 15px;"><a href="${whitebkgCTAButtonURL}" target="_blank" style="color: #515050; text-decoration: none; border: 1px solid #e8e3d3; display: inline-block; text-transform: uppercase;"><span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">${whitebkgCTAButtonText}</span></a>
                                     </td>
                                     <td align="center">
                                         <a href="${whitebkgCTAButtonURL}">
@@ -1477,12 +1679,28 @@
                           </tr>
                         </table>
                         <!--END CTA BUTTON - PURPLE BACKGROUND-->
+
+                          <!--1 PX HR  MODULE -->
+                          <table cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100% !important;" class="white-background mktoModule" id="hrModule" mktoName="Horizontal Rule">
+
+                            <tr>
+                                <td>
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100% !important;margin-top: ${hr-top-margin}px !important; margin-bottom: ${hr-bottom-margin}px !important" class="white-background">
+                                        <tr>
+                                            <td align="left" valign="top" width="100%" height="1" style="background-color: #bcbec0; border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 1px;"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                            </tr>
+                        </table>
+                        <!--END 10 PX SPACER MODULE -->
                        
                        <!--BE LANGUAGE MODULE GOLD TEXT BACKGROUND-->
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="goldTextBeLanguageSnippet" mktoName="Be Language Module">
                           <tr>
                             <td bgcolor="#fffff" style="background-color: #ffffff; padding: 10px 0;" class="text">
-                               <p class ="be-language" style="font-family:'Open Sans', arial, helvetica, sans-serif; color: ${beLanguageColor}; font-size:16px; text-align: center;text-transform:uppercase;">BE&nbsp;<strong>${beLanguage1}</strong>. BE&nbsp;<strong>${beLanguage2}</strong>. BE&nbsp;<strong>${beLanguage3}</strong>.</p>    
+                               <p class ="be-language" style="font-family:'Open Sans', arial, helvetica, sans-serif; color: ${beLanguageColor}; font-size:16px; text-align: center;text-transform:uppercase;"><span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">BE&nbsp;<strong>${beLanguage1}</strong>. BE&nbsp;<strong>${beLanguage2}</strong>. BE&nbsp;<strong>${beLanguage3}</strong>.</span></p>    
                             </td>
                           </tr>
                         </table>
@@ -1523,7 +1741,7 @@
              <!-- SOCIAL MEDIA ICON ROW -->
             <table border="0" cellspacing="0" cellpadding="0" width="100%" class="white-background social-media-footer mktoModule" id="socialMediaFooter" mktoName="Social Media Footer" role="presentation">
                 <tr>
-                    <td align="center" valign="top" class="text" style="background-color: #ffffff; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 13px; line-height: 1.2; text-align: center; color: #3d3d3d; vertical-align: middle; padding: 5px 0;">
+                    <td align="center" valign="top" class="text" style="background-color: #ffffff; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 13px; line-height: 1.2; text-align: center; color: #3d3d3d; vertical-align: middle;  padding: 15px 0 5px 0">
                         <div class="mktoText" id="socialMediaIcons" mktoName="Social Media Icons">
                          <a href="https://facebook.com/uwalum" style="text-decoration: none;">
                             <img src="http://explore.uw.edu/rs/131-AQO-225/images/facebook_icon.jpg" alt="Facebook" style="color: #FFFFFF; display: inline-block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 9px; font-weight: 600; text-align: center; text-transform: uppercase; vertical-align: middle; width: auto;"/>
@@ -1571,11 +1789,14 @@
                 </tr>
             </table>
             <!--END ANTI-SPAM EMAIL SENT TO & COPYRIGHT-->
+
+               
+                       
                          
                          
                          
              <!--BOUNDLESS LOGO - PURPLE BACKGROUND-->
-            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="purple-background mktoModule" id="campaignTaglineW" mktoName="Campaign Tagline - Purple" role="presentation"> 
+            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="mktoModule" id="campaignTaglineW" mktoName="Campaign Tagline - Purple" role="presentation"> 
                 <tr>
                     <td align="center" valign="top" style="background-color: #4b2e83; padding: 10px 0 10px 0;">
                         
@@ -1606,7 +1827,7 @@
              <!-- SOCIAL MEDIA ICON ROW - PURPLE BACKGROUND -->
             <table border="0" cellspacing="0" cellpadding="0" width="100%" class="purple-background social-media-footer mktoModule" id="socialMediaFooterP" mktoName="Social Media Footer - Purple" role="presentation">
                 <tr>
-                    <td align="center" valign="top" class="text" style="background-color: #4b2e83; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 13px; line-height: 1.2; text-align: center; color: #3d3d3d; vertical-align: middle; padding: 5px 0;">
+                    <td align="center" valign="top" class="text" style="background-color: #4b2e83; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 13px; line-height: 1.2; text-align: center; color: #3d3d3d; vertical-align: middle;  padding: 15px 0 5px 0">
                     
                         <div class="mktoText" id="socialMediaIconsP" mktoName="Social Media Icons">
                         <a href="https://facebook.com/uwalum" style="text-decoration: none;">
