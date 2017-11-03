@@ -19,6 +19,22 @@
         <meta class="mktoString" id="preferenceCenterText" mktoName="Update Preferences Text" default="Update Your Preferences" mktomodulescope="true">
       
       <meta class="mktoList" id="acrLineHeight" mktoName="Line Height Adjustment" values="22.1px,18.2px">  
+
+
+      <!-- ACR Advanced Modules -->
+
+        <!-- 756eq - ACR Advanced Event Information Block -->
+        <!-- 6t8n8 -->
+        <!-- ubrw9 -->
+        <!-- ufi6y -->
+        <!-- l8y8w -->
+        <!-- kfqpr -->
+        <!-- h1v6i -->
+        <!-- rdgxt -->
+        <!-- utieo -->
+        <!-- crt1c -->
+
+       <!-- End ACR Advanced Modules -->
         
       <!-- ACR Be Languge Block -->
         <meta class="mktoList" id="beLanguageColor" mktoName="Be Language Color" values="#b7a57a, #4b2e83">  
@@ -36,9 +52,14 @@
         <meta class="mktoString" id="eventTime" mktoName="Event Time" default="Time">
         <meta class="mktoString" id="eventLocation" mktoName="Event Location" default="Location">
 
-        <!--ACR Basic Event Information Block -->
-      <meta class="mktoList" id="eventModuleBasicBackground" mktoName="Basic Event Information Block Color" values="#b7a5u7a, #444444" mktomodulescope="true">
-        <meta class="mktoString" id="eventBasicText" mktoName="Text Block" default="INSERT TEXT HERE" mktomodulescope="true">
+        <!--ACR Advanced Event Information Block (756eq) -->
+            <!-- LEGACY VARIABLES (to remove in future version) -->
+                <meta class="mktoList" id="eventModuleBasicBackground" mktoName="DEPRECIATED" values="#b7a5u7a, #444444"    mktomodulescope="true">
+                <meta class="mktoString" id="eventBasicText" mktoName="DEPRECIATED" default="INSERT TEXT HERE" mktomodulescope="true">
+
+        <!-- ACTIVE MODULES -->
+        <meta class="mktoList" id="eventModuleAdvancedBackground" mktoName="Background Color" values="#444444, #FFFFFF, #b7a57a, #3D3D3D" mktomodulescope="true">
+        <meta class="mktoList" id="eventModuleAdvancedTextColor" mktoName="Text Color" values="#FFFFFF, #b7a57a, #444444, #3D3D3D" mktomodulescope="true">
 
       
       <!--ACR Two Column CTA Block -->
@@ -582,16 +603,19 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         </table>
                         <!--END Event Information Block-->
 
-                        <!--Event Information Block-->
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="eventBasicInformationBlock" mktoName="Basic Event Information Block">
+                        <!-- ADVANCED Event Information Block (756eq)-->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="eventBasicInformationBlock" mktoName="ADVANCED -- Event Information Block">
                         <tr>
 
-                <td align="center" valign="top" class="text" style="background-color: ${eventModuleBasicBackground}; color: #ffffff; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 16px; font-weight: 400; line-height: 21px; padding: 12px 15px; text-align: center; vertical-align: middle;">
-                            <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">${eventBasicText}</span>
+                <td align="center" valign="top" class="text" style="background-color: ${eventModuleAdvancedBackground}; color: ${eventModuleAdvancedTextColor}; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 16px; font-weight: 400; line-height: 21px; padding: 12px 15px; text-align: center; vertical-align: middle;">
+                    <div class="mktoText" id="eventModuleAdvanceTextblock" mktoName="Advanced Event Module Text Area">
+                            <span style="font-family: 'Open Sans', arial, sans-serif">You wanted a text box, here is a text box.</span>                    
+                                                </div>
+                            
                         </td>
                         </tr>
                         </table>
-                        <!--END Event Information Block-->
+                        <!--END  ADVANCED Event Information Block-->
 
 
                          <!--NEWSLETTER-SECTION-HEADLINE-->
