@@ -24,7 +24,7 @@
       <!-- ACR Advanced Modules -->
 
         <!-- 756eq - ACR Advanced Event Information Block -->
-        <!-- 6t8n8 -->
+        <!-- 6t8n8 - ACR Two Column CTA Block -->
         <!-- ubrw9 -->
         <!-- ufi6y -->
         <!-- l8y8w -->
@@ -62,18 +62,18 @@
         <meta class="mktoList" id="eventModuleAdvancedTextColor" mktoName="Text Color" values="#FFFFFF, #b7a57a, #444444, #4b2e83, #3D3D3D" mktomodulescope="true">
 
       
-      <!--ACR Two Column CTA Block -->
+      <!--ACR Two Column CTA Block (6t8n8) -->
         <meta class="mktoList" id="twoColumnCTAButtonAreaBackground" mktoName="Two Column CTA Background" values="#FFFFFF,#b7a57a,#4b2e83," mktomodulescope="true">
-        <meta class="mktoList" id="ACRTwoColumnCTACopyColor" mktoName="Two Column CTA Copy Color" values="#3d3d3d,#FFFFFF,#b7a57a,#4b2e83," mktomodulescope="true">
-        <meta class="mktoList" id="twoColumnCTAButtonColor" mktoName="Two Column CTA Button Color" values="4b2e83,B7A57A,FFFFFF" mktomodulescope="true">
-        <meta class="mktoString" id="twoColumnCTAButtonURL" mktoName="Two Column CTA Button Link" default="#CTALINK" mktomodulescope="true">
-        <meta class="mktoString" id="twoColumnCTAButtonText" mktoName="Two Column CTA Button Text" default="Learn More" mktomodulescope="true">
+        <meta class="mktoList" id="ACRTwoColumnCTACopyColor" mktoName="Copy Color  Two-Column CTA " values="#3d3d3d,#FFFFFF,#b7a57a,#4b2e83," mktomodulescope="true">
+        <meta class="mktoList" id="twoColumnCTAButtonColor" mktoName="Button Color Two-Column CTA " values="4b2e83,B7A57A,FFFFFF" mktomodulescope="true">
+        <meta class="mktoString" id="twoColumnCTAButtonURL" mktoName="Button Link Two-Column CTA " default="#CTALINK" mktomodulescope="true">
+        <meta class="mktoString" id="twoColumnCTAButtonText" mktoName="Button Text Two-Column CTA " default="Learn More" mktomodulescope="true">
       
-      <!--ACR Centered CTA Block -->
-        <meta class="mktoList" id="ACRCTAButtonBackgroundColor" mktoName="ACR CTA Background" values="#FFFFFF,#b7a57a,#4b2e83," mktomodulescope="true">        
-        <meta class="mktoList" id="ACRCTAButtonColor" mktoName="ACR CTA Button Color" values="4b2e83,B7A57A,FFFFFF" mktomodulescope="true">
-        <meta class="mktoString" id="ACRCTAButtonURL" mktoName="ACR CTA Button Link" default="#CTALINK" mktomodulescope="true">
-        <meta class="mktoString" id="ACRCTAButtonText" mktoName="ACR CTA Button Text" default="Learn More" mktomodulescope="true">
+      <!--LEGACY ACR Centered CTA Block -->
+        <meta class="mktoList" id="ACRCTAButtonBackgroundColor" mktoName="DEPRECIATED" values="#FFFFFF,#b7a57a,#4b2e83," mktomodulescope="true">        
+        <meta class="mktoList" id="ACRCTAButtonColor" mktoName="DEPRECIATED" values="4b2e83,B7A57A,FFFFFF" mktomodulescope="true">
+        <meta class="mktoString" id="ACRCTAButtonURL" mktoName="DEPRECIATED" default="#CTALINK" mktomodulescope="true">
+        <meta class="mktoString" id="ACRCTAButtonText" mktoName="DEPRECIATED" default="Learn More" mktomodulescope="true">
       
       <!-- 3/4|1/1 SECTION VARIABLES -->
       <!--Body4 Variables-->
@@ -1399,7 +1399,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
 <!--END ACR SPONSOR THREE COLUMN WRAPPER-->
 
               
-<!-- UWAA CTA EVENT-TWO-COLUMN-WRAPPER -->
+<!-- UWAA CTA EVENT-TWO-COLUMN-WRAPPER (6t8n8) -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="uwaaTwoColumnCTA" mktoName="ACR Two Column Call To Action">
     <tr>
 
@@ -1429,16 +1429,23 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
 
             <!--CALL TO ACTION BUTTON - TEXT COLUMN-->
             <table border="0" cellspacing="0" cellpadding="0" role="presentation">
-                <tr>
-                    <td align="center" bgcolor="#${twoColumnCTAButtonColor}" class="text" style="font-size: 16px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 800; height: 40px; max-width: 300px; padding: 0 15px;"><a href="${twoColumnCTAButtonURL}" target="_blank" style="color: ${twoColumnCTAButtonAreaBackground}; text-decoration: none; border: 1px solid #${twoColumnCTAButtonColor}; display: inline-block; text-transform: uppercase;"><span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">${twoColumnCTAButtonText}</span></a>
+                                <tr>
+                                    <td>
+                                        <table border="0" cellspacing="0" cellpadding="0" role="presentation">
+                                            <tr>
+                                                <td align="center" bgcolor="#${twoColumnCTAButtonColor}" class="text" style="font-size: 16px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 800; height: 40px; max-width: 300px; padding: 0 15px;"><a href="${twoColumnCTAButtonURL}" target="_blank" style="color: ${twoColumnCTAButtonAreaBackground}; text-decoration: none; border: 1px solid #${twoColumnCTAButtonColor}; display: inline-block; text-transform: uppercase;"><span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">${twoColumnCTAButtonText}</span></a>
                     </td>
-                    <td align="center">
-                        <a href="${twoColumnCTAButtonURL}">
-                            <img src="https://explore.uw.edu/rs/131-AQO-225/images/uwaa_mkto_btn_end_%23${twoColumnCTAButtonColor}.gif">
-                        </a>
-                    </td>
-                </tr>
-            </table>
+                                    <td align="center">
+                                        <a href="${twoColumnCTAButtonURL}">
+                                            <img src="http://explore.uw.edu/rs/131-AQO-225/images/ArrowCap.png">
+                                        </a>
+                                    </td>
+                                </tr>
+                              </table>
+                              </td> 
+                              </tr>
+                            </table>                           
+                                             
             <!--END CALL TO ACTION BUTTON - TEXT COLUMN-->
         </td>
         <!-- END TEXT COLUMN -->
@@ -1628,25 +1635,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                 <!--END ACR TWO COLUMN LAYOUT - SHORT -->   
               
               <!--ACR CTA BUTTON -->
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="ACRCTAButton" mktoName="ACR Centered CTA Button">
-                          <tr>
-                            <td bgcolor="#fffff" style="background-color: ${ACRCTAButtonBackgroundColor}; padding: 20px 0;" class="text">
-                                <center>
-                              <table border="0" cellspacing="0" cellpadding="0" role="presentation">
-                                    <tr>
-                                        <td align="center" bgcolor="#${ACRCTAButtonColor}" class="text" style="font-size: 16px; font-family: 'Open Sans', Arial, Helvetica,sans-serif; font-weight: 800; height: 40px; max-width: 300px; padding: 0 15px;"><a href="${ACRCTAButtonURL}" target="_blank" style="color:${ACRCTAButtonBackgroundColor}; text-decoration: none; border: 1px solid #${ACRCTAButtonColor}; display: inline-block; text-transform: uppercase;"><span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">${ACRCTAButtonText}</span></a>
-                                        </td>
-                                        <td align="center">
-                                            <a href="${ACRCTAButtonURL}">
-                                                <img src="https://explore.uw.edu/rs/131-AQO-225/images/uwaa_mkto_btn_end_%23${ACRCTAButtonColor}.gif">
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </table>
-                                </center>
-                            </td>
-                          </tr>
-                        </table>
+                        <!-- removed from template, variables remain temporarily. -->
             <!--END UWAA CTA BUTTON -->
                          
                         <!--CTA BUTTON - WHITE BACKGROUND-->
