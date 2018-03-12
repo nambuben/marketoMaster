@@ -25,22 +25,26 @@
 
         <!-- 756eq - ACR Advanced Event Information Block -->
         <!-- 6t8n8 - ACR Two Column CTA Block -->
+        <!-- 68fka - ACR Two Column Short Block -->
         <!-- ubrw9 - ACR Three Column Lecture Block -->
         <!-- ufi6y - Body1 Variables Checkerboard -->
         <!-- l8y8w - Body2 Variables Checkerboard -->
-        <!-- kfqpr -->
-        <!-- h1v6i -->
+        <!-- kfqpr - ACR Be Languge Block -->        
         <!-- rdgxt -->
         <!-- utieo -->
         <!-- crt1c -->
 
        <!-- End ACR Advanced Modules -->
         
-      <!-- ACR Be Languge Block -->
+    <!-- ACR Be Languge Block (kfqpr) -->
         <meta class="mktoList" id="beLanguageColor" mktoName="Be Language Color" values="#b7a57a, #4b2e83">  
-        <meta class="mktoString" id="beLanguage1" mktoName="Action 1" default="connected">
-        <meta class="mktoString" id="beLanguage2" mktoName="Action 2" default="purple">
-        <meta class="mktoString" id="beLanguage3" mktoName="Action 3" default="there">
+        <meta class="mktoString" id="beLanguage1" mktoName="Action 1" default="connected" mktomodulescope="true">
+        <meta class="mktoString" id="beLanguage2" mktoName="Action 2" default="purple" mktomodulescope="true">
+        <meta class="mktoString" id="beLanguage3" mktoName="Action 3" default="there" mktomodulescope="true">
+        <meta class="mktoString" id="beLanguage1be" mktoName="Be 1" default ="be" mktomodulescope="true">
+        <meta class="mktoString" id="beLanguage2be" mktoName="Be 2" default ="be" mktomodulescope="true">
+        <meta class="mktoString" id="beLanguage3be" mktoName="Be 3" default ="be" mktomodulescope="true">
+    
       
       <!-- ACR Message Title Background Selector -->
         <meta class="mktoList" id="messageTitleBackground" mktoName="Message Title Background Color" values="#b7a57a, #444444, #4b2e83">   
@@ -63,11 +67,17 @@
 
       
       <!--ACR Two Column CTA Block (6t8n8) -->
-        <meta class="mktoList" id="twoColumnCTAButtonAreaBackground" mktoName="Two Column CTA Background" values="#FFFFFF,#b7a57a,#4b2e83," mktomodulescope="true">
+        <meta class="mktoList" id="twoColumnCTAButtonAreaBackground" mktoName="Background Color - Two Column CTA" values="#FFFFFF,#b7a57a,#4b2e83," mktomodulescope="true">
         <meta class="mktoList" id="ACRTwoColumnCTACopyColor" mktoName="Copy Color  Two-Column CTA " values="#3d3d3d,#FFFFFF,#b7a57a,#4b2e83," mktomodulescope="true">
         <meta class="mktoList" id="twoColumnCTAButtonColor" mktoName="Button Color Two-Column CTA " values="4b2e83,B7A57A,FFFFFF" mktomodulescope="true">
         <meta class="mktoString" id="twoColumnCTAButtonURL" mktoName="Button Link Two-Column CTA " default="#CTALINK" mktomodulescope="true">
         <meta class="mktoString" id="twoColumnCTAButtonText" mktoName="Button Text Two-Column CTA " default="Learn More" mktomodulescope="true">
+
+
+
+    <!--ACR Two Column Short Block (68fka) -->
+        <meta class="mktoList" id="ACRShortTwoColumnAreaBackground" mktoName="Background Color - Two Column Short Background" values="#FFFFFF, #4b2e83," mktomodulescope="true">
+        <meta class="mktoList" id="ACRShortTwoColumnCopyColor" mktoName="Copy Color - Two-Column" values="#3d3d3d,#FFFFFF," mktomodulescope="true">
       
       <!--LEGACY ACR Centered CTA Block -->
         <meta class="mktoList" id="ACRCTAButtonBackgroundColor" mktoName="DEPRECIATED" values="#FFFFFF,#b7a57a,#4b2e83," mktomodulescope="true">        
@@ -109,6 +119,13 @@
       <meta class="mktoString" id="ACRThreeColumnSponsorLeftURL" mktoName="Left Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
       <meta class="mktoString" id="ACRThreeColumnSponsorCenterURL" mktoName="Center Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
       <meta class="mktoString" id="ACRThreeColumnSponsorRightURL" mktoName="Right Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
+
+      <!-- Sponsor - Four Column Variables -->
+      <meta class="mktoBoolean" id="ACRshowSponsorRuleFourColumns" mktoName="Show Rule" default="false" false_value="" true_value="border-top: 1px solid #bcbec0;" false_value_name="Hide Rule" true_value_name="Show Rule" mktoModuleScope="true">
+      <meta class="mktoString" id="ACRFourColumnSponsorLeftURL" mktoName="Left Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
+      <meta class="mktoString" id="ACRFourColumnSponsorLeftCenterURL" mktoName="Left-Center Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
+      <meta class="mktoString" id="ACRFourColumnSponsorRightCenterURL" mktoName="Right-Center Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
+      <meta class="mktoString" id="ACRFourColumnSponsorRightURL" mktoName="Right Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true">
 
 
       <meta class="mktoString" id="headlineFullWidthImageURL" mktoName="Headline URL" default="#ADDLINK" mktomodulescope="true">
@@ -550,25 +567,28 @@
                         </table>
                         <!--END NEWSLETTER-ISSUE-DATE-->
 
-                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="headlineWithThumbnail" mktoname="Headline w/ Thumbnail Image" role="presentation">
-<tbody>
-<tr>
-<td class="text main-headline" style="background-color: ${headlineModuleBackground}; color:${headlineModuleTextColor}; text-align: center; width: 500px; padding: 0px 4px;">
-<div class="mktoText" id="headlineRichText" mktoname="Headline w/ Photo Text Area">
-<div style="margin-left: 10px; text-align: left;">
-                                        <span style="font-family: 'Open Sans', arial, sans-serif; font-size: 24px; line-height: 1.2;">Executive Director&rsquo;s Message</span>
-                                      </div>
-</div>
-</td>
-<td align="center" valign="top" style="background-color: #6f7376;  width: 100px;"> <img src="https://explore.uw.edu/rs/131-AQO-225/images/Paul_Rucker_100x100.jpg" width="100" style="color: #ffffff; display: block; vertical-align: middle; width: 100%;" class="mktoImg" 
-id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnail Image" mktolockimgsize="true" mktolockimgstyle="true" /> </td>
-</tr>
-</tbody>
-</table>
+                        <!-- DIRECTOR MESSAGE -->
+
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="headlineWithThumbnail" mktoname="Headline w/ Thumbnail Image" role="presentation" mktoAddByDefault="FALSE" >
+                            <tbody>
+                            <tr>
+                            <td class="text main-headline" style="background-color: ${headlineModuleBackground}; color:${headlineModuleTextColor}; text-align: center; width: 500px; padding: 0px 4px;">
+                            <div class="mktoText" id="headlineRichText" mktoname="Headline w/ Photo Text Area">
+                            <div style="margin-left: 10px; text-align: left;">
+                                                                    <span style="font-family: 'Open Sans', arial, sans-serif; font-size: 24px; line-height: 1.2;">Executive Director&rsquo;s Message</span>
+                                                                  </div>
+                            </div>
+                            </td>
+                            <td align="center" valign="top" style="background-color: #6f7376;  width: 100px;"> <img src="https://explore.uw.edu/rs/131-AQO-225/images/Paul_Rucker_100x100.jpg" width="100" style="color: #ffffff; display: block; vertical-align: middle; width: 100%;" class="mktoImg" 
+                            id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnail Image" mktolockimgsize="true" mktolockimgstyle="true" /> </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!-- END DIRECTOR MESSAGE -->
                        
             <!-- TWO COLUMN HEADLINE IMAGE -->
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRTwoColumnHeadline" mktoName="ACR 2 Column Headline Block">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRTwoColumnHeadline" mktoName="ACR 2 Column Headline Block" mktoAddByDefault="FALSE">
     <tr>
         <td style="background-color: #ffffff; padding: 0 0 10px 0">
             <!--2 COLUMN TABLE WRAPPER-->
@@ -605,7 +625,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                        
                        
                         <!--FULL WIDTH IMAGE -->
-                     <table border="0" cellspacing="0" cellpadding="0" width="100%" class="mktoModule" id="fullWidthImg" mktoName="Full Width Image" role="presentation">
+                     <table border="0" cellspacing="0" cellpadding="0" width="100%" class="mktoModule" id="fullWidthImg" mktoName="Full Width Image" role="presentation" mktoAddByDefault="FALSE">
                         <tr>
                             <td align="center" valign="top" style="background-color: #ffffff;">
                               <a href="${headlineFullWidthImageURL}">
@@ -617,7 +637,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                     <!--END FULL WIDTH IMAGE --> 
                        
                         <!--Event Information Block-->
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="eventInformationBlock" mktoName="Event Information Block">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="eventInformationBlock" mktoName="Event Information Block" >
                         <tr>
 
                 <td align="center" valign="top" class="text" style="background-color: ${eventModuleBackground}; color: #ffffff; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 16px; font-weight: 400; line-height: 21px; padding: 12px 15px; text-align: center; vertical-align: middle;">
@@ -628,7 +648,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         <!--END Event Information Block-->
 
                         <!-- ADVANCED Event Information Block (756eq)-->
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="eventBasicInformationBlock" mktoName="ADVANCED -- Event Information Block">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="eventBasicInformationBlock" mktoName="ADVANCED -- Event Information Block" mktoAddByDefault="FALSE">
                         <tr>
 
                 <td align="center" valign="top" class="text" style="background-color: ${eventModuleAdvancedBackground}; color: ${eventModuleAdvancedTextColor}; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 16px; font-weight: 400; line-height: 21px; padding: 12px 15px; text-align: center; vertical-align: middle;">
@@ -643,7 +663,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
 
 
                          <!--NEWSLETTER-SECTION-HEADLINE-->
-                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="newsletterSectionHeadline" mktoName="Section Headline" role="presentation">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="newsletterSectionHeadline" mktoName="Section Headline" role="presentation" mktoAddByDefault="FALSE">
                             <tr>
                                 <td class="text section-headline" style="background-color: #ffffff; color: #4b2e83; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 24px; font-weight: 400; line-height: 1.1; padding: 10px 10px 15px 10px; text-align: left; vertical-align: middle;">
                                     <div class="mktoText" id="sectionHeadline" mktoName="Section Headline">
@@ -654,7 +674,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         </table>                
                         <!--END NEWSLETTER-SECTION-HEADLINE-->     
 <!--TWO COLUMN WRAPPER-->                         
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="newsletterTwoColumn" mktoName="2 Column Block">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="newsletterTwoColumn" mktoName="2 Column Block" mktoAddByDefault="FALSE">
     <tr>
         <td class="white-background" style="background-color: #fff; padding-bottom: 10px;">
                         <!--TWO COLUMN LAYOUT ROW-->
@@ -704,7 +724,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
 
                          
                 <!--NEWSLETTER-THREE-COLUMN-LAYOUT-->                              
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="newsletterThreeCol" mktoName="3 Column Block">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="newsletterThreeCol" mktoName="3 Column Block" mktoAddByDefault="FALSE">
                     <tr>
                         <td style="background-color: #ffffff; padding: 0 0 10px 0;">
                             <!--@MARK - changed to 10 PX bottom padding -->
@@ -810,7 +830,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
 <!--END NEWSLETTER-THREE-COLUMN-LAYOUT-->  
 
 <!-- ubrw9 - ACR Three Column Lecture Block -->
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRnewsletterThreeColumnLecture" mktoName="Lectures 3 Column Block">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRnewsletterThreeColumnLecture" mktoName="Lectures 3 Column Block" mktoAddByDefault="FALSE">
                     <tr>
                         <!--COLUMN #1 WRAPPER-->
                         <td align="center" class="column-3 stack-column" style="background-color: #ffffff; width: 33.33%; padding: 0; vertical-align: top;">
@@ -928,7 +948,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
 <!-- ubrw9 - END ACR Three Column Lecture Block -->
                          
 <!--LIGHT-GOLD CALL OUT--> 
-               <table border="0" cellpadding="0" cellspacing="0" width="100%" class="light-gold-background mktoModule" id="lightGoldCallout" mktoName="Call Out Message" role="presentation">
+               <table border="0" cellpadding="0" cellspacing="0" width="100%" class="light-gold-background mktoModule" id="lightGoldCallout" mktoName="Call Out Message" role="presentation" mktoAddByDefault="FALSE">
                     <tr>
                         <!--CALL OUT HEAD-->
                         <td class="text callout-head" style="background-color: #e8e3d3; color: #4b2e84; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 20px; font-weight: 600; line-height: 1.2; padding: 15px 25px 5px 25px; text-align: center; text-transform: uppercase; vertical-align: middle;">
@@ -946,7 +966,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                           <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">  
                           <div class="mktoText" id="lightGoldParagraph" mktoName="Paragraph">
                             <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">
-                                Venis ea eosae occulpari odit volum. Quiati diorerc hiliquam, sernatquibus sent, que poriorem sustet aut voluptas cium re nait en dit is doleng at thist ud anta proa.</span>
+                                Venis ea eosae occulpari odit volum. Quiati <a href="#ADDLINK">diorerc hiliquam</a>, sernatquibus sent, que poriorem sustet aut voluptas cium re nait en dit is doleng at thist ud anta proa.</span>
                             </div>
                           </span>
                         </td>
@@ -954,12 +974,68 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                     </tr>
                 </table>
 <!--END LIGHT-GOLD CALL OUT-->
+
+<!--PURPLE CALL OUT--> 
+               <table border="0" cellpadding="0" cellspacing="0" width="100%" class="purple-background mktoModule" id="purpleCallout" mktoName="Call Out Message" role="presentation" mktoAddByDefault="FALSE">
+                    <tr>
+                        <!--CALL OUT HEAD-->
+                        <td class="text callout-head" style="background-color: #4b2e83; color: #FFFFFF; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 20px; font-weight: 600; line-height: 1.2; padding: 15px 25px 5px 25px; text-align: center; text-transform: uppercase; vertical-align: middle;">
+                          <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">  
+                          <div class="mktoText" id="purpleCalloutHeader" mktoName="Header">
+                                <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">Very Short Call Out Message</span>
+                            </div>
+                          </span>
+                        </td>
+                        <!--END CALL OUT HEAD-->
+                    </tr>
+                    <tr>
+                        <!--CALL OUT PARAGRAPH-->
+                        <td class="text callout-paragraph" style="background-color: #4b2e83; color: #FFFFFF; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18px; padding: 0 25px 20px 15px; text-align: center; vertical-align: middle;">
+                          <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">  
+                          <div class="mktoText" id="purpleParagraph" mktoName="Paragraph">
+                            <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">
+                                Venis ea eosae occulpari odit volum. Quiati diorerc hiliquam, sernatquibus sent, que poriorem sustet aut voluptas cium re nait en dit is doleng at thist ud anta proa. <a href="#ADDLINK"><span style="color:#59befd">Click Here</span></a></span>
+                            </div>
+                          </span>
+                        </td>
+                        <!--END CALL OUT PARAGRAPH-->
+                    </tr>
+                </table>
+<!--END PURPLE CALL OUT-->
+
+<!--DARK GRAY CALL OUT--> 
+               <table border="0" cellpadding="0" cellspacing="0" width="100%" class="dark-grey-background-background mktoModule" id="darkGrayCallout" mktoName="Call Out Message" role="presentation" mktoAddByDefault="FALSE">
+                    <tr>
+                        <!--CALL OUT HEAD-->
+                        <td class="text callout-head" style="background-color: #444444; color: #FFFFFF; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 20px; font-weight: 600; line-height: 1.2; padding: 15px 25px 5px 25px; text-align: center; text-transform: uppercase; vertical-align: middle;">
+                          <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">  
+                          <div class="mktoText" id="darkGrayHeader" mktoName="Header">
+                                <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">Very Short Call Out Message</span>
+                            </div>
+                          </span>
+                        </td>
+                        <!--END CALL OUT HEAD-->
+                    </tr>
+                    <tr>
+                        <!--CALL OUT PARAGRAPH-->
+                        <td class="text callout-paragraph" style="background-color: #444444; color: #ffffff; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18px; padding: 0 25px 20px 15px; text-align: center; vertical-align: middle;">
+                          <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">  
+                          <div class="mktoText" id="darkGrayParagraph" mktoName="Paragraph">
+                            <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">
+                                Venis ea eosae occulpari odit volum. Quiati diorerc hiliquam, sernatquibus sent, que poriorem <a href="#ADDLINK"><span style="color:#59befd">Click Here</span></a> sustet aut voluptas cium re nait en dit is doleng at thist ud anta proa.</span>
+                            </div>
+                          </span>
+                        </td>
+                        <!--END CALL OUT PARAGRAPH-->
+                    </tr>
+                </table>
+<!--END DARK GRAY CALL OUT-->
                        
                       
 
 
  <!--FOUR-COLUMN-NEWSLETTER-LAYOUT-->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="newsletterFourColumnBlock" mktoName="4 Column Block">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="newsletterFourColumnBlock" mktoName="4 Column Block" mktoAddByDefault="FALSE">
 <tr>
 <td style="background-color: #ffffff;">
   <!--@MARK removed 10px of padding-top -->
@@ -1083,7 +1159,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                        
 
   <!--EXTENDED FOUR COLUMNS LAYOUT-->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="ACRExpandedFourColumnBlock" mktoName="ACR 4 Columns Block - Extended Details">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="ACRExpandedFourColumnBlock" mktoName="ACR 4 Columns Block - Extended Details" mktoAddByDefault="FALSE">
 <tr>
 <td style="background-color: #ffffff;">
   <!--@MARK removed 10px of padding-top -->
@@ -1269,7 +1345,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
 </table>
 <!--END EXTENDED FOUR COLUMNS LAYOUT-->
 <!--EXTENDED FOUR COLUMNS - NO DATE LAYOUT-->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="ACRExpandedNoDateFourColumnBlock" mktoName="ACR 4 Columns Block - Extended Details w/ no Date">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="ACRExpandedNoDateFourColumnBlock" mktoName="ACR 4 Columns Block - Extended Details w/ no Date" mktoAddByDefault="FALSE">
 <tr>
 <td style="background-color: #ffffff;">
   <!--@MARK removed 10px of padding-top -->
@@ -1431,7 +1507,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
 <!--END EXTENDED FOUR COLUMNS - NO DATE LAYOUT-->
 
 <!--ACR SPONSOR ONE COLUMN WRAPPER-->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRsponsorONEColumn" mktoName="ACR Sponsor 1 Column Block">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRsponsorONEColumn" mktoName="ACR Sponsor 1 Column Block" mktoAddByDefault="FALSE">
     <tr>
         <td class="white-background acr-sponsor-td-row" style="background-color: #fff; ${ACRshowSponsorRuleOneColumn} ">
                         <!--ONE COLUMN LAYOUT ROW-->
@@ -1454,7 +1530,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
 <!--END ACR SPONSOR ONE COLUMN WRAPPER-->
               
 <!--ACR SPONSOR TWO COLUMN WRAPPER-->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRsponsorTwoColumn" mktoName="ACR Sponsor 2 Column Block">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRsponsorTwoColumn" mktoName="ACR Sponsor 2 Column Block" mktoAddByDefault="FALSE">
     <tr>
         <td class="white-background acr-sponsor-td-row" style="background-color: #fff; ${ACRshowSponsorRuleTwoColumns} ">
                         <!--TWO COLUMN LAYOUT ROW-->
@@ -1484,7 +1560,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
 <!--END ACR SPONSOR TWO COLUMN WRAPPER-->
 
 <!--ACR SPONSOR THREE COLUMN WRAPPER-->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRsponsorThreeColumn" mktoName="ACR Sponsor 3 Column Block">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRsponsorThreeColumn" mktoName="ACR Sponsor 3 Column Block" mktoAddByDefault="FALSE">
     <tr>
         <td class="white-background acr-sponsor-td-row" style="background-color: #fff; ${ACRshowSponsorRuleThreeColumns} ">
                         <!--THREE COLUMN LAYOUT ROW-->
@@ -1521,9 +1597,84 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
 </table>
 <!--END ACR SPONSOR THREE COLUMN WRAPPER-->
 
+<!--ACR SPONSOR FOUR COLUMN WRAPPER-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRsponsorFourColumn" mktoName="ACR Sponsor 4 Column Block" mktoAddByDefault="FALSE">
+    <tr>
+        <td class="white-background acr-sponsor-td-row" style="background-color: #fff; ${ACRshowSponsorRuleFourColumns} ">
+                        <!--THREE COLUMN LAYOUT ROW-->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background" role="presentation">
+                            <tr>
+                                <!--IMAGE COLUMN-->
+                                <td class="column-4 stack-column " style="width: 25%; background-color: #ffffff; vertical-align:top;" align="center">
+                                  <a href="${ACRFourColumnSponsorLeftURL}">
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="4 Column Image" width="150" style="display: block; " class="mktoImg" id="sponsorFourColumnLeft" mktoName="Image" mktoLockImgStyle="true"/>
+                                    </a>
+                                </td>
+                                <!--END IMAGE COLUMN-->
+
+                                <!--IMAGE COLUMN-->
+                                <td class="column-4 stack-column " style="width: 25%; background-color: #ffffff; vertical-align:top;" align="center">
+                                  <a href="${ACRFourColumnSponsorLeftCenterURL}">
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="4 Column Image" width="150" style="display: block; " class="mktoImg" id="sponsorFourColumnLeftCenter" mktoName="Image" mktoLockImgStyle="true"/>
+                                    </a>
+                                </td>
+                                <!--END IMAGE COLUMN-->
+
+                                <!--IMAGE COLUMN-->
+                                <td class="column-4 stack-column " style="width: 25%; background-color: #ffffff; vertical-align:top;" align="center">
+                                  <a href="${ACRFourColumnSponsorRightCenterURL}">
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="4 Column Image" width="150" style="display: block; " class="mktoImg" id="sponsorFourColumnCenterRight" mktoName="Image" mktoLockImgStyle="true"/>
+                                    </a>
+                                </td>
+                                <!--END IMAGE COLUMN-->
+
+                                <!--TEXT COLUMN-->
+                                <td class="column-4 stack-column" style="width: 25%; background-color: #ffffff; vertical-align: top;" align="center">
+                                  <a href="${ACRFourColumnSponsorRightURL}">
+                                     <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images150x100-px.png" alt="4 Column Image" width="150" style="display: block; " class="mktoImg" id="sponsorFourColumnRight" mktoName="Image" mktoLockImgStyle="true"/>
+                                    </a>
+                                </td>
+                                <!--END TEXT COLUMN-->
+                            </tr>
+                        </table>
+                        <!--THREE COLUMN LAYOUT ROW-->
+        </td>
+    </tr>
+</table>
+<!--END ACR SPONSOR FOUR COLUMN WRAPPER-->
+
+
+<!-- ACR TWO COLUMN LAYOUT - SHORT (68fka)-->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="twoColumnWhiteBackgroundCTA" mktoName="2 Column Block" mktoAddByDefault="FALSE">
+                    <tr>
+                        <!--IMAGE COLUMN-->
+                        <td align="center" class="column-2 stack-column image-column" style="width: 50%; background-color: #ffffff;">
+                            <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_300x250.jpg" alt="image" width="300" style="display: block; color: #444444; width: 100% !important; font-family: 'Open Sans', arial, helvetica, sans-serif; font-weight: 600; font-size: 14px; height: auto; line-height: 1.2; text-align: center; text-transform: uppercase; vertical-align: middle;" class="mktoImg" id="colImgW" mktoName="Column Image" mktoLockImgStyle="true" role="presentation"/>
+                        </td>
+                        <!--END IMAGE COLUMN-->
+ 
+                        <!--START TEXT COLUMN-->
+                        <td align="center" valign="top" class="column-2 stack-column" style="background-color: ${ACRShortTwoColumnAreaBackground};">
+                            
+                            <!--BODY TEXT - TEXT COLUMN-->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="body-text" role="presentation">
+                                <tr>
+                                    <td class="text body-copy" style="color: ${ACRShortTwoColumnCopyColor}; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 22px; text-align: left; padding: 15px 20px 15px 20px; vertical-align: top; background-color: ${ACRShortTwoColumnAreaBackground}">
+                                      <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">  
+                                      <div class="mktoText" id="colParagraphW" mktoName="Paragraph">
+                                            Mus es eipcipit atisquis aliassimo maximpe venis ea eosae occulpari odit volum inissum conem latum. Mus es eipcipit atisquis aliassimo maximpe. Tus es eipcipit atisquis aliassimo  ea eosae occulpari odit volum inissum conem latum fugitecus.</div>
+                                      </span>
+                                    </td>
+                                </tr>
+                            </table>              
+                        </td>
+                    </tr>
+                </table>
+                <!--END ACR TWO COLUMN LAYOUT - SHORT -->
+
               
 <!-- UWAA CTA EVENT-TWO-COLUMN-WRAPPER (6t8n8) -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="uwaaTwoColumnCTA" mktoName="ACR Two Column Call To Action">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="uwaaTwoColumnCTA" mktoName="ACR Two Column Call To Action" mktoAddByDefault="FALSE">
     <tr>
 
         <!-- IMAGE COLUMN -->
@@ -1575,28 +1726,31 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
     </tr>                   
 </table> 
 <!-- END UWAA CTA EVENT-TWO-COLUMN-WRAPPER -->
+
+
               
+<!-- Combined Layout (2 Column- Right/Left Image -->
    <!-- Body 4 Begins -->
-                                <table role="Presentation Section1" class="mktoModule" id="body4" mktoName="2 Column - Left Image" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+                                <table role="Presentation Section1" class="mktoModule" id="body4" mktoName="2 Column - Left Image" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse;" mktoAddByDefault="FALSE">
                                     <tr>
                                         <td bgcolor="#ffffff" valign="top" style="background-color: #ffffff;">
-                                            <table role="Presentation Section1 Inner Container" class="checkerboard_inner_table" width="560" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 560px; margin: 0 auto;">
+                                            <table role="Presentation Section1 Inner Container" class="checkerboard_inner_table" width="570" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 570px; margin: 0 auto;">
                                                 <tr>
                                                     <td colspan="2" height="${checker-left-top-space}" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="checkerboard_block2 checkerboard_center_align" valign="top" width="160" style="width:160px; text-align: left; padding-top: 5px;">
+                                                    <td class="checkerboard_block2 checkerboard_center_align" valign="top" width="175" style="width:175px; text-align: left; padding-top: 5px;">
                                                         <div class="mktoImg" id="body4-img" mktoName="Image">
-                                                            <img align="absbottom" src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images160x160-px.png" alt="Presentaion Image3" border="0" width="160" />
+                                                            <img align="absbottom" src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="Presentaion Image3" border="0" width="175" />
                                                         </div>
                                                     </td>
-                                                    <td class="checkerboard_block2 none" valign="top" width="50" style="width:50px;">&nbsp;</td>
-                                                    <td class="checkerboard_block2 top-pad" valign="top" width="350" style="width: 350px;">
+                                                    <td class="checkerboard_block2 none" valign="top" width="10" style="width:10px;">&nbsp;</td>
+                                                    <td class="checkerboard_block2 top-pad" valign="top" width="385" style="width: 385px;">
                                                         <table role="Presentation Content" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
                                                             <tr>
-                                                                <td valign="top" style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size:15px; line-height:21px; color: #3d3d3d; font-weight: bold; text-align: left;">
+                                                                <td valign="top" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; text-align: left; vertical-align: middle;">
                                                                     <div class="mktoText" id="body4-heading" mktoName="Heading">
-                                                                        <h5 style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size:15px; line-height:21px; color: #3d3d3d; font-weight: bold; text-align: left;margin:0px;padding:0px;">Sample Title</h5>
+                                                                        Sample Title
                                                                     </div>
                                                                 </td>
                                                             </tr>
@@ -1604,13 +1758,13 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                                                                 <td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                                                             </tr>
                                                             <tr>
-                                                                <td valign="top" style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size: 13px; line-height: 18px; color: #3d3d3d; font-weight: normal; text-align: left;line-height: 22.1px;">
+                                                                <td valign="top" style="font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 4; line-height: ${acrLineHeight}; text-align: left; vertical-align: top;">
                                                                     <div class="mktoText" id="body4-text" mktoName="Text">
-                                                                        <p style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size: 13px; line-height: 18px; color: #3d3d3d; font-weight: normal; text-align: left;margin:0px;padding:0px;line-height: 22.1px;">Cras sed mollis erat.
+                                                                       Cras sed mollis erat.
                                                                             In tristique elei fend elit, sit amets per enim rutrum vitae nibh.
                                                                             Nulla elementum dapibus odio.
                                                                             Quisque ornare elit et nibh lacinia tincidunt maenas ultricies.
-                                                                        </p>
+                                                                        
                                                                     </div>
                                                                 </td>
                                                             </tr>
@@ -1626,20 +1780,20 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                                 </table>
                                 <!-- Body 4 Ends -->
                                 <!-- Body 5 Begins -->
-                                <table role="Presentation Section2" class="mktoModule" id="body5" mktoName="2 Column - Right Image" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+                                <table role="Presentation Section2" class="mktoModule" id="body5" mktoName="2 Column - Right Image" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse;" mktoAddByDefault="FALSE">
                                     <tr>
                                         <td bgcolor="#ECE9E2" valign="top" style="background-color: #FFFFFF;">
-                                            <table role="Presentation Section2 Inner Container" class="checkerboard_inner_table" width="560" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 560px; margin: 0 auto;">
+                                            <table role="Presentation Section2 Inner Container" class="checkerboard_inner_table" width="570" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 570px; margin: 0 auto;">
                                                 <tr>
                                                     <td colspan="2" height="${checker-right-top-space}" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="checkerboard_block2" valign="top" width="350" style="width: 350px;">
+                                                    <td class="checkerboard_block2" valign="top" width="385" style="width: 385px;">
                                                         <table role="Presentation Section2 Content" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
                                                             <tr>
-                                                                <td valign="top" style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size:15px; line-height:21px; color: #3d3d3d; font-weight: bold; text-align: left;">
+                                                                <td valign="top" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; text-align: left; vertical-align: middle;">
                                                                     <div class="mktoText" id="body5-heading" mktoName="Heading">
-                                                                        <h5 style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size:15px; line-height:21px;color: #3d3d3d;font-weight: bold; text-align: left;margin:0px;padding:0px;line-height: 22.1px;">Sample Title</h5>
+                                                                        Sample Title
                                                                     </div>
                                                                 </td>
                                                             </tr>
@@ -1647,22 +1801,22 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                                                                 <td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                                                             </tr>
                                                             <tr>
-                                                                <td valign="top" style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size: 13px; line-height: 18px; color: #3d3d3d; font-weight: normal; text-align: left;">
+                                                                <td valign="top" style="font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 4; line-height: ${acrLineHeight}; text-align: left; vertical-align: top;">
                                                                     <div class="mktoText" id="body5-text" mktoName="Text">
-                                                                        <p style="font-family: 'Open Sans' , Arial, Helvetica, sans-serif; font-size: 13px; line-height: 18px; color: #3d3d3d; font-weight: normal; text-align: left;margin:0px;padding:0px;line-height: 22.1px;">Cras sed mollis erat.
+                                                                        Cras sed mollis erat.
                                                                             In tristique elei fend elit, sit amets per enim rutrum vitae nibh.
                                                                             Nulla elementum dapibus odio.
                                                                             Quisque ornare elit et nibh lacinia tincidunt maenas ultricies.
-                                                                        </p>
+                                                                       
                                                                     </div>
                                                                 </td>
                                                             </tr>
                                                         </table>
                                                     </td>
-                                                    <td class="checkerboard_block2 none" valign="top" width="50" style="width:50px;">&nbsp;</td>
-                                                    <td class="checkerboard_block2 checkerboard_center_align top-pad" valign="top" width="160" style="width:160px; text-align: right; padding-top: 5px;">
+                                                    <td class="checkerboard_block2 none" valign="top" width="10" style="width:10px;">&nbsp;</td>
+                                                    <td class="checkerboard_block2 checkerboard_center_align top-pad" valign="top" width="175" style="width:175px; text-align: right; padding-top: 5px;">
                                                         <div class="mktoImg" id="body5-img" mktoName="Image">
-                                                            <img align="absbottom" src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images160x160-px.png" alt="Presentaion Image2" border="0" width="160" />
+                                                            <img align="absbottom" src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="Presentaion Image2" border="0" width="175" />
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -1673,10 +1827,11 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                                         </td>
                                     </tr>
                                 </table>
-                                <!-- Body 5 Ends -->           
+                                <!-- Body 5 Ends --> 
+            <!-- END 1/4|3/4 Combined Layout (2 Column- Right/Left Image) -->
               
               <!--ACR CENTERED BLOCK TITLE-->
-                        <table border="0" cellspacing="0" cellpadding="0" width="100%" class="mktoModule" id="ACRCenteredTextBlock" mktoName="ACR Short Centered Title" role="presentation">
+                        <table border="0" cellspacing="0" cellpadding="0" width="100%" class="mktoModule" id="ACRCenteredTextBlock" mktoName="ACR Short Centered Title" role="presentation" mktoAddByDefault="FALSE">
                             <tr>
                                 <td valign="top" class="text unit-name" style="background-color: #ffffff; color: #4b2e83; font-family: 'Open Sans', arial, helvetica, sans-serif;  font-size: 16px; font-weight: 600; line-height: 1.2; text-transform: uppercase; text-align:center; padding: 12px 15px; vertical-align: middle;">
                                   <div class="mktoText" id="ACRCenteredTextBlockText" mktoName="ACR Short Message Title"><span style="font-family:'Open Sans', arial, helvetica, sans-serif;">Reminder</span></div>
@@ -1687,7 +1842,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                          
                                     
 <!--BODY COPY, FULL WIDTH, WHITE BACKGROUND-->
-                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="bodyCopyPurpleSubhead" mktoName="Body Header" role="presentation">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="bodyCopyPurpleSubhead" mktoName="Body Header" role="presentation" mktoAddByDefault="FALSE">
                             <!-- PURPLE SUBHEAD-->
                             <tr>
                                 <td class="text" style="background-color: #ffffff; color: #4b2e84; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 20px; line-height: 1.2; font-weight: 600; padding: 20px 15px 5px 15px;">
@@ -1701,16 +1856,16 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         <!--END BODY COPY, FULL WIDTH, WHITE BACKGROUND-->
 
                         <!--BODY COPY ROW-->
-                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="bodyCopyParagraph" mktoName="Body Paragraph" role="presentation">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="bodyCopyParagraph" mktoName="Body Paragraph" role="presentation" mktoAddByDefault="FALSE">
                             <tr>
-                                <td class="text body-copy" style="background-color: #ffffff; color: #3d3d3d; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: ${acrLineHeight}; text-align: left; vertical-align: top; padding: 5px 15px 5px 15px;"><div class="mktoText" id="bodyParagraph" mktoName="Paragraph"><strong>Aliassimo maximpe venis</strong> aliassimo maximpe venis ea eosae occulpi qui archicid ut id ex etur as ex et fugiatio vereptatur, sus estius, suntiat perios doluptat ut quam eos naturiberia vel enim volectia <a href="#ADDLINK" style="color: #0088dd; text-decoration: none;">don't forget to copy link styles</a> est.</div>
+                                <td class="text body-copy" style="background-color: #ffffff; color: #3d3d3d; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: ${acrLineHeight}; text-align: left; vertical-align: top; padding: 5px 15px 5px 15px;"><div class="mktoText" id="bodyParagraph" mktoName="Paragraph"><span style="font-family:'Open Sans', arial, helvetica, sans-serif;"><strong>Aliassimo maximpe venis</strong> aliassimo maximpe venis ea eosae occulpi qui archicid ut id ex etur as ex et fugiatio vereptatur, sus estius, suntiat perios doluptat ut quam eos naturiberia vel enim volectia <a href="#ADDLINK" style="color: #0088dd; text-decoration: none;">don't forget to copy link styles</a> est.</span></div>
                                 </td>
                             </tr>
                         </table>
                         <!--BODY COPY ROW-->
 
                          <!--BODY COPY ROW W/ BULLETED LIST-->
-                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="bodyCopyBulletList" mktoName="Body Bullet List" role="presentation">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="bodyCopyBulletList" mktoName="Body Bullet List" role="presentation" mktoAddByDefault="FALSE">
                             <tr>
                                 <td class="text body-copy" style="background-color: #ffffff; color: #3d3d3d; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 22px; text-align: left; vertical-align: top; padding: 5px 15px 5px 15px;">
                                     <div class="mktoText" id="bodyBulletList" mktoName="Bullet List">
@@ -1729,36 +1884,10 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         </table>
                         <!-- BULLETED LIST ENDS HERE -->
               
-              <!-- ACR TWO COLUMN LAYOUT - SHORT-->
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="twoColumnWhiteBackgroundCTA" mktoName="2 Column Block">
-                    <tr>
-                        <!--IMAGE COLUMN-->
-                        <td align="center" class="column-2 stack-column image-column" style="width: 50%; background-color: #ffffff;">
-                            <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_300x250.jpg" alt="image" width="300" style="display: block; color: #444444; width: 100% !important; font-family: 'Open Sans', arial, helvetica, sans-serif; font-weight: 600; font-size: 14px; height: auto; line-height: 1.2; text-align: center; text-transform: uppercase; vertical-align: middle;" class="mktoImg" id="colImgW" mktoName="Column Image" mktoLockImgStyle="true" role="presentation"/>
-                        </td>
-                        <!--END IMAGE COLUMN-->
- 
-                        <!--START TEXT COLUMN-->
-                        <td align="center" valign="top" class="column-2 stack-column" style="background-color: #ffffff;">
-                            
-                            <!--BODY TEXT - TEXT COLUMN-->
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="body-text" role="presentation">
-                                <tr>
-                                    <td class="text body-copy" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 22px; text-align: left; padding: 15px 20px 15px 20px; vertical-align: top;">
-                                      <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">  
-                                      <div class="mktoText" id="colParagraphW" mktoName="Paragraph">
-                                            Mus es eipcipit atisquis aliassimo maximpe venis ea eosae occulpari odit volum inissum conem latum. Mus es eipcipit atisquis aliassimo maximpe. Tus es eipcipit atisquis aliassimo  ea eosae occulpari odit volum inissum conem latum fugitecus.</div>
-                                      </span>
-                                    </td>
-                                </tr>
-                            </table>              
-                        </td>
-                    </tr>
-                </table>
-                <!--END ACR TWO COLUMN LAYOUT - SHORT -->
+              
               
               <!--Body 1 Begins-->
-                                <table role="Speaker Section1" class="mktoModule" id="body1" mktoName="Checkerboard A" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+                                <table role="Speaker Section1" class="mktoModule" id="body1" mktoName="Checkerboard A" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse;" mktoAddByDefault="FALSE">
                                     <tr>
                                         <td valign="top">
                                             <table role="Speaker Inner Container" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
@@ -1844,7 +1973,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                                 </table>
                                 <!--Body 1 Ends-->
                                 <!--Body 2 Begins-->
-                                <table role="Speaker Section2" class="mktoModule" id="body2" mktoName="Checkerboard B" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+                                <table role="Speaker Section2" class="mktoModule" id="body2" mktoName="Checkerboard B" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse;" mktoAddByDefault="FALSE">
                                     <tr>
                                         <td valign="top">
                                             <table role="Speaker Inner Container" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
@@ -1931,7 +2060,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                                 <!--Body 2 Ends-->
               
               <!--Body 8 Begins-->
-                                <table role="Presentation Section4" class="mktoModule" id="body8" cellpadding="0" cellspacing="0" align="center" border="0" width="100%" style="border-collapse: collapse; margin:0 auto; min-width:100%;" mktoname="Text Centered w/ CTA">
+                                <table role="Presentation Section4" class="mktoModule" id="body8" cellpadding="0" cellspacing="0" align="center" border="0" width="100%" style="border-collapse: collapse; margin:0 auto; min-width:100%;" mktoname="Text Centered w/ CTA" mktoAddByDefault="FALSE">
                                     <tr>
                                         <td valign="top" bgcolor="#ffffff" style="background-color: #ffffff;">
                                             <table role="Presentation Section4 Inner Container" align="center" style="margin:0 auto; width:500px;" class="inner_table" width="500" cellpadding="0" cellspacing="0" >
@@ -1991,7 +2120,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
             <!--END UWAA CTA BUTTON -->
                          
                         <!--CTA BUTTON - WHITE BACKGROUND-->
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="whitebkgCTAButton" mktoName="CTA Button - White">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="whitebkgCTAButton" mktoName="CTA Button - White" mktoAddByDefault="FALSE">
                           <tr>
                             <td bgcolor="#fffff" style="background-color: #ffffff; padding: 20px 0;" class="text">
                                 <center>
@@ -2012,7 +2141,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         </table>
                         <!--END CTA BUTTON - WHITE BACKGROUND-->
                         <!--BODY COPY, FULL WIDTH, PURPLE BACKGROUND-->
-                        <table border="0" cellspacing="0" cellpadding="0" width="100%" class="purple-background mktoModule" id="bodyCopyPurple" mktoName="Body Paragraph - Purple" role="presentation">
+                        <table border="0" cellspacing="0" cellpadding="0" width="100%" class="purple-background mktoModule" id="bodyCopyPurple" mktoName="Body Paragraph - Purple" role="presentation" mktoAddByDefault="FALSE">
                             <tr>
                                 <td align="left" valign="top" class="text body-copy" style="background-color: #4b2e84; color: #FFFFFF; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: ${acrLineHeight}; padding: 10px 15px 10px 15px;text-align: left;  vertical-align: top;">
                                 <div class="mktoText" id="bodyCopyParagraphPurple" mktoName="Body Paragraph"><span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
@@ -2024,7 +2153,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         <!--END BODY COPY, FULL-WIDTH, PURPLE BACKGROUND-->
 
                         <!--CTA BUTTON - PURPLE BACKGROUND-->
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="purplebkgCTAButton" mktoName="CTA Button - Purple">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="purplebkgCTAButton" mktoName="CTA Button - Purple" mktoAddByDefault="FALSE">
                           <tr>
                             <td bgcolor="#4b2e83" style="padding: 20px 0;" class="text">
                                 <center>
@@ -2046,7 +2175,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         <!--END CTA BUTTON - PURPLE BACKGROUND-->
 
                           <!--1 PX HR  MODULE -->
-                          <table cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100% !important;" class="white-background mktoModule" id="hrModule" mktoName="Horizontal Rule">
+                          <table cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100% !important;" class="white-background mktoModule" id="hrModule" mktoName="Horizontal Rule" mktoAddByDefault="FALSE">
 
                             <tr>
                                 <td>
@@ -2061,11 +2190,11 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         </table>
                         <!--END 10 PX SPACER MODULE -->
                        
-                       <!--BE LANGUAGE MODULE GOLD TEXT BACKGROUND-->
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="goldTextBeLanguageSnippet" mktoName="Be Language Module">
+                       <!-- (kfqpr) BE LANGUAGE MODULE GOLD TEXT BACKGROUND-->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="goldTextBeLanguageSnippet" mktoName="Be Language Module" >
                           <tr>
-                            <td bgcolor="#fffff" style="background-color: #ffffff; padding: 10px 0;" class="text">
-                               <p class ="be-language" style="font-family:'Open Sans', arial, helvetica, sans-serif; color: ${beLanguageColor}; font-size:16px; text-align: center;text-transform:uppercase;"><span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">BE&nbsp;<strong>${beLanguage1}</strong>. BE&nbsp;<strong>${beLanguage2}</strong>. BE&nbsp;<strong>${beLanguage3}</strong>.</span></p>    
+                            <td bgcolor="#fffff" style="background-color: #ffffff; padding: 6.666px 0;" class="text">
+                               <p class ="be-language" style="font-family:'Open Sans', arial, helvetica, sans-serif; color: ${beLanguageColor}; font-size:16px; text-align: center;text-transform:uppercase;"><span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">${beLanguage1be}&nbsp;<strong>${beLanguage1}</strong>. ${beLanguage2be}&nbsp;<strong>${beLanguage2}</strong>. ${beLanguage3be}&nbsp;<strong>${beLanguage3}</strong>.</span></p>    
                             </td>
                           </tr>
                         </table>
@@ -2073,7 +2202,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
 
 
                         <!--FOOTER LINK ROW GREY BAR WRAPPER-->
-                        <table border="0" cellspacing="0" cellpadding="0" width="100%" class="cool-grey-background grey-bar-footer mktoModule" id="footerLinkRow" mktoName="Link Row" role="presentation">
+                        <table border="0" cellspacing="0" cellpadding="0" width="100%" class="cool-grey-background grey-bar-footer mktoModule" id="footerLinkRow" mktoName="Link Row" role="presentation" mktoAddByDefault="FALSE">
                             <tr>
                                 <!--UW HOME FOOTER LINK-->
                                 <td align="center" valign="top" class="text stack-column column-3" style="background-color: #8d9194; padding: 4px 0; font-family:'Open Sans', Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: 1px; font-size: 11px; line-height: 1.2; text-align: center; text-transform: uppercase; vertical-align: middle; width: 33.33%;"><span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
@@ -2094,7 +2223,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         <!--END FOOTER LINK ROW - GREY BAR WRAPPER-->
 
             <!--BOUNDLESS LOGO - WHITE BACKGROUND-->
-            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="white-background mktoModule" id="campaignTagline" mktoName="Campaign Tagline" role="presentation"> 
+            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="white-background mktoModule" id="campaignTagline" mktoName="Campaign Tagline" role="presentation" > 
                 <tr>
                     <td align="center" valign="top" style="background-color: #fff; padding: 10px 0 10px 0;"><a href="http://www.uw.edu/boundless">
                         <img src="http://explore.uw.edu/rs/131-AQO-225/images/Boundless_CampaignTagline.png" alt="Be Boundless / For Washington, For the World"  width="200" style="color: #4B2E83; display: block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.2; font-weight: 800; text-align: center; text-transform: uppercase; vertical-align: middle;"/>
@@ -2162,7 +2291,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                          
                          
              <!--BOUNDLESS LOGO - PURPLE BACKGROUND-->
-            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="mktoModule" id="campaignTaglineW" mktoName="Campaign Tagline - Purple" role="presentation"> 
+            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="mktoModule" id="campaignTaglineW" mktoName="Campaign Tagline - Purple" role="presentation" mktoAddByDefault="FALSE"> 
                 <tr>
                     <td align="center" valign="top" style="background-color: #4b2e83; padding: 10px 0 10px 0;"><a href="http://www.uw.edu/boundless">
                         
@@ -2175,7 +2304,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                        
                        
                        <!--10 PX SPACER MODULE -->
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="TenPxWhiteSpacer" mktoName="White 10 Pixel Spacer">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="TenPxWhiteSpacer" mktoName="White 10 Pixel Spacer" mktoAddByDefault="FALSE">
                           <tr>
                             <td height="10" bgcolor="#FFFFFF" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                           </tr>
@@ -2183,7 +2312,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         <!--END 10 PX SPACER MODULE -->
                        
                         <!--10 PX SPACER MODULE -->
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="TenPxPurpleSpacer" mktoName="White 10 Pixel Spacer">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="TenPxPurpleSpacer" mktoName="White 10 Pixel Spacer" mktoAddByDefault="FALSE">
                           <tr>
                             <td height="10" bgcolor="#4b2e83" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                           </tr>
@@ -2191,7 +2320,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         <!--END 10 PX SPACER MODULE -->
                          
              <!-- SOCIAL MEDIA ICON ROW - PURPLE BACKGROUND -->
-            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="purple-background social-media-footer mktoModule" id="socialMediaFooterP" mktoName="Social Media Footer - Purple" role="presentation">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="purple-background social-media-footer mktoModule" id="socialMediaFooterP" mktoName="Social Media Footer - Purple" role="presentation" mktoAddByDefault="FALSE">
                 <tr>
                     <td align="center" valign="top" class="text" style="background-color: #4b2e83; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 13px; line-height: 1.2; text-align: center; color: #3d3d3d; vertical-align: middle;  padding: 15px 0 5px 0">
                     
@@ -2222,7 +2351,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
                         
 
             <!--ANTI-SPAM FOOTER LINKS - PURPLE BACKGROUND-->
-            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="anti-spam-row-purple purple-background mktoModule" id="footerAntiSpamRowP" mktoName="Anti-Spam Links - Purple" role="presentation">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="anti-spam-row-purple purple-background mktoModule" id="footerAntiSpamRowP" mktoName="Anti-Spam Links - Purple" role="presentation" mktoAddByDefault="FALSE">
                 <tr>
                     <td align="center" valign="top" class="text" style="background-color: #4b2e83; padding: 5px 15px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 9px; line-height: 2.5; text-align: center; text-transform: uppercase; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; color: #ffffff;">
                         <span style="font-family:'Open Sans', arial, helvetica, sans-serif;"><a href="https://subscribe.gifts.washington.edu/SubscriptionManagement/Email?SubscriberToken={{lead.SubscriberToken}}&ProgramID={{program.id}}" class="apple-link-white" style="color: #FFFFFF; text-decoration: none;">${preferenceCenterText}</a></span>
@@ -2236,7 +2365,7 @@ id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a" mktoname="Thumbnai
             <!--END ANTI-SPAM FOOTER LINKS - PURPLE BACKGROUND-->
 
             <!--ANTI-SPAM EMAIL SENT TO & COPYRIGHT - PURPLE BACKGROUND-->
-            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="anti-spam-row-purple purple-background mktoModule" id="copyrightRowP" mktoName="Copyright & Address - Purple" role="presentation">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%" class="anti-spam-row-purple purple-background mktoModule" id="copyrightRowP" mktoName="Copyright & Address - Purple" role="presentation" mktoAddByDefault="FALSE">
                 <tr>
                     <td align="center" valign="top" class="text apple-link-white" style=" background-color: #4b2e83; padding: 0px 15px 15px 15px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 9px; line-height: 1.2; text-align: center; text-transform: none; color: #ffffff; -ms-text-size-adjust: none; -webkit-text-size-adjust: none;">
                     <div class="mktoText" id="copyrightAndAddressP" mktoName="Copyright & Address">&copy; 2018 University of Washington Alumni Association, 4333 Brooklyn Ave. NE, Seattle, WA 98195,&nbsp;<span style="font-family:'Open Sans', arial, helvetica, sans-serif;"><a href="mailto:alumni@uw.edu" target="_blank">alumni@uw.edu</a></span></div>
