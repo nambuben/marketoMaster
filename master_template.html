@@ -102,9 +102,12 @@
 
     <!-- ACR Three Column Lecture Block Variables (ubrw9) -->
 
-    <meta class="mktoString" id="ACRLectureThreeColumnDateTime1" mktoName="Date Left" default="Wed. Oct. 12 • 7:30 p.m. " mktomodulescope="true">
-    <meta class="mktoString" id="ACRLectureThreeColumnDateTime2" mktoName="Date Center" default="Wed. Oct. 12 • 7:30 p.m. " mktomodulescope="true">
-    <meta class="mktoString" id="ACRLectureThreeColumnDateTime3" mktoName="Date Right" default="Wed. Oct. 12 • 7:30 p.m. " mktomodulescope="true">
+    <meta class="mktoString" id="ACRLectureThreeColumnDateTime1" mktoName="Date Left" default="[DATE] • [TIME] • [VENUE]" mktomodulescope="true">
+    <meta class="mktoString" id="ACRLectureThreeColumnDateTime2" mktoName="Date Center" default="[DATE] • [TIME] • [VENUE]" mktomodulescope="true">
+    <meta class="mktoString" id="ACRLectureThreeColumnDateTime3" mktoName="Date Right" default="[DATE] • [TIME] • [VENUE]" mktomodulescope="true">
+    <meta class="mktoString" id="ACRLectureThreeColumnImageLink1" mktoName="Image Link Left" default="https://www.washington.edu/alumni/events/?filter=lecture" mktomodulescope="true">
+    <meta class="mktoString" id="ACRLectureThreeColumnImageLink2" mktoName="Image Link Center" default="https://www.washington.edu/alumni/events/?filter=lecture" mktomodulescope="true">
+    <meta class="mktoString" id="ACRLectureThreeColumnImageLink3" mktoName="Image Link Right" default="https://www.washington.edu/alumni/events/?filter=lecture" mktomodulescope="true">
 
 
     <!-- Sponsor - One Column Variables -->
@@ -1039,7 +1042,7 @@
                                                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                         <tr>
                                                             <td align="center" style="background-color: #ffffff;">
-                                                                <a href="https://www.washington.edu/alumni/events/?filter=lecture">
+                                                                <a href="${ACRLectureThreeColumnImageLink1}">
                                                                     <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg"
                                                                         alt="{alt}" class="mktoImg" id="LecturethreeColImgOne"
                                                                         mktoName="Left Column - Image" mktoLockImgStyle="true"
@@ -1050,14 +1053,14 @@
                                                         </tr>
                                                         <tr>
                                                             <td align="center" class="text item-head" style="color: #000000; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 15.5px; padding: 6px 2px 5px 12px; text-align: left; vertical-align: middle;">
-                                                                <span style="font-size: 12px; font-family: 'Open Sans', arial, sans-serif"> ${ACRLectureThreeColumnDateTime1}</span>
+                                                                <span style="font-size: 12px; font-family: 'Open Sans', arial, helvetica, sans-serif;"> ${ACRLectureThreeColumnDateTime1}</span>
 
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td align="center" class="text item-head" style="color: #000000; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 0 2px 1px 12px; text-align: left; vertical-align: middle;">
                                                                 <div class="mktoText" id="ACRLectureThreeColumnLeftTitle" mktoName="Left Column - Title">
-                                                                    <span style="color: #000000; font-family: 'Open Sans', arial, sans-serif">Lorem and Ipsum:  Replace me</span>
+                                                                    <span style="color: #000000; font-family: 'Open Sans', arial, helvetica, sans-serif;">Lorem and Ipsum:  Replace me</span>
                                                                 </div>
 
                                                             </td>
@@ -1065,8 +1068,8 @@
                                                         <tr>
                                                             <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; padding: 0 2px 5px 12px; text-align: left; vertical-align: middle;">
                                                                 <div class="mktoText" id="ACRLectureThreeColumnLeftCopy" mktoName="Left Column - Copy">
-                                                                    <span style="font-family: 'Open Sans', arial, sans-serif">Lorem ipsum dolor amet next level seitan chia mixtape. <strong>Ethical semiotics</strong>Ethical semiotics poke swag vice food truck YOLO </span>
-                                                                    <a href="https://www.washington.edu/alumni/events/?filter=lecture">
+                                                                    <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">Lorem ipsum dolor amet next level seitan chia mixtape. <strong>Ethical semiotics</strong>Ethical semiotics poke swag vice food truck YOLO </span>
+                                                                    <a href="${ACRLectureThreeColumnImageLink2}">
                                                                         <img src="https://explore.uw.edu/rs/131-AQO-225/images/uwaa_arrow_more.gif"
                                                                             alt="arrow" width="14px" style="display: inline; height:12px; padding:0 7px 0 0px;"
                                                                         />
@@ -1091,7 +1094,7 @@
                                                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                                         <tr>
                                                             <td align="center" style="background-color: #ffffff;">
-                                                                <a href="https://www.washington.edu/alumni/events/?filter=lecture">
+                                                                <a href="${ACRLectureThreeColumnImageLink3}">
                                                                     <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg"
                                                                         alt="{alt}" class="mktoImg" id="LecturethreeColImgTwo"
                                                                         mktoName="Center Column - Image" mktoLockImgStyle="true"
@@ -1102,14 +1105,14 @@
                                                         </tr>
                                                         <tr>
                                                             <td align="center" class="text item-head" style="color: #000000; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 15.5px; padding: 6px 2px 5px 12px; text-align: left; vertical-align: middle;">
-                                                                <span style="font-size: 12px; font-family: 'Open Sans', arial, sans-serif">${ACRLectureThreeColumnDateTime2}</span>
+                                                                <span style="font-size: 12px; font-family: 'Open Sans', arial, helvetica, sans-serif;">${ACRLectureThreeColumnDateTime2}</span>
 
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td align="center" class="text item-head" style="color: #000000; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 0 2px 1px 12px; text-align: left; vertical-align: middle;">
                                                                 <div class="mktoText" id="ACRLectureThreeColumnCenterTitle" mktoName="Center Column - Title">
-                                                                    <span style="color: #000000; font-family: 'Open Sans', arial, sans-serif"> Lorem for things that are ipsum: resiliant</span>
+                                                                    <span style="color: #000000; font-family: 'Open Sans', arial, helvetica, sans-serif;"> Lorem for things that are ipsum: resiliant</span>
                                                                 </div>
 
                                                             </td>
@@ -1117,7 +1120,7 @@
                                                         <tr>
                                                             <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; padding: 0 2px 5px 12px; text-align: left; vertical-align: middle;">
                                                                 <div class="mktoText" id="ACRLectureThreeColumnCenterCopy" mktoName="Center Column - Copy">
-                                                                    <span style="font-family: 'Open Sans', arial, sans-serif">Lorem ipsum dolor amet next level seitan chia mixtape.
+                                                                    <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">Lorem ipsum dolor amet next level seitan chia mixtape.
                                                                         <strong>Ethical semiotics</strong>Ethical semiotics poke swag vice food truck YOLO </span>
                                                                     <a href="https://www.washington.edu/alumni/events/?filter=lecture">
                                                                         <img src="https://explore.uw.edu/rs/131-AQO-225/images/uwaa_arrow_more.gif"
@@ -1154,14 +1157,14 @@
                                                         </tr>
                                                         <tr>
                                                             <td align="center" class="text item-head" style="color: #000000; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 15.5px; padding: 6px 2px 5px 12px; text-align: left; vertical-align: middle;">
-                                                                <span style="font-size: 12px; font-family: 'Open Sans', arial, sans-serif">${ACRLectureThreeColumnDateTime3}</span>
+                                                                <span style="font-size: 12px; font-family: 'Open Sans', arial, helvetica, sans-serif;">${ACRLectureThreeColumnDateTime3}</span>
 
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td align="center" class="text item-head" style="color: #000000; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 0 2px 1px 12px; text-align: left; vertical-align: middle;">
                                                                 <div class="mktoText" id="ACRLectureThreeColumnRightTitle" mktoName="Left Column - Title">
-                                                                    <span style="color: #000000; font-family: 'Open Sans', arial, sans-serif">Contemporary Ipsum to replace</span>
+                                                                    <span style="color: #000000; font-family: 'Open Sans', arial, helvetica, sans-serif;">Contemporary Ipsum to replace</span>
                                                                 </div>
 
                                                             </td>
@@ -1169,7 +1172,7 @@
                                                         <tr>
                                                             <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; padding: 0 2px 5px 12px; text-align: left; vertical-align: middle;">
                                                                 <div class="mktoText" id="ACRLectureThreeColumnRightCopy" mktoName="Left Column - Copy">
-                                                                    <span style="font-family: 'Open Sans', arial, sans-serif">Lorem ipsum dolor amet next level seitan chia mixtape.
+                                                                    <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">Lorem ipsum dolor amet next level seitan chia mixtape.
                                                                         <strong>Ethical semiotics</strong>Ethical semiotics poke swag vice food truck YOLO </span>
                                                                     <a
                                                                         href="https://www.washington.edu/alumni/events/?filter=lecture">
@@ -2714,7 +2717,7 @@
 
                                                 </tr>
                                         </table>
-                                        <!-- ubrw9 - END ACR Two Column Signiture Line -->
+                                        <!-- rdgxt - END ACR Two Column Signiture Line -->
 
                                         <!--CTA BUTTON - WHITE BACKGROUND-->
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="whitebkgCTAButton" mktoName="CTA Button - White"
