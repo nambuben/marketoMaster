@@ -31,8 +31,10 @@
     <!-- l8y8w - Body2 Variables Checkerboard -->
     <!-- kfqpr - ACR Be Languge Block -->
     <!-- rdgxt - ACR Two Column Signiture Line -->
-    <!-- utieo -->
-    <!-- crt1c -->
+    <!-- utieo - Two-Column Right Image-->
+    <!-- crt1c - Two-Column Left Image -->
+    <!-- z1t4g - BlockQuote -->
+
 
     <!-- End ACR Advanced Modules -->
 
@@ -69,7 +71,7 @@
 
 
     <!--ACR Two Column CTA Block (6t8n8) -->
-    <meta class="mktoList" id="twoColumnCTAButtonAreaBackground" mktoName="Background Color - Two Column CTA" values="#FFFFFF,#b7a57a,#4b2e83,"
+    <meta class="mktoList" id="twoColumnCTAButtonAreaBackground" mktoName="Background Color - Two Column CTA" values="#FFFFFF,#b7a57a,#4b2e83,#e8e3d3"
         mktomodulescope="true">
     <meta class="mktoList" id="ACRTwoColumnCTACopyColor" mktoName="Copy Color  Two-Column CTA " values="#3d3d3d,#FFFFFF,#b7a57a,#4b2e83,"
         mktomodulescope="true">
@@ -93,11 +95,11 @@
 
     <!-- 3/4|1/1 SECTION VARIABLES -->
     <!--Body4 Variables-->
-    <meta mktoModuleScope="true" class="mktoNumber" id="checker-left-top-space" mktoName="Top Space" default="35" />
-    <meta mktoModuleScope="true" class="mktoNumber" id="checker-left-bottom-space" mktoName="Bottom Space" default="35" />
+    <meta mktoModuleScope="true" class="mktoNumber" id="checker-left-top-space" mktoName="Top Space" default="10" />
+    <meta mktoModuleScope="true" class="mktoNumber" id="checker-left-bottom-space" mktoName="Bottom Space" default="0" />
     <!--Body5 Variables-->
-    <meta mktoModuleScope="true" class="mktoNumber" id="checker-right-top-space" mktoName="Top Space" default="35" />
-    <meta mktoModuleScope="true" class="mktoNumber" id="checker-right-bottom-space" mktoName="Bottom Space" default="35" />
+    <meta mktoModuleScope="true" class="mktoNumber" id="checker-right-top-space" mktoName="Top Space" default="10" />
+    <meta mktoModuleScope="true" class="mktoNumber" id="checker-right-bottom-space" mktoName="Bottom Space" default="0" />
 
 
     <!-- ACR Three Column Lecture Block Variables (ubrw9) -->
@@ -105,9 +107,12 @@
     <meta class="mktoString" id="ACRLectureThreeColumnDateTime1" mktoName="Date Left" default="[DATE] • [TIME] • [VENUE]" mktomodulescope="true">
     <meta class="mktoString" id="ACRLectureThreeColumnDateTime2" mktoName="Date Center" default="[DATE] • [TIME] • [VENUE]" mktomodulescope="true">
     <meta class="mktoString" id="ACRLectureThreeColumnDateTime3" mktoName="Date Right" default="[DATE] • [TIME] • [VENUE]" mktomodulescope="true">
-    <meta class="mktoString" id="ACRLectureThreeColumnImageLink1" mktoName="Image Link Left" default="https://www.washington.edu/alumni/events/?filter=lecture" mktomodulescope="true">
-    <meta class="mktoString" id="ACRLectureThreeColumnImageLink2" mktoName="Image Link Center" default="https://www.washington.edu/alumni/events/?filter=lecture" mktomodulescope="true">
-    <meta class="mktoString" id="ACRLectureThreeColumnImageLink3" mktoName="Image Link Right" default="https://www.washington.edu/alumni/events/?filter=lecture" mktomodulescope="true">
+    <meta class="mktoString" id="ACRLectureThreeColumnImageLink1" mktoName="Image Link Left" default="https://www.washington.edu/alumni/events/?filter=lecture"
+        mktomodulescope="true">
+    <meta class="mktoString" id="ACRLectureThreeColumnImageLink2" mktoName="Image Link Center" default="https://www.washington.edu/alumni/events/?filter=lecture"
+        mktomodulescope="true">
+    <meta class="mktoString" id="ACRLectureThreeColumnImageLink3" mktoName="Image Link Right" default="https://www.washington.edu/alumni/events/?filter=lecture"
+        mktomodulescope="true">
 
 
     <!-- Sponsor - One Column Variables -->
@@ -180,10 +185,15 @@
     <!--Body8 Variables Checkboard kfqpr -->
     <meta mktoModuleScope="true" class="mktoString" id="Body8-btntext" mktoname="Body8 btn Text " default="Learn" />
     <meta mktoModuleScope="true" class="mktoString" id="Body8btnUrl" mktoName="Body8 btn Url" default="#" />
-    <meta mktoModuleScope="true" class="mktoNumber" id="Body8-top-space" mktoname="Top Space" default="40" step="1" min="0" max="100"
-    />
-    <meta mktoModuleScope="true" class="mktoNumber" id="Body8-bottom-space" mktoname="Bottom Space" default="40" step="1" min="0"
-        max="100" />
+    <meta mktoModuleScope="true" class="mktoNumber" id="Body8-top-space" mktoname="Top Space" default="40" step="1" min="0" max="100"/>
+    <meta mktoModuleScope="true" class="mktoNumber" id="Body8-bottom-space" mktoname="Bottom Space" default="40" step="1" min="0" max="100" />
+
+
+    <!-- z1t4g - BlockQuote -->
+    <meta mktoModuleScope="true" class="mktoNumber" id="body_section6_top_space" mktoname="Top Space" default="25" step="1" min="0" max="60" />
+    <meta mktoModuleScope="true" class="mktoNumber" id="body_section6_btm_space" mktoname="Bottom Space" default="25" step="1" min="0" max="50" />
+    <meta mktoModuleScope="true" class="mktoNumber" id="body_section6_inner_top_space" mktoname="Inner Box Top Space" default="10" step="1" min="0" max="60" />
+    <meta mktoModuleScope="true" class="mktoNumber" id="body_section6_inner_btm_space" mktoname="Inner Box Bottom Space" default="10" step="1" min="0" max="60" />
 
     <!--END OF MARKETO VARIABLES-->
 
@@ -738,8 +748,7 @@
                                                         </div>
                                                     </td>
                                                     <td align="center" valign="top" style="background-color: #6f7376;  width: 100px;">
-                                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/Paul_Rucker_100x100.jpg"
-                                                            width="100" style="color: #ffffff; display: block; vertical-align: middle; width: 100%;"
+                                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/Paul_Rucker_100x100.jpg" width="100" style="color: #ffffff; display: block; vertical-align: middle; width: 100%;"
                                                             class="mktoImg" id="thumbnailForHeadlinebd2d6268-905e-49a5-93b9-0df15213746a"
                                                             mktoname="Thumbnail Image" mktolockimgsize="true" mktolockimgstyle="true"
                                                         /> </td>
@@ -876,8 +885,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: ${acrLineHeight}; padding: 0 10px 3px 10px; text-align: left; vertical-align: middle;">
-                                                                            <div class="mktoText" id="newsTwoColItemParagraph"
-                                                                                mktoName="2 Column Paragraph">
+                                                                            <div class="mktoText" id="newsTwoColItemParagraph" mktoName="2 Column Paragraph">
                                                                                 <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
                                                                                     Venis ea eosae occulpari odit volum. Quiati diorerc hiliquam, sernatquibus sent, que poriorem sustet aut voluptas cium re
                                                                                     nait en dit is doleng at thist ud anta
@@ -1043,8 +1051,7 @@
                                                         <tr>
                                                             <td align="center" style="background-color: #ffffff;">
                                                                 <a href="${ACRLectureThreeColumnImageLink1}">
-                                                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg"
-                                                                        alt="{alt}" class="mktoImg" id="LecturethreeColImgOne"
+                                                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="{alt}" class="mktoImg" id="LecturethreeColImgOne"
                                                                         mktoName="Left Column - Image" mktoLockImgStyle="true"
                                                                         style="display: block; background-color: #ffffff; width: 175px; height: 175px; border: 2px solid #ffffff;"
                                                                     />
@@ -1060,7 +1067,7 @@
                                                         <tr>
                                                             <td align="center" class="text item-head" style="color: #000000; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 0 2px 1px 12px; text-align: left; vertical-align: middle;">
                                                                 <div class="mktoText" id="ACRLectureThreeColumnLeftTitle" mktoName="Left Column - Title">
-                                                                    <span style="color: #000000; font-family: 'Open Sans', arial, helvetica, sans-serif;">Lorem and Ipsum:  Replace me</span>
+                                                                    <span style="color: #000000; font-family: 'Open Sans', arial, helvetica, sans-serif;">Lorem and Ipsum: Replace me</span>
                                                                 </div>
 
                                                             </td>
@@ -1068,15 +1075,16 @@
                                                         <tr>
                                                             <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; padding: 0 2px 5px 12px; text-align: left; vertical-align: middle;">
                                                                 <div class="mktoText" id="ACRLectureThreeColumnLeftCopy" mktoName="Left Column - Copy">
-                                                                    <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">Lorem ipsum dolor amet next level seitan chia mixtape. <strong>Ethical semiotics</strong>Ethical semiotics poke swag vice food truck YOLO </span>
+                                                                    <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">Lorem ipsum dolor amet next level seitan chia mixtape.
+                                                                        <strong>Ethical semiotics</strong>Ethical semiotics poke
+                                                                        swag vice food truck YOLO </span>
                                                                     <a href="${ACRLectureThreeColumnImageLink2}">
-                                                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/uwaa_arrow_more.gif"
-                                                                            alt="arrow" width="14px" style="display: inline; height:12px; padding:0 7px 0 0px;"
+                                                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/uwaa_arrow_more.gif" alt="arrow" width="14px" style="display: inline; height:12px; padding:0 7px 0 0px;"
                                                                         />
                                                                     </a>
                                                                     <br>
                                                                     <span style="color: #b7a57a; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 11px; font-weight: 400;  text-align: left; vertical-align: baseline; text-transform:uppercase;">
-                                                                    Lorem school of things</span>
+                                                                        Lorem school of things</span>
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -1095,8 +1103,7 @@
                                                         <tr>
                                                             <td align="center" style="background-color: #ffffff;">
                                                                 <a href="${ACRLectureThreeColumnImageLink3}">
-                                                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg"
-                                                                        alt="{alt}" class="mktoImg" id="LecturethreeColImgTwo"
+                                                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="{alt}" class="mktoImg" id="LecturethreeColImgTwo"
                                                                         mktoName="Center Column - Image" mktoLockImgStyle="true"
                                                                         style="display: block; background-color: #ffffff; width: 175px; height: 175px; border: 2px solid #ffffff;"
                                                                     />
@@ -1121,15 +1128,15 @@
                                                             <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; padding: 0 2px 5px 12px; text-align: left; vertical-align: middle;">
                                                                 <div class="mktoText" id="ACRLectureThreeColumnCenterCopy" mktoName="Center Column - Copy">
                                                                     <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">Lorem ipsum dolor amet next level seitan chia mixtape.
-                                                                        <strong>Ethical semiotics</strong>Ethical semiotics poke swag vice food truck YOLO </span>
+                                                                        <strong>Ethical semiotics</strong>Ethical semiotics poke
+                                                                        swag vice food truck YOLO </span>
                                                                     <a href="https://www.washington.edu/alumni/events/?filter=lecture">
-                                                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/uwaa_arrow_more.gif"
-                                                                            alt="arrow" width="14px" style="display: inline; height:12px; padding:0 7px 0 0px;"
+                                                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/uwaa_arrow_more.gif" alt="arrow" width="14px" style="display: inline; height:12px; padding:0 7px 0 0px;"
                                                                         />
                                                                     </a>
                                                                     <br>
                                                                     <span style="color: #b7a57a; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 11px; font-weight: 400;  text-align: left; vertical-align: baseline; text-transform:uppercase;">
-                                                                    2016 Lorem LECTURE Ipsum</span>
+                                                                        2016 Lorem LECTURE Ipsum</span>
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -1147,8 +1154,7 @@
                                                         <tr>
                                                             <td align="center" style="background-color: #ffffff;">
                                                                 <a href="https://www.washington.edu/alumni/events/?filter=lecture">
-                                                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg"
-                                                                        alt="{alt}" class="mktoImg" id="LecturethreeColImgThree"
+                                                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="{alt}" class="mktoImg" id="LecturethreeColImgThree"
                                                                         mktoName="Right Column - Image" mktoLockImgStyle="true"
                                                                         style="display: block; background-color: #ffffff; width: 175px; height: 175px; border: 2px solid #ffffff;"
                                                                     />
@@ -1173,15 +1179,14 @@
                                                             <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; padding: 0 2px 5px 12px; text-align: left; vertical-align: middle;">
                                                                 <div class="mktoText" id="ACRLectureThreeColumnRightCopy" mktoName="Left Column - Copy">
                                                                     <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">Lorem ipsum dolor amet next level seitan chia mixtape.
-                                                                        <strong>Ethical semiotics</strong>Ethical semiotics poke swag vice food truck YOLO </span>
-                                                                    <a
-                                                                        href="https://www.washington.edu/alumni/events/?filter=lecture">
-                                                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/uwaa_arrow_more.gif"
-                                                                            alt="arrow" width="14px" style="display: inline; height:12px; padding:0 7px 0 0px;"
+                                                                        <strong>Ethical semiotics</strong>Ethical semiotics poke
+                                                                        swag vice food truck YOLO </span>
+                                                                    <a href="https://www.washington.edu/alumni/events/?filter=lecture">
+                                                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/uwaa_arrow_more.gif" alt="arrow" width="14px" style="display: inline; height:12px; padding:0 7px 0 0px;"
                                                                         />
-                                                                        </a>
-                                                                        <br>
-                                                                        <span style="color: #b7a57a; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 11px; font-weight: 400;  text-align: left; vertical-align: baseline; text-transform:uppercase;">
+                                                                    </a>
+                                                                    <br>
+                                                                    <span style="color: #b7a57a; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 11px; font-weight: 400;  text-align: left; vertical-align: baseline; text-transform:uppercase;">
                                                                         UW FILLERTEXT | 2016 LoremIpsum</span>
                                                                 </div>
                                                             </td>
@@ -1218,7 +1223,8 @@
                                                                 Venis ea eosae occulpari odit volum. Quiati
                                                                 <a href="#ADDLINK">diorerc hiliquam</a>, sernatquibus sent, que poriorem sustet
                                                                 aut voluptas cium re nait en dit is doleng at thist ud anta
-                                                                proa.</span>
+                                                                proa.
+                                                            </span>
                                                         </div>
                                                     </span>
                                                 </td>
@@ -1249,10 +1255,9 @@
                                                             <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">
                                                                 Venis ea eosae occulpari odit volum. Quiati diorerc hiliquam, sernatquibus sent, que poriorem sustet aut voluptas cium re
                                                                 nait en dit is doleng at thist ud anta proa.
-                                                                <a
-                                                                    href="#ADDLINK">
+                                                                <a href="#ADDLINK">
                                                                     <span style="color:#59befd">Click Here</span>
-                                                                    </a>
+                                                                </a>
                                                             </span>
                                                         </div>
                                                     </span>
@@ -1283,11 +1288,10 @@
                                                         <div class="mktoText" id="darkGrayParagraph" mktoName="Paragraph">
                                                             <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">
                                                                 Venis ea eosae occulpari odit volum. Quiati diorerc hiliquam, sernatquibus sent, que poriorem
-                                                                <a
-                                                                    href="#ADDLINK">
+                                                                <a href="#ADDLINK">
                                                                     <span style="color:#59befd">Click Here</span>
-                                                                    </a> sustet aut voluptas cium re nait en dit is doleng at
-                                                                    thist ud anta proa.</span>
+                                                                </a> sustet aut voluptas cium re nait en dit is doleng at thist
+                                                                ud anta proa.</span>
                                                         </div>
                                                     </span>
                                                 </td>
@@ -1331,8 +1335,7 @@
                                                                                     <td class="text column-4-link" style="padding: 5px 10px 0 10px; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; text-align: left;">
                                                                                         <div class="mktoText" id="fourColLinkOne" mktoName="4 Column - Link 1">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <a href="#ADDLINK" class="text"
-                                                                                                    style="color: #0088dd; text-decoration: none;">Atisquis maxime it andwugh</a>
+                                                                                                <a href="#ADDLINK" class="text" style="color: #0088dd; text-decoration: none;">Atisquis maxime it andwugh</a>
                                                                                             </span>
                                                                                         </div>
                                                                                     </td>
@@ -1357,8 +1360,7 @@
                                                                                     <td class="text column-4-link" style="padding: 5px 10px 0 10px; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; text-align: left;">
                                                                                         <div class="mktoText" id="fourColLinkTwo" mktoName="4 Column - Link 2">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <a href="#ADDLINK" class="text"
-                                                                                                    style="color: #0088dd; text-decoration: none;">Atisquis maxime it andwugh</a>
+                                                                                                <a href="#ADDLINK" class="text" style="color: #0088dd; text-decoration: none;">Atisquis maxime it andwugh</a>
                                                                                             </span>
                                                                                         </div>
 
@@ -1397,8 +1399,7 @@
                                                                                     <td class="text column-4-link" style="padding: 5px 10px 0 10px; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; text-align: left;">
                                                                                         <div class="mktoText" id="fourColLink3" mktoName="4 Column - Link 3">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <a href="#ADDLINK" class="text"
-                                                                                                    style="color: #0088dd; text-decoration: none;">Atisquis maxime it andwugh</a>
+                                                                                                <a href="#ADDLINK" class="text" style="color: #0088dd; text-decoration: none;">Atisquis maxime it andwugh</a>
                                                                                             </span>
                                                                                         </div>
                                                                                     </td>
@@ -1423,8 +1424,7 @@
                                                                                     <td class="text column-4-link" style="padding: 5px 10px 0 10px; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 16px; text-align: left;">
                                                                                         <div class="mktoText" id="fourColLinkFour" mktoName="4 Column - Link 4">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <a href="#ADDLINK" class="text"
-                                                                                                    style="color: #0088dd; text-decoration: none;">Atisquis maxime it andwugh</a>
+                                                                                                <a href="#ADDLINK" class="text" style="color: #0088dd; text-decoration: none;">Atisquis maxime it andwugh</a>
                                                                                             </span>
                                                                                         </div>
                                                                                     </td>
@@ -1478,8 +1478,7 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-head" style="color: #3d3d3d;font-family: 'Open Sans', arial, helvetica, sans-serif; font-size:13px; font-weight: 400; line-height: 15.5px; padding: 6px 2px 5px 12px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColItemHeadDateOne"
-                                                                                                    mktoName="4 Column - Date 1">
+                                                                                                <div class="mktoText" id="ACRfourColItemHeadDateOne" mktoName="4 Column - Date 1">
                                                                                                     Date of Event
                                                                                                 </div>
                                                                                             </span>
@@ -1488,8 +1487,7 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-head" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 0 2px 1px 12px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColItemHeadTitleOne"
-                                                                                                    mktoName="4 Column - Title 1">
+                                                                                                <div class="mktoText" id="ACRfourColItemHeadTitleOne" mktoName="4 Column - Title 1">
                                                                                                     Atisquis maxime it andwugh
                                                                                                 </div>
                                                                                             </span>
@@ -1500,12 +1498,10 @@
                                                                                 <tr>
                                                                                     <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.2px; padding: 5px 10px 0px 10px; text-align: left; vertical-align: middle;">
                                                                                         <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                            <div class="mktoText" id="ACRfourColItemCopyOne"
-                                                                                                mktoName="4 Column - Copy 1">
+                                                                                            <div class="mktoText" id="ACRfourColItemCopyOne" mktoName="4 Column - Copy 1">
                                                                                                 Venis ea eosae occulpari odit volum. Tcium re niat en dit is doleng at proa.
                                                                                                 <br>
-                                                                                                <a href="#ADDLINK" class="text"
-                                                                                                    style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
+                                                                                                <a href="#ADDLINK" class="text" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
                                                                                             </div>
                                                                                         </span>
 
@@ -1530,8 +1526,7 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-head" style="color: #3d3d3d;font-family: 'Open Sans', arial, helvetica, sans-serif; font-size:13px; font-weight: 400; line-height: 15.5px; padding: 6px 2px 5px 12px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColItemHeadDateTwo"
-                                                                                                    mktoName="4 Column - Date 2">
+                                                                                                <div class="mktoText" id="ACRfourColItemHeadDateTwo" mktoName="4 Column - Date 2">
                                                                                                     Date of Event
                                                                                                 </div>
                                                                                             </span>
@@ -1540,8 +1535,7 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-head" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 0 2px 1px 12px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColItemHeadTitleTwo"
-                                                                                                    mktoName="4 Column - Title 2">
+                                                                                                <div class="mktoText" id="ACRfourColItemHeadTitleTwo" mktoName="4 Column - Title 2">
                                                                                                     Atisquis maxime it andwugh
                                                                                                 </div>
                                                                                             </span>
@@ -1551,12 +1545,10 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.2px; padding: 5px 10px 0px 10px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColItemCopyTwo"
-                                                                                                    mktoName="4 Column - Copy 2">
+                                                                                                <div class="mktoText" id="ACRfourColItemCopyTwo" mktoName="4 Column - Copy 2">
                                                                                                     Venis ea eosae occulpari odit volum. Tcium re niat en dit is doleng at proa.
                                                                                                     <br>
-                                                                                                    <a href="#ADDLINK" class="text"
-                                                                                                        style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
+                                                                                                    <a href="#ADDLINK" class="text" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
                                                                                                 </div>
                                                                                             </span>
 
@@ -1594,8 +1586,7 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-head" style="color: #3d3d3d;font-family: 'Open Sans', arial, helvetica, sans-serif; font-size:13px; font-weight: 400; line-height: 15.5px; padding: 6px 2px 5px 12px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColItemHeadDateThree"
-                                                                                                    mktoName="4 Column - Date 3">
+                                                                                                <div class="mktoText" id="ACRfourColItemHeadDateThree" mktoName="4 Column - Date 3">
                                                                                                     Date of Event
                                                                                                 </div>
                                                                                             </span>
@@ -1604,8 +1595,7 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-head" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 0 2px 1px 12px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColItemHeadTitleThree"
-                                                                                                    mktoName="4 Column - Title 3">
+                                                                                                <div class="mktoText" id="ACRfourColItemHeadTitleThree" mktoName="4 Column - Title 3">
                                                                                                     Atisquis maxime it andwugh
                                                                                                 </div>
                                                                                             </span>
@@ -1615,12 +1605,10 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.2px; padding: 5px 10px 0px 10px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColItemCopyThree"
-                                                                                                    mktoName="4 Column - Copy 3">
+                                                                                                <div class="mktoText" id="ACRfourColItemCopyThree" mktoName="4 Column - Copy 3">
                                                                                                     Venis ea eosae occulpari odit volum. Tcium re niat en dit is doleng at proa.
                                                                                                     <br>
-                                                                                                    <a href="#ADDLINK" class="text"
-                                                                                                        style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
+                                                                                                    <a href="#ADDLINK" class="text" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
                                                                                                 </div>
                                                                                             </span>
 
@@ -1645,8 +1633,7 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-head" style="color: #3d3d3d;font-family: 'Open Sans', arial, helvetica, sans-serif; font-size:13px; font-weight: 400; line-height: 15.5px; padding: 6px 2px 5px 12px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColItemHeadDateFour"
-                                                                                                    mktoName="4 Column - Date 4">
+                                                                                                <div class="mktoText" id="ACRfourColItemHeadDateFour" mktoName="4 Column - Date 4">
                                                                                                     Date of Event
                                                                                                 </div>
                                                                                             </span>
@@ -1655,8 +1642,7 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-head" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 0 2px 1px 12px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColItemHeadTitleFour"
-                                                                                                    mktoName="4 Column - Title 4">
+                                                                                                <div class="mktoText" id="ACRfourColItemHeadTitleFour" mktoName="4 Column - Title 4">
                                                                                                     Atisquis maxime it andwugh
                                                                                                 </div>
                                                                                             </span>
@@ -1666,12 +1652,10 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.2px; padding: 5px 10px 0px 10px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColItemCopyFour"
-                                                                                                    mktoName="4 Column - Copy 4">
+                                                                                                <div class="mktoText" id="ACRfourColItemCopyFour" mktoName="4 Column - Copy 4">
                                                                                                     Venis ea eosae occulpari odit volum. Tcium re niat en dit is doleng at proa.
                                                                                                     <br>
-                                                                                                    <a href="#ADDLINK" class="text"
-                                                                                                        style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
+                                                                                                    <a href="#ADDLINK" class="text" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
                                                                                                 </div>
                                                                                             </span>
 
@@ -1725,8 +1709,7 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-head" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 6px  2px 1px 12px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColNoDateItemHeadTitleOne"
-                                                                                                    mktoName="4 Column - Title 1">
+                                                                                                <div class="mktoText" id="ACRfourColNoDateItemHeadTitleOne" mktoName="4 Column - Title 1">
                                                                                                     Atisquis maxime it andwugh
                                                                                                 </div>
                                                                                             </span>
@@ -1737,12 +1720,10 @@
                                                                                 <tr>
                                                                                     <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.2px; padding: 5px 10px 0px 10px; text-align: left; vertical-align: middle;">
                                                                                         <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                            <div class="mktoText" id="ACRfourColNoDateItemCopyOne"
-                                                                                                mktoName="4 Column - Copy 1">
+                                                                                            <div class="mktoText" id="ACRfourColNoDateItemCopyOne" mktoName="4 Column - Copy 1">
                                                                                                 Venis ea eosae occulpari odit volum. Tcium re niat en dit is doleng at proa.
                                                                                                 <br>
-                                                                                                <a href="#ADDLINK" class="text"
-                                                                                                    style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
+                                                                                                <a href="#ADDLINK" class="text" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
                                                                                             </div>
                                                                                         </span>
 
@@ -1767,8 +1748,7 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-head" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 6px  2px 1px 12px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColNoDateItemHeadTitleTwo"
-                                                                                                    mktoName="4 Column - Title 2">
+                                                                                                <div class="mktoText" id="ACRfourColNoDateItemHeadTitleTwo" mktoName="4 Column - Title 2">
                                                                                                     Atisquis maxime it andwugh
                                                                                                 </div>
                                                                                             </span>
@@ -1778,13 +1758,11 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.2px; padding: 5px 10px 0px 10px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColNoDateItemCopyTwo"
-                                                                                                    mktoName="4 Column - Copy 2">
+                                                                                                <div class="mktoText" id="ACRfourColNoDateItemCopyTwo" mktoName="4 Column - Copy 2">
 
                                                                                                     Venis ea eosae occulpari odit volum. Tcium re niat en dit is doleng at proa.
                                                                                                     <br>
-                                                                                                    <a href="#ADDLINK" class="text"
-                                                                                                        style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
+                                                                                                    <a href="#ADDLINK" class="text" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
                                                                                                 </div>
                                                                                             </span>
 
@@ -1822,8 +1800,7 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-head" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 6px 2px 1px 12px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColNoDateItemHeadTitleThree"
-                                                                                                    mktoName="4 Column - Title 3">
+                                                                                                <div class="mktoText" id="ACRfourColNoDateItemHeadTitleThree" mktoName="4 Column - Title 3">
                                                                                                     Atisquis maxime it andwugh
                                                                                                 </div>
                                                                                             </span>
@@ -1833,13 +1810,11 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.2px; padding: 5px 10px 0px 10px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColNoDateItemCopyThree"
-                                                                                                    mktoName="4 Column - Copy 3">
+                                                                                                <div class="mktoText" id="ACRfourColNoDateItemCopyThree" mktoName="4 Column - Copy 3">
 
                                                                                                     Venis ea eosae occulpari odit volum. Tcium re niat en dit is doleng at proa.
                                                                                                     <br>
-                                                                                                    <a href="#ADDLINK" class="text"
-                                                                                                        style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
+                                                                                                    <a href="#ADDLINK" class="text" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
                                                                                                 </div>
                                                                                             </span>
 
@@ -1864,8 +1839,7 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-head" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 700; line-height: 16px; padding: 6px  2px 1px 12px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColNoDateItemHeadTitleFour"
-                                                                                                    mktoName="4 Column - Title 4">
+                                                                                                <div class="mktoText" id="ACRfourColNoDateItemHeadTitleFour" mktoName="4 Column - Title 4">
                                                                                                     Atisquis maxime it andwugh
                                                                                                 </div>
                                                                                             </span>
@@ -1875,13 +1849,11 @@
                                                                                     <tr>
                                                                                         <td align="center" class="text item-paragraph more-link" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: 18.2px; padding: 5px 10px 0px 10px; text-align: left; vertical-align: middle;">
                                                                                             <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                                                                <div class="mktoText" id="ACRfourColNoDateItemCopyFour"
-                                                                                                    mktoName="4 Column - Copy 4">
+                                                                                                <div class="mktoText" id="ACRfourColNoDateItemCopyFour" mktoName="4 Column - Copy 4">
 
                                                                                                     Venis ea eosae occulpari odit volum. Tcium re niat en dit is doleng at proa.
                                                                                                     <br>
-                                                                                                    <a href="#ADDLINK" class="text"
-                                                                                                        style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
+                                                                                                    <a href="#ADDLINK" class="text" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.5; text-decoration: none; text-transform: uppercase;">More</a>
                                                                                                 </div>
                                                                                             </span>
 
@@ -2079,8 +2051,7 @@
                                                                 <tr>
                                                                     <!--DATE COLUMN-->
                                                                     <td class="text column-2 stack-column stretch-image" style="width: 20%; background-color: #4b2e83; color: #ffffff; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; line-height: 18.2px; text-align: center; vertical-align:middle; padding: 8px 0px 8px 0px; border-bottom: 1px solid #bcbec0;">
-                                                                        <div class="mktoText" id="regionalThreeQuarterColumnDate"
-                                                                            mktoname="Date - Regional 3/4 Event">
+                                                                        <div class="mktoText" id="regionalThreeQuarterColumnDate" mktoname="Date - Regional 3/4 Event">
                                                                             <strong>1.20.18</strong>
                                                                         </div>
                                                                     </td>
@@ -2106,8 +2077,7 @@
                                                                                                     book, gentrify woke forage
                                                                                                     selvage cray enamel pin
                                                                                                     cornhole occupy.
-                                                                                                    <a href="#mailto:#ADDLINK"
-                                                                                                        target="_self" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.2; text-decoration: none; text-transform: uppercase;">hipster@uw.edu</a>.</span>
+                                                                                                    <a href="#mailto:#ADDLINK" target="_self" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.2; text-decoration: none; text-transform: uppercase;">hipster@uw.edu</a>.</span>
                                                                                             </div>
                                                                                         </div>
                                                                                     </td>
@@ -2152,7 +2122,8 @@
                                                                         Mus es eipcipit atisquis aliassimo maximpe venis ea eosae occulpari odit volum inissum conem latum. Mus es eipcipit atisquis
                                                                         aliassimo maximpe. Tus es eipcipit atisquis aliassimo
                                                                         ea eosae occulpari odit volum inissum conem latum
-                                                                        fugitecus.</div>
+                                                                        fugitecus.
+                                                                    </div>
                                                                 </span>
                                                             </td>
                                                         </tr>
@@ -2203,8 +2174,7 @@
                                                                 <table border="0" cellspacing="0" cellpadding="0" role="presentation">
                                                                     <tr>
                                                                         <td align="center" bgcolor="#${twoColumnCTAButtonColor}" class="text" style="font-size: 16px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 800; height: 40px; max-width: 300px; padding: 0 15px;">
-                                                                            <a href="${twoColumnCTAButtonURL}" target="_blank"
-                                                                                style="color: ${twoColumnCTAButtonAreaBackground}; text-decoration: none; border: 1px solid #${twoColumnCTAButtonColor}; display: inline-block; text-transform: uppercase;">
+                                                                            <a href="${twoColumnCTAButtonURL}" target="_blank" style="color: ${twoColumnCTAButtonAreaBackground}; text-decoration: none; border: 1px solid #${twoColumnCTAButtonColor}; display: inline-block; text-transform: uppercase;">
                                                                                 <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">${twoColumnCTAButtonText}</span>
                                                                             </a>
                                                                         </td>
@@ -2229,7 +2199,7 @@
 
 
                                         <!-- Combined Layout (2 Column- Right/Left Image -->
-                                        <!-- Two Column - Left Image Begins -->
+                                        <!--  (crt1c) Two Column - Left Image Begins -->
                                         <table role="Presentation Section1" class="mktoModule" id="body4" mktoName="2 Column - Left Image" width="100%" align="center"
                                             border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse;"
                                             mktoAddByDefault="FALSE">
@@ -2251,15 +2221,13 @@
                                                             <td class="checkerboard_block2 top-pad" valign="top" width="391" style="width: 397px;">
                                                                 <table role="Presentation Content" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
                                                                     <tr>
-                                                                        <td valign="top" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 15px; font-weight: 400; line-height: 18px; text-align: left; vertical-align: middle;">
+                                                                        <td valign="top" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 15px; padding-bottom: 5px; font-weight: 700; line-height: 18px; text-align: left; vertical-align: middle;">
                                                                             <div class="mktoText" id="body4-heading" mktoName="Heading">
                                                                                 Sample Title
                                                                             </div>
                                                                         </td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                                                    </tr>
+
                                                                     <tr>
                                                                         <td valign="top" style="font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: ${acrLineHeight}; text-align: left; vertical-align: top;">
                                                                             <div class="mktoText" id="body4-text" mktoName="Text">
@@ -2281,7 +2249,9 @@
                                             </tr>
                                         </table>
                                         <!-- Two Column - Left Image Ends -->
-                                        <!-- Two Column - Right Image Begins -->
+
+
+                                        <!-- (utieo) Two Column - Right Image Begins -->
                                         <table role="Presentation Section2" class="mktoModule" id="body5" mktoName="2 Column - Right Image" width="100%" align="center"
                                             border="0" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse;"
                                             mktoAddByDefault="FALSE">
@@ -2296,15 +2266,13 @@
                                                             <td class="checkerboard_block2" valign="top" width="391" style="width: 397px;">
                                                                 <table role="Presentation Section2 Content" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
                                                                     <tr>
-                                                                        <td valign="top" style="color: #815858; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 15px; font-weight: 400; line-height: 18px; text-align: left; vertical-align: middle;">
+                                                                        <td valign="top" style="color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 15px; padding-bottom: 5px; font-weight: 700; line-height: 18px; text-align: left; vertical-align: middle;">
                                                                             <div class="mktoText" id="body5-heading" mktoName="Heading">
                                                                                 Sample Title
                                                                             </div>
                                                                         </td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                                                    </tr>
+
                                                                     <tr>
                                                                         <td valign="top" style="font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 400; line-height: ${acrLineHeight}; text-align: left; vertical-align: top;">
                                                                             <div class="mktoText" id="body5-text" mktoName="Text">
@@ -2752,18 +2720,138 @@
                                                     <div class="mktoText" id="bodyCopyParagraphPurple" mktoName="Body Paragraph">
                                                         <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
                                                             Mus es eipcipit atisquis aliassimo maximpe venis ea eosae occulpari odit volum
-                                                            <a
-                                                                href="#ADDLINK" style="color: #59befd; text-decoration: none;">inissum conem latum fugitecus, si blaboris</a> mo doloratur audition
-                                                                rem labo. Inverum endit est quiati diorerc hiliquam, sernatquibus
-                                                                sent re nait en dit is dolend anta proaser nat quibus sent,
-                                                                que sernatquibus sent, que poriorem sustet aut voluptas mo
-                                                                optatus cium re nait en dit is anta proaporiorem sustet aut
-                                                                voluptas mo optatus cium re nait en dit is dolend anta proa.</span>
+                                                            <a href="#ADDLINK" style="color: #59befd; text-decoration: none;">inissum conem latum fugitecus, si blaboris</a> mo doloratur audition
+                                                            rem labo. Inverum endit est quiati diorerc hiliquam, sernatquibus
+                                                            sent re nait en dit is dolend anta proaser nat quibus sent, que
+                                                            sernatquibus sent, que poriorem sustet aut voluptas mo optatus
+                                                            cium re nait en dit is anta proaporiorem sustet aut voluptas
+                                                            mo optatus cium re nait en dit is dolend anta proa.</span>
                                                     </div>
                                                 </td>
                                             </tr>
                                         </table>
                                         <!--END BODY COPY, FULL-WIDTH, PURPLE BACKGROUND-->
+
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mktoModule" id="chickFilA-Module"
+                                            mktoname="Chick-fil-A Module">
+                                            <tbody>
+                                                <tr>
+                                                    <!-- IMAGE COLUMN -->
+                                                    <td align="center" class="column-2 stack-column image-column" style="width: 50%; background-color: #ffffff; vertical-align:top;">
+                                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/2018_ChickFilA_KickOff_300x150.jpg" alt="Exterior of Mercedes-Benz Stadium in Atlanta with school logos superimposed"
+                                                            width="300" style="display: block; color: #444444;  font-family: 'Open Sans', arial, helvetica, sans-serif; font-weight: 600; font-size: 14px; height: auto; line-height: 18px; text-align: center; text-transform: uppercase; vertical-align: middle; height: auto;"
+                                                            class="mktoImg" id="ACRTwoColumnCTAImagece637884-e78e-4dc9-b05b-d445941d1fd6" mktoname="ACR Two Column CTA Image"
+                                                            mktolockimgsize="true" mktolockimgstyle="true" /> </td>
+                                                    <!-- END IMAGE COLUMN-->
+                                                    <!-- TEXT COLUMN -->
+                                                    <td align="center" valign="top" class="column-2 stack-column" style="background-color: ${twoColumnCTAButtonAreaBackground};">
+                                                        <!--BODY TEXT - TEXT COLUMN-->
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" align="center" class="body-text">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="text body-copy" style="color: ${ACRTwoColumnCTACopyColor}; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 13px; font-weight: 4; line-height: ${acrLineHeight}; text-align: left; padding: 15px 20px 0px 20px; vertical-align: top;">
+                                                                        <div class="mktoText" id="ACRCTAParagraphce637884-e78e-4dc9-b05b-d445941d1fd6" mktoname="ACR Two Column CTA Paragraph">
+                                                                            <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">
+                                                                                <span style="font-size: 16px;">
+                                                                                    <strong>Chick-fil-A Kickoff Game</strong>
+                                                                                </span>
+                                                                                <br />
+                                                                                <strong>
+                                                                                    <span style="font-size: 14px;">Saturday, Sept. 1 | Atlanta, GA</span>
+                                                                                </strong>
+                                                                                <br />Be part of history as one of the most touted teams in Husky history travels to Atlanta
+                                                                                to launch the season against&nbsp;SEC powerhouse&nbsp;
+                                                                                <strong>Auburn.</strong>
+                                                                                <br />
+                                                                                <a href="http://gohuskies.com/gameday/football-vs-auburn/football/119" class="text"
+                                                                                    style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 1.2; text-decoration: none; text-transform: uppercase; bg-color: e8e3d3;"
+                                                                                    target="_blank">join the pack</a>
+                                                                            </span>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <!-- END TEXT COLUMN -->
+
+                                        <!--BlockQuote starts here z1t4g -->
+                                        <table role="BlockQuote" class="mktoModule" id="body_section6" cellpadding="0" cellspacing="0" align="center" border="0"
+                                            width="100%" style="border-collapse: collapse; margin:0 auto;min-width:100%;" mktoname="Quote Block">
+                                            <tr>
+                                                <td bgcolor="#ffffff" style="background-color:#ffffff;">
+                                                    <table role="BlockQuote Inner Container" align="center" style="margin:0 auto;width:500px;" class="inner_table" width="500"
+                                                        cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td height="${body_section6_top_space}" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td bgcolor="#ffffff" style="vertical-align:top;background-color:#ffffff;">
+                                                                <table role="BlockQuote Content" align="center" style="margin:0 auto;width:90%;" class="main" width="90%" cellpadding="0"
+                                                                    cellspacing="0">
+                                                                    <tr>
+                                                                        <td height="${body_section6_inner_top_space}" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="text-align:left;vertical-align:top;">
+                                                                            <div class="mktoImg" id="inverted_left_image" mktoName="Open Quote Image">
+                                                                                <img src="https://explore.uw.edu/rs/131-AQO-225/images/Quote Marks Open.png" alt="Open Quote Image" width="19" />
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="8" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td valign="top" style="vertical-align:top">
+                                                                            <table role="BlockQuote Quote" width="86%" align="center" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;width:86%;">
+                                                                                <tr>
+                                                                                    <td valign="top" style="font-family:'Open Sans', arial, helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:21px;color:#3d3d3d;vertical-align:top;text-align:center;">
+                                                                                        <div class="mktoText" id="body_section6_content" mktoName="Quote Text">
+                                                                                            <h2 style="font-family:'Open Sans', arial, helvetica, sans-serif;font-size:15px;font-weight:bold;line-height:21px;color:#3d3d3d;vertical-align:top;text-align:center;margin:0px;padding:0px;">
+                                                                                            <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">The Secret of change is to focus all of your energy. not an fighting
+                                                                                                the old, but on building the new.</span>
+                                                                                            </h2>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="8" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td valign="top" style="font-family:'Open Sans', arial, helvetica, sans-serif;font-size:18px;font-weight:bold;line-height:24px;color:#4B2E83;font-style:italic;vertical-align:top;text-align:center;">
+                                                                            <div class="mktoText" id="body_section6_sub_content" mktoName="Quote Attribution">
+                                                                                <p style="font-family:'Open Sans', arial, helvetica, sans-serif;font-size:18px;font-weight:bold;line-height:24px;color:#4B2E83;font-style:italic;vertical-align:top;text-align:center;margin:0px;padding:0px;"><span style="font-family:'Open Sans', arial, helvetica, sans-serif;">-Socrates-</span></p>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="8" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="text-align:right;vertical-align:top;">
+                                                                            <div class="mktoImg" id="inverted_right_image" mktoName="Closed Quote Image">
+                                                                                <img src="https://explore.uw.edu/rs/131-AQO-225/images/Quote Marks Close.png" alt="Close Quote Image" width="19" />
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td height="${body_section6_inner_btm_space}" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="${body_section6_btm_space}" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--BlockQuote ends here-->
 
                                         <!--CTA BUTTON - PURPLE BACKGROUND-->
                                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="purplebkgCTAButton" mktoName="CTA Button - Purple"
@@ -2912,13 +3000,11 @@
                                                     </span>
                                                     &nbsp;&nbsp;|&nbsp;&nbsp;
                                                     <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                        <a href="http://www.washington.edu/online/privacy/" class="apple-link-grey"
-                                                            style="color: #3d3d3d; text-decoration: none;">Privacy</a>
+                                                        <a href="http://www.washington.edu/online/privacy/" class="apple-link-grey" style="color: #3d3d3d; text-decoration: none;">Privacy</a>
                                                     </span>
                                                     &nbsp;&nbsp;|&nbsp;&nbsp;
                                                     <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                        <a href="http://www.washington.edu/online/terms/" class="apple-link-grey"
-                                                            style="color: #3d3d3d; text-decoration: none;">Terms</a>
+                                                        <a href="http://www.washington.edu/online/terms/" class="apple-link-grey" style="color: #3d3d3d; text-decoration: none;">Terms</a>
                                                     </span>
                                                 </td>
                                             </tr>
@@ -2933,8 +3019,7 @@
                                                     <div class="mktoText" id="copyrightAndAddress" mktoName="Copyright & Address">
                                                         <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">&copy;2017 University of Washington Alumni Association, 4333 Brooklyn
                                                             Ave. NE, Seattle, WA 98195,&nbsp;
-                                                            <a href="mailto:alumni@uw.edu"
-                                                                target="_blank">alumni@uw.edu</a>
+                                                            <a href="mailto:alumni@uw.edu" target="_blank">alumni@uw.edu</a>
                                                         </span>
                                                     </div>
                                                 </td>
@@ -3030,13 +3115,11 @@
                                                     </span>
                                                     &nbsp;&nbsp;|&nbsp;&nbsp;
                                                     <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                        <a href="http://www.washington.edu/online/privacy/" class="apple-link-white"
-                                                            style="color: #FFFFFF; text-decoration: none;">Privacy</a>
+                                                        <a href="http://www.washington.edu/online/privacy/" class="apple-link-white" style="color: #FFFFFF; text-decoration: none;">Privacy</a>
                                                     </span>
                                                     &nbsp;&nbsp;|&nbsp;&nbsp;
                                                     <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
-                                                        <a href="http://www.washington.edu/online/terms/" class="apple-link-white"
-                                                            style="color: #FFFFFF; text-decoration: none;">Terms</a>
+                                                        <a href="http://www.washington.edu/online/terms/" class="apple-link-white" style="color: #FFFFFF; text-decoration: none;">Terms</a>
                                                     </span>
                                                 </td>
                                             </tr>
