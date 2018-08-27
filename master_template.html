@@ -39,7 +39,13 @@
     <!-- 11f26 - Event w/ Date & CTAs -->
     <!-- lee1z-left -  UW 2 Column Left Image -->
     <!-- lee1z-right - UW 2 Column Right Image -->
+    <!--18avfgj1 -  Photo Gallery -->
+
+
     <!-- End ACR Advanced Modules -->
+
+    
+    
     <!-- ACR Be Languge Block (kfqpr) -->
     <meta class="mktoList" id="beLanguageColor" mktoname="Be Language Color" values="#b7a57a, #4b2e83" />
     <meta class="mktoString" id="beLanguage1" mktoname="Action 1" default="connected" mktomodulescope="true" />
@@ -203,6 +209,14 @@
     <meta mktomodulescope="true" class="mktoString" id="Section3-btntext_uwaa" mktoname="Button Text " default="DOWNLOAD" />
     <meta mktomodulescope="true" class="mktoString" id="Section3btnUrl_uwaa" mktoname="Button Url" default="#" />
     <!-- lee1z-right - UW 2 Column Right Image ends -->
+
+    <!--18avfgj1 -  Photo Gallery -->
+    <meta mktoModuleScope="true" class="mktoNumber" id="ase_body_section9_top_space" mktoname="Top Space" default="30" step="1" min="0"
+        max="60" />
+    <meta mktoModuleScope="true" class="mktoNumber" id="ase_body_section9_btm_space" mktoname="Bottom Space" default="15" step="1"
+        min="0" max="60" />
+
+
     <!--END OF MARKETO VARIABLES-->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -595,6 +609,24 @@
         }
 
         @media only screen and (max-width:550px) {
+
+            /* 18avfgj1 - originally 640px */
+            .res { 
+                width:100% !important;
+                display:block;
+            }
+
+            /* 18avfgj1 - originally 640px */
+            .iphoneSpace {
+                height:25px !important;
+            }
+
+            /* 18avfgj1 - originally 640px */
+            .gallery_center_align {
+                text-align:center !important
+                ;margin:0 auto;
+            }
+
             .image-column img {
                 width: 100% !important;
             }
@@ -3313,8 +3345,72 @@
                                                                 </td>
                                                             </tr>
                                                         </tbody>
+                                                    </table>                                                   
+                                                    <!--(18avfgj1) Photo Gallery starts here-->
+                                                    <table role="Gallery Images Section" class="mktoModule" id="ase_body_section9" cellpadding="0" cellspacing="0" align="center"
+                                                        border="0" width="100%" style="border-collapse: collapse; margin:0 auto;min-width:100%;" mktoname="Image Gallery">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td bgcolor="#ffffff" style="background-color:#ffffff;">
+                                                                    <table role="Gallery Section Inner Container" align="center" style="margin:0 auto;width:560px;" class="checkerboard_inner_table" width="560"
+                                                                        cellpadding="0" cellspacing="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td height="${ase_body_section9_top_space}" style="line-height:1px;font-size:1px;height:${ase_body_section9_top_space}px">&nbsp;</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td valign="top" style="vertical-align:top;">
+                                                                                    <table role="Gallery Images" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td class="res gallery_center_align" valign="top" width="265" style="width:265px;vertical-align:top;line-height:1px;">
+                                                                                                    <div class="mktoImg" id="ase_body_section9_left_image" mktoname="Left Image - 265x380">
+                                                                                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images265x380-px.png" alt="Gallery Image1" width="265"
+                                                                                                            border="0">
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td width="30" class="res iphoneSpace" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                                                                                <td class="res gallery_center_align" valign="top" width="265" style="width:265px;vertical-align:top;">
+                                                                                                    <table role="Gallery Right Images" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+                                                                                                        <tbody>
+                                                                                                            <tr>
+                                                                                                                <td class="gallery_center_align" valign="top" style="vertical-align:top;line-height:1px;">
+                                                                                                                    <div class="mktoImg" id="ase_body_section9_right_image1" mktoname="Top Right Image - 265x180">
+                                                                                                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images265x180-px.png" alt="Gallery Image2" width="265"
+                                                                                                                            border="0">
+                                                                                                                    </div>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                                <td height="20" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                                <td class="gallery_center_align" valign="top" style="vertical-align:top;line-height:1px;">
+                                                                                                                    <div class="mktoImg" id="ase_body_section9_right_image2" mktoname="Bottom Right Image - 265x180">
+                                                                                                                        <img src="https://explore.uw.edu/rs/131-AQO-225/images/Marketo-Template-images265x180-px.png" alt="Gallery Image3" width="265"
+                                                                                                                            border="0">
+                                                                                                                    </div>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </tbody>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td height="${ase_body_section9_btm_space}" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
                                                     </table>
-
+                                                    <!--body section9 ends here-->
+                                                    <!--Photo Gallery ends here-->
                                                                                         <!--10 PX SPACER MODULE -->
                                                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="TenPxWhiteSpacer" mktoName="White 10 Pixel Spacer"
                                                                                             mktoAddByDefault="FALSE">
