@@ -116,19 +116,19 @@
     <meta class="mktoString" id="ACRLectureThreeColumnImageLink3" mktoname="Image Link Right" default="https://www.washington.edu/alumni/events/?filter=lecture"
         mktomodulescope="true" />
     <!-- Sponsor - One Column Variables -->
-    <meta class="mktoBoolean" id="ACRshowSponsorRuleOneColumn" mktoname="Show Rule" default="false" false_value="" true_value="border-top: 1px solid #bcbec0;"
+    <meta class="mktoBoolean" id="ACRshowSponsorRuleOneColumn" mktoname="Show Rule" default="true" false_value="" true_value="border-top: 1px solid #bcbec0;"
         false_value_name="Hide Rule" true_value_name="Show Rule" mktomodulescope="true" />
     <meta class="mktoString" id="ACROneColumnSponsorURL" mktoname="Image Link URL" default="#ADDLINK" mktomodulescope="true"
     />
     <!-- Sponsor - Two Column Variables -->
-    <meta class="mktoBoolean" id="ACRshowSponsorRuleTwoColumns" mktoname="Show Rule" default="false" false_value="" true_value="border-top: 1px solid #bcbec0;"
+    <meta class="mktoBoolean" id="ACRshowSponsorRuleTwoColumns" mktoname="Show Rule" default="true" false_value="" true_value="border-top: 1px solid #bcbec0;"
         false_value_name="Hide Rule" true_value_name="Show Rule" mktomodulescope="true" />
     <meta class="mktoString" id="ACRTwoColumnSponsorLeftURL" mktoname="Left Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true"
     />
     <meta class="mktoString" id="ACRTwoColumnSponsorRightURL" mktoname="Right Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true"
     />
     <!-- Sponsor - Three Column Variables -->
-    <meta class="mktoBoolean" id="ACRshowSponsorRuleThreeColumns" mktoname="Show Rule" default="false" false_value="" true_value="border-top: 1px solid #bcbec0;"
+    <meta class="mktoBoolean" id="ACRshowSponsorRuleThreeColumns" mktoname="Show Rule" default="true" false_value="" true_value="border-top: 1px solid #bcbec0;"
         false_value_name="Hide Rule" true_value_name="Show Rule" mktomodulescope="true" />
     <meta class="mktoString" id="ACRThreeColumnSponsorLeftURL" mktoname="Left Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true"
     />
@@ -137,7 +137,7 @@
     <meta class="mktoString" id="ACRThreeColumnSponsorRightURL" mktoname="Right Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true"
     />
     <!-- Sponsor - Four Column Variables -->
-    <meta class="mktoBoolean" id="ACRshowSponsorRuleFourColumns" mktoname="Show Rule" default="false" false_value="" true_value="border-top: 1px solid #bcbec0;"
+    <meta class="mktoBoolean" id="ACRshowSponsorRuleFourColumns" mktoname="Show Rule" default="true" false_value="" true_value="border-top: 1px solid #bcbec0;"
         false_value_name="Hide Rule" true_value_name="Show Rule" mktomodulescope="true" />
     <meta class="mktoString" id="ACRFourColumnSponsorLeftURL" mktoname="Left Sponsor Image Link URL" default="#ADDLINK" mktomodulescope="true"
     />
@@ -228,6 +228,23 @@
         <meta mktoModuleScope="true" class="mktoString" mktoName="Col-2 Button Text" id="3col_uwcta_col2_text_btn" default="RSVP">
         <meta mktoModuleScope="true" class="mktoString" mktoName="Col-3 Button URL" id="3col_uwcta_col3_URL_btn" default="#">
         <meta mktoModuleScope="true" class="mktoString" mktoName="Col-3 Button Text" id="3col_uwcta_col3_text_btn" default="RSVP">
+
+
+        <!--(fj1px4) Sailgate Product Presentation starts here-->
+        <meta mktomodulescope="true" class="mktoNumber" id="ase_body_section5_top_space" mktoname="Top Space" default="30" step="1" min="0"
+            max="60" />
+        <meta mktomodulescope="true" class="mktoNumber" id="ase_body_section5_btm_space" mktoname="Bottom Space" default="10" step="1"
+            min="0" max="60" />
+        <meta mktomodulescope="true" class="mktoString" id="ase_body_section5_text1" mktoname="Col-1 Button Text" default="CALL ME" />
+        <meta mktomodulescope="true" class="mktoString" id="ase_body_section5_URL1" mktoname="Col-1 Button URL" default="#" />
+        <meta mktomodulescope="true" class="mktoString" id="ase_body_section5_text2" mktoname="Col-2 Button Text" default="LEARN" />
+        <meta mktomodulescope="true" class="mktoString" id="ase_body_section5_URL2" mktoname="Col-2 Button URL" default="#" />
+
+        <meta class="mktoList" id="btnTextColor" mktoname="Button Text Color" values="#ffffff,#4b2e83,#b7a57a,#e8e3d3,#5a5a5a" mktomodulescope="true"
+        />
+        <meta class="mktoList" id="btnColor" mktoname="Button Color" values="#4b2e83,#ffffff,#b7a57a,#e8e3d3" mktomodulescope="true"
+        />
+        <meta class="mktoList" id="ctaArrow" mktoname="Arrow Color" values="purple,tan,gold" mktomodulescope="true" />
 
 
     <!--END OF MARKETO VARIABLES-->
@@ -734,7 +751,7 @@
             .body-copy,
             p {
                 font-size: 14px !important;
-                line-height: 22.4px !important;
+                line-height: 22px !important;
                 text-align: left !important;
             }
             .grey-bar-footer a {
@@ -3369,9 +3386,143 @@
                                                                 </td>
                                                             </tr>
                                                         </tbody>
-                                                    </table>                                                   
+                                                    </table>       
+                                                    
+                                                    <!--(fj1px4)  -->
+                        <table role="Presentation Module" class="mktoModule" id="body_section5"  mktoAddByDefault="FALSE" cellpadding="0" cellspacing="0" align="center" border="0" width="100%" style="border-collapse: collapse; margin:0 auto;min-width:100%;" mktoname="2 Column - Img &amp; CTA"> 
+                        <tbody> 
+                          <tr> 
+                            <td bgcolor="#ffffff" style="background-color:#ffffff;"> 
+                              <table role="Presentation Module Container" align="center" style="margin:0 auto;width:560px;" class="checkerboard_inner_table" width="560" cellpadding="0" cellspacing="0"> 
+                                <tbody> 
+                                  <tr> 
+                                    <td height="${ase_body_section5_top_space}" style="line-height:1px;font-size:1px;">&nbsp; </td> 
+                                  </tr> 
+                                  <!--two column section--> 
+                                  <tr> 
+                                    <td valign="top" style="vertical-align:top;"> 
+                                      <table role="Presentation Main Section" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;"> 
+                                        <tbody> 
+                                          <tr> 
+                                            <!--one column--> 
+                                            <td valign="top" width="265" class="res" style="width:265px;vertical-align:top;"> 
+                                              <table role="Presentation1" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;"> 
+                                                <tbody> 
+                                                  <tr> 
+                                                    <td valign="top" style="vertical-align:top;"> 
+                                                      <div class="mktoImg" id="body_section5_image1" mktoname="Col-1 Image">
+                                                        <img align="absbottom" class="full-width_fa11fjf1" src="https://explore.uw.edu/rs/131-AQO-225/images/rowers-560x380.jpg" alt="Presentation Image1" border="0" width="265" />
+                                                      </div> </td> 
+                                                  </tr> 
+                                                  <tr> 
+                                                    <td bgcolor="#ffffff" style="background-color:#ffffff"> 
+                                                      <div class="mktoText" id="body_section5_content1" mktoname="Col-1 Content">
+                                                        <table role="Presentation1 Content" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0 auto;"> 
+                                                          <tbody> 
+                                                            <tr> 
+                                                              <td height="20" style="line-height:1px;font-size:1px;">&nbsp; </td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                              <td valign="top" style="font-family:'Open Sans', arial,sans-serif,helvetica;font-size:15px;font-weight:bold;line-height:21px;color:#3d3d3d;vertical-align:top;text-align:left;"> Product Presentation</td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                              <td height="8" style="line-height:1px;font-size:1px;">&nbsp; </td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                              <td  class="body-copy" valign="top" style="font-family:'Open Sans',arial,sans-serif,helvetica;font-size:13px;font-weight:normal;line-height:22px;color:#3d3d3d;vertical-align:top;text-align:left;"> The research raises the hope that someday it may be possible to repair retinas damaged by trauma, glaucoma and other eye diseases.</td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                              <td height="20" style="line-height:1px;font-size:1px;">&nbsp; </td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                              <td align="left" valign="top"> 
+                                                                <table role="Presentation1 Button" cellpadding="0" cellspacing="0" border="0" align="left"> 
+                                                                  <tbody> 
+                                                                    <tr> 
+                                                                      <td bgcolor="${btnColor}" style="background-color:${btnColor}; text-align: center; font-size: 14px; font-family:'Open Sans',Arial,Helvetica,sans-serif;text-decoration: none; border-radius:0px;padding:0 20px;font-weight:bold;color:${btnTextColor};line-height: 14px;height: 40px; " valign="middle"> <a aria-label="Presentation Button" style="text-decoration: none; color:${btnTextColor}; outline:none;text-decoration:none;" href="${ase_body_section5_URL1}">${ase_body_section5_text1}</a></td> 
+                                                                      <td  style="display: inline-block; height: 40px;" align="center"> <a href="${whitebkgCTAButtonURL}"> <img src="https://explore.uw.edu/rs/131-AQO-225/images/arrow-${ctaArrow}.png" alt="" aria-hidden="true" /> </a> </td> 
+                                                                    </tr> 
+                                                                  </tbody> 
+                                                                </table> </td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                              <td height="15" style="line-height:1px;font-size:1px;">&nbsp; </td> 
+                                                            </tr> 
+                                                          </tbody> 
+                                                        </table>
+                                                      </div> </td> 
+                                                  </tr> 
+                                                </tbody> 
+                                              </table> </td> 
+                                            <!--one column--> 
+                                            <td class="res phne_height" width="30" style="line-height:1px;font-size:1px;">&nbsp; </td> 
+                                            <!--two column --> 
+                                            <td valign="top" width="265" class="res" style="width:265px;vertical-align:top;"> 
+                                              <table role="Presentation2" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;"> 
+                                                <tbody> 
+                                                  <tr> 
+                                                    <td valign="top" style="vertical-align:top;"> 
+                                                      <div class="mktoImg" id="body_section5_image2" mktoname="Col-2 Image">
+                                                        <img align="absbottom" class="full-width_fa11fjf1" src="https://explore.uw.edu/rs/131-AQO-225/images/rowers-560x380.jpg" alt="Presentation2 Image" border="0" width="265" />
+                                                      </div> </td> 
+                                                  </tr> 
+                                                  <tr> 
+                                                    <td bgcolor="#ffffff" style="background-color:#ffffff"> 
+                                                      <div class="mktoText" id="body_section5_content2" mktoname="Col-2 Content">
+                                                        <table role="Presentation2 Content" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="width:100%;margin:0 auto;"> 
+                                                          <tbody> 
+                                                            <tr> 
+                                                              <td height="20" style="line-height:1px;font-size:1px;">&nbsp; </td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                              <td valign="top" style="font-family:'Open Sans',arial,sans-serif,helvetica;font-size:15px;font-weight:bold;line-height:21px;color:#3d3d3d;vertical-align:top;text-align:left;"> Product Presentation</td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                              <td height="8" style="line-height:1px;font-size:1px;">&nbsp; </td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                              <td  class="body-copy" valign="top" style="font-family:'Open Sans',arial,sans-serif,helvetica;font-size:13px;font-weight:normal;line-height:22px;color:#3d3d3d;vertical-align:top;text-align:left;"> The research raises the hope that someday it may be possible to repair retinas damaged by trauma, glaucoma and other eye diseases. </td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                              <td height="20" style="line-height:1px;font-size:1px;">&nbsp; </td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                              <td align="left" valign="top"> 
+                                                                <table role="Presentation2 Button" cellpadding="0" cellspacing="0" border="0" align="left"> 
+                                                                  <tbody> 
+                                                                    <tr> 
+                                                                      <td bgcolor="${btnColor}" style="background-color:${btnColor}; text-align: center; font-size: 14px; font-family:'Open Sans',Arial,Helvetica,sans-serif;text-decoration: none; border-radius:0px;padding:0 20px;font-weight:bold;color:${btnTextColor};line-height: 14px;height: 40px;" valign="middle"> <a aria-label="Presentation2 Button Link" style="text-decoration: none; 
+																																		color:${btnTextColor}; outline:none;text-decoration:none;" href="${ase_body_section5_URL2}">${ase_body_section5_text2}</a></td> 
+                                                                      <td style="display: inline-block; height: 40px;" align="center"> <a href="${whitebkgCTAButtonURL}"> <img src="https://explore.uw.edu/rs/131-AQO-225/images/arrow-${ctaArrow}.png" alt="" aria-hidden="true" /> </a> </td> 
+                                                                    </tr> 
+                                                                  </tbody> 
+                                                                </table> </td> 
+                                                            </tr> 
+                                                            <tr> 
+                                                              <td height="15" style="line-height:1px;font-size:1px;">&nbsp; </td> 
+                                                            </tr> 
+                                                          </tbody> 
+                                                        </table>
+                                                      </div> </td> 
+                                                  </tr> 
+                                                </tbody> 
+                                              </table> </td> 
+                                            <!--two column --> 
+                                          </tr> 
+                                        </tbody> 
+                                      </table> </td> 
+                                  </tr> 
+                                  <!--two column section ends here--> 
+                                  <tr> 
+                                    <td height="${ase_body_section5_btm_space}" style="line-height:1px;font-size:1px;">&nbsp; </td> 
+                                  </tr> 
+                                </tbody> 
+                              </table> </td> 
+                          </tr> 
+                        </tbody> 
+                      </table>
                                                     <!--(18avfgj1) Photo Gallery starts here-->
-                                                    <table role="Gallery Images Section" class="mktoModule" id="ase_body_section9" cellpadding="0" cellspacing="0" align="center"
+                                                    <table role="Gallery Images Section" class="mktoModule" id="ase_body_section9"  mktoAddByDefault="FALSE" cellpadding="0" cellspacing="0" align="center"
                                                         border="0" width="100%" style="border-collapse: collapse; margin:0 auto;min-width:100%;" mktoname="Image Gallery">
                                                         <tbody>
                                                             <tr>
@@ -3435,7 +3586,7 @@
                                                     </table>                                                    
                                                     <!--Photo Gallery ends here-->
                                                     <!-- (fa11fjf1) Three Column, UW CTA Button starts here-->                                                                                                        
-                                                    <table role="Product Presentation Section" class="mktoModule" id="3col_uwcta" cellpadding="0" cellspacing="0" align="center"
+                                                    <table role="Product Presentation Section" class="mktoModule" id="fa11fjf1"  mktoAddByDefault="FALSE" cellpadding="0" cellspacing="0" align="center"
                                                         border="0" width="100%" style="border-collapse: collapse; margin:0 auto;min-width:100%;" mktoname="3 Column Block">
                                                         <tr>
                                                             <td bgcolor="#efeef4" style="background-color:#efeef4;">
@@ -3454,7 +3605,7 @@
                                                                                         <table role="Product Presentation Column1" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
                                                                                             <tr>
                                                                                                 <td valign="top" style="vertical-align:top;">
-                                                                                                    <div class="mktoImg" id="3col_uwcta_image1" mktoName="Col-1 Image" style="text-align: center;">
+                                                                                                    <div class="mktoImg" id="fa11fjf1_image1" mktoName="Col-1 Image" style="text-align: center;">
                                                                                                         <img align="absbottom" class="full-width_fa11fjf1" src="https://explore.uw.edu/rs/131-AQO-225/images/dubs-and-friends.jpg" alt="Product Presentation Image1"
                                                                                                             border="0" width="166" />
                                                                                                     </div>
@@ -3462,7 +3613,7 @@
                                                                                             </tr>
                                                                                             <tr>
                                                                                                 <td bgcolor="#ffffff" style="background-color:#ffffff">
-                                                                                                    <div class="mktoText" id="3col_uwcta_content1" mktoname="Col-1 Content">
+                                                                                                    <div class="mktoText" id="fa11fjf1_content1" mktoname="Col-1 Content">
                                                                                                         <table role="Product Presentation Column1 Content" width="80%" align="center" cellpadding="0" cellspacing="0" border="0"
                                                                                                             style="width:80%;margin:0 auto;">
                                                                                                             <tr>
@@ -3520,7 +3671,7 @@
                                                                                         <table role="Product Presentation Column2" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
                                                                                             <tr>
                                                                                                 <td valign="top" style="vertical-align:top;">
-                                                                                                    <div class="mktoImg" id="3col_uwcta_image2" mktoName="Col-2 Image" style="text-align: center;">
+                                                                                                    <div class="mktoImg" id="fa11fjf1_image2" mktoName="Col-2 Image" style="text-align: center;">
                                                                                                         <img align="absbottom" class="full-width_fa11fjf1" src="https://explore.uw.edu/rs/131-AQO-225/images/dubs-and-friends.jpg" alt="Product Presentation Image2"
                                                                                                             border="0" width="166" />
                                                                                                     </div>
@@ -3528,7 +3679,7 @@
                                                                                             </tr>
                                                                                             <tr>
                                                                                                 <td bgcolor="#ffffff" style="background-color:#ffffff">
-                                                                                                    <div class="mktoText" id="3col_uwcta_content2" mktoname="Col-2 Content">
+                                                                                                    <div class="mktoText" id="fa11fjf1_content2" mktoname="Col-2 Content">
                                                                                                         <table role="Product Presentation Column2 Content" width="80%" align="center" cellpadding="0" cellspacing="0" border="0"
                                                                                                             style="width:80%;margin:0 auto;">
                                                                                                             <tr>
@@ -3587,7 +3738,7 @@
                                                                                         <table role="Product Presentation Column3" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
                                                                                             <tr>
                                                                                                 <td valign="top" style="vertical-align:top;">
-                                                                                                    <div class="mktoImg" id="3col_uwcta_image3" mktoName="Col-3 Image" style="text-align: center;">
+                                                                                                    <div class="mktoImg" id="fa11fjf1_image3" mktoName="Col-3 Image" style="text-align: center;">
                                                                                                         <img align="absbottom" class="full-width_fa11fjf1" src="https://explore.uw.edu/rs/131-AQO-225/images/dubs-and-friends.jpg" alt="Product Presentation Image3"
                                                                                                             border="0" width="166" />
                                                                                                     </div>
@@ -3595,7 +3746,7 @@
                                                                                             </tr>
                                                                                             <tr>
                                                                                                 <td bgcolor="#ffffff" style="background-color:#ffffff">
-                                                                                                    <div class="mktoText" id="3col_uwcta_content3" mktoname="Col-3 Content">
+                                                                                                    <div class="mktoText" id="fa11fjf1_content3" mktoname="Col-3 Content">
                                                                                                         <table role="Product Presentation Column3 Content" width="80%" align="center" cellpadding="0" cellspacing="0" border="0"
                                                                                                             style="width:80%;margin:0 auto;">
                                                                                                             <tr>
