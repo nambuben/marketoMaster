@@ -1,21 +1,134 @@
-Custom Content should appear below here
+Token Start <br><br>
+
+#set($activeMemberCode = "A")
 
 #if ( !$uWAAMembership_cList.isEmpty() )
 
-#foreach ($member in $uWAAMembership.cList)
-#if( $member.membStatusCode == "A" )
 
-Active Member
+#foreach($member in $uWAAMembership_cList)
+
+
+
+#if( $member.membStatusCode.equals($activeMemberCode) )
+
+#set( $dateOptions = {  
+  "formats" : {  
+    "userin" : "yyyy-MM-dd",  
+    "userout" : "MM/d/yy"  
+  },  
+  "timezones" : {  
+    "userin" : "America/Los_Angeles",  
+    "userout" : "America/Los_Angeles"  
+  },  
+  "locale" : $date.getLocale()  
+} )  
+#set( $expirationDatelike = $member.membNextRenewalDate )  
+#set( $expirationDate = $convert.parseDate(  
+  $expirationDatelike,  
+  $dateOptions.formats.userin,  
+  $dateOptions.locale,  
+  $date.getTimeZone().getTimeZone($dateOptions.timezones.userin)  
+) )  
+#set( $formattedCardRenewalDatemember = $date.format(  
+  $dateOptions.formats.userout,  
+  $expirationDate,  
+  $dateOptions.locale,  
+  $date.getTimeZone().getTimeZone($dateOptions.timezones.userout)  
+) )  
+ 
+
+    <table role="Membership Module" width="100%" cellpadding="0" cellspacing="0" style="width:100%;" class="deviceWidth_11f26 mktoModule" mktoname="Membership Information" id="membershipModule"> 
+                              <tbody> 
+                                <tr> 
+                                  <td bgcolor="#efeef4"> 
+                                    <table width="100%" role="Inner Container" style="width: 100%; margin: 0 auto; border-collapse: collapse;" align="center" cellpadding="0" cellspacing="0"> 
+                                      <tbody> 
+                                        <tr> 
+                                          <td class="member-card block_11f26 center_11f26 padding_bottom_lee1z full-width_fa11fjf1" width="300" height="188" valign="top" style="background-image: url(${member-card});background-repeat:no-repeat;background-position: center;color: #000000;font-family: 'Open Sans', Arial, sans-serif;font-size: 16px;line-height: 20px;"> 
+                                            <!--[if gte mso 9]>
+                                            <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:300px;height:188px;">
+                                              <v:fill type="tile" src="https://explore.uw.edu/rs/131-AQO-225/images/uwaa-card-empty.jpg" color="#efefef" />
+                                              <v:textbox inset="0,0,0,0">
+                                            <![endif]--> 
+                                            <table align="bottom" width="100%" cellpadding="0" cellspacing="0" style="width:100%;"> 
+                                              <tbody> 
+                                                <tr> 
+                                                  <td class="" style="color: #ffffff;text-align:right; font-size: 11px; text-transform:uppercase;padding:15px 10px 0 0;font-family: 'Open Sans', Arial, sans-serif;">[[Member.type]]</td> 
+                                                </tr> 
+                                                <tr> 
+                                                  <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="85">&nbsp;</td> 
+                                                </tr> 
+                                                <tr> 
+                                                  <td style="padding-left:10px;text-align: left;"> 
+                                                    <div class="mktoText" id="memberNumber" mktoname="Member Number">
+                                                      <span style="font-size: 12px;font-family: 'Open Sans', Arial, sans-serif;">${lead.advanceID}</span>
+                                                    </div> </td> 
+                                                </tr> 
+                                                <tr> 
+                                                  <td style="padding-left:10px;text-align: left;font-family: 'Open Sans', Arial, sans-serif;font-weight: bold;"> 
+                                                    <div class="mktoText" id="memberName" mktoname="Member Name">
+                                                      ${lead.FirstName} ${lead.LastName}
+                                                    </div> </td> 
+                                                </tr> 
+                                                <tr> 
+                                                  <td style="padding-left:10px;text-align: left;font-family: 'Open Sans', Arial, sans-serif;"> 
+                                                    <div class="mktoText" id="memberRenew" mktoname="Member Renew Date">
+                                                      <span style="font-size: 11px;">$formattedCardRenewalDatemember</span>
+                                                    </div> </td> 
+                                                </tr> 
+                                                <tr> 
+                                                  <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="5">&nbsp;</td> 
+                                                </tr> 
+                                              </tbody> 
+                                            </table> 
+                                            <!--[if gte mso 9]>
+                                            </v:textbox>
+                                          </v:rect>
+                                          <![endif]--> </td> 
+                                          <td valign="top" class="block_11f26" style="background-color: #efeef4;padding: 0px 10px 0px 22px;"> 
+                                            <table role="Event Agenda Tab1 Right Content" style="width: 100%; border-collapse: collapse;margin:0 auto;" border="0" cellpadding="0" cellspacing="0" width="100%" align="center"> 
+                                              <tbody> 
+                                                <tr> 
+                                                  <td style="line-height: 1px; font-size: 1px;" height="15">&nbsp;</td> 
+                                                </tr> 
+                                                <tr> 
+                                                  <td valign="top" style="font-family:'Open Sans',arial,sans-serif,helvetica;font-size:15px;font-weight:bold;mso-line-height: exactly;line-height:19px;color:#3d3d3d;vertical-align:top;text-align:left;"> </td> 
+                                                </tr> 
+                                                <tr> 
+                                                  <td valign="top" style="font-family:'Open Sans',arial,sans-serif,helvetica;font-size:13px;font-weight:normal;mso-line-height: exactly;line-height:${acrLineHeight};color:#3d3d3d;vertical-align:top;text-align:left;"> 
+                                                    <div class="mktoText" id="body2-para" mktoname="Paragraph">
+                                                      <p style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 14px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left; margin: 0px; padding: 0px;"><span face="Open Sans, arial, helvetica, sans-serif" style="font-family: 'Open Sans', arial, helvetica, sans-serif;"> <strong>${lead.FirstName}, thank you for being a UWAA member!</strong><br /><br />Your membership is up for renewal on </span></p> 
+                                                      <p style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 13px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left; margin: 0px; padding: 0px;"><span face="Open Sans, arial, helvetica, sans-serif" style="font-family: 'Open Sans', arial, helvetica, sans-serif;">{{my.renewalEndOfMonth}}<br /><br />[[renewal.response]]</span></p>
+                                                    </div> </td> 
+                                                </tr> 
+                                                <!-- Extra space --> 
+                                                <tr> 
+                                                  <td style="line-height: 1px; font-size: 1px;" height="15">&nbsp;</td> 
+                                                </tr> 
+                                                <tr> 
+                                                  <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="10">&nbsp;</td> 
+                                                </tr> 
+                                              </tbody> 
+                                            </table> </td> 
+                                        </tr> 
+                                      </tbody> 
+                                    </table> </td> 
+                                </tr> 
+                              </tbody> 
+                            </table>
 
 #else 
 
-Not Active Member
+Not Active Member<br><br>
 
 ##ifMember
 #end
 
-##foreach
+##close the loop
 #end
 
-##ifHasModule
+
+#else
+No Member Object found<br><br>
+
 #end
