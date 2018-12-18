@@ -1,5 +1,3 @@
-Token Start <br><br>
-
 #set($activeMemberCode = "A")
 
 #if ( !$uWAAMembership_cList.isEmpty() )
@@ -11,7 +9,8 @@ Token Start <br><br>
 
 #if( $member.membStatusCode.equals($activeMemberCode) )
 
-#set( $dateOptions = {  
+## Formats our date object in order to display on the card.
+#set( $cardDateOptions = {  
   "formats" : {  
     "userin" : "yyyy-MM-dd",  
     "userout" : "MM/d/yy"  
@@ -25,17 +24,65 @@ Token Start <br><br>
 #set( $expirationDatelike = $member.membNextRenewalDate )  
 #set( $expirationDate = $convert.parseDate(  
   $expirationDatelike,  
-  $dateOptions.formats.userin,  
-  $dateOptions.locale,  
-  $date.getTimeZone().getTimeZone($dateOptions.timezones.userin)  
+  $cardDateOptions.formats.userin,  
+  $cardDateOptions.locale,  
+  $date.getTimeZone().getTimeZone($cardDateOptions.timezones.userin)  
 ) )  
 #set( $formattedCardRenewalDatemember = $date.format(  
-  $dateOptions.formats.userout,  
+  $cardDateOptions.formats.userout,  
   $expirationDate,  
-  $dateOptions.locale,  
-  $date.getTimeZone().getTimeZone($dateOptions.timezones.userout)  
+  $cardDateOptions.locale,  
+  $date.getTimeZone().getTimeZone($cardDateOptions.timezones.userout)  
+) )  
+
+
+
+## Formats our date object in order to display in the text on the right.
+#set( $paragraphDateOptions = {  
+  "formats" : {  
+    "userin" : "yyyy-MM-dd",  
+    "userout" : "MMMM dd, yyyy"  
+  },  
+  "timezones" : {  
+    "userin" : "America/Los_Angeles",  
+    "userout" : "America/Los_Angeles"  
+  },  
+  "locale" : $date.getLocale()  
+} )  
+#set( $expirationDatelike = $member.membNextRenewalDate )  
+#set( $expirationDate = $convert.parseDate(  
+  $expirationDatelike,  
+  $paragraphDateOptions.formats.userin,  
+  $paragraphDateOptions.locale,  
+  $date.getTimeZone().getTimeZone($paragraphDateOptions.timezones.userin)  
+) )  
+#set( $formattedParagraphRenewalDatemember = $date.format(  
+  $paragraphDateOptions.formats.userout,  
+  $expirationDate,  
+  $paragraphDateOptions.locale,  
+  $date.getTimeZone().getTimeZone($paragraphDateOptions.timezones.userout)  
 ) )  
  
+
+##Does the Life/Annual Check - setting background for the card, and determining which text should appear
+#set($membershipType = $member.membTypeCode)
+
+#if( $membershipType.contains("A"))
+
+#set($cardBackgroundURL = "http://fpoimg.com/600x400?text=AnnualMember")
+#elseif( $membershipType.contains("I"))
+
+#set($cardBackgroundURL = "http://fpoimg.com/600x400?text=LifeMember")
+
+
+#elseif( $membershipType.contains("L"))
+
+#set($cardBackgroundURL = "http://fpoimg.com/600x400?text=LifeMember")
+#else
+Error - did not catch anything
+#end
+
+
 
     <table role="Membership Module" width="100%" cellpadding="0" cellspacing="0" style="width:100%;" class="deviceWidth_11f26 mktoModule" mktoname="Membership Information" id="membershipModule"> 
                               <tbody> 
@@ -44,10 +91,10 @@ Token Start <br><br>
                                     <table width="100%" role="Inner Container" style="width: 100%; margin: 0 auto; border-collapse: collapse;" align="center" cellpadding="0" cellspacing="0"> 
                                       <tbody> 
                                         <tr> 
-                                          <td class="member-card block_11f26 center_11f26 padding_bottom_lee1z full-width_fa11fjf1" width="300" height="188" valign="top" style="background-image: url(${member-card});background-repeat:no-repeat;background-position: center;color: #000000;font-family: 'Open Sans', Arial, sans-serif;font-size: 16px;line-height: 20px;"> 
+                                          <td class="member-card block_11f26 center_11f26 padding_bottom_lee1z full-width_fa11fjf1" width="300" height="188" valign="top" style="background-image: url(${cardBackgroundURL});background-repeat:no-repeat;background-position: center;color: #000000;font-family: 'Open Sans', Arial, sans-serif;font-size: 16px;line-height: 20px;"> 
                                             <!--[if gte mso 9]>
                                             <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:300px;height:188px;">
-                                              <v:fill type="tile" src="https://explore.uw.edu/rs/131-AQO-225/images/uwaa-card-empty.jpg" color="#efefef" />
+                                              <v:fill type="tile" src="${cardBackgroundURL}" color="#efefef" />
                                               <v:textbox inset="0,0,0,0">
                                             <![endif]--> 
                                             <table align="bottom" width="100%" cellpadding="0" cellspacing="0" style="width:100%;"> 
@@ -69,13 +116,15 @@ Token Start <br><br>
                                                     <div class="mktoText" id="memberName" mktoname="Member Name">
                                                       ${lead.FirstName} ${lead.LastName}
                                                     </div> </td> 
-                                                </tr> 
+                                                </tr>
+#if( $membershipType.contains("A"))                 
                                                 <tr> 
                                                   <td style="padding-left:10px;text-align: left;font-family: 'Open Sans', Arial, sans-serif;"> 
                                                     <div class="mktoText" id="memberRenew" mktoname="Member Renew Date">
-                                                      <span style="font-size: 11px;">$formattedCardRenewalDatemember</span>
+                                                      <span style="font-size: 11px;">Renew by ${formattedCardRenewalDatemember}</span>
                                                     </div> </td> 
                                                 </tr> 
+#end
                                                 <tr> 
                                                   <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="5">&nbsp;</td> 
                                                 </tr> 
@@ -94,13 +143,23 @@ Token Start <br><br>
                                                 <tr> 
                                                   <td valign="top" style="font-family:'Open Sans',arial,sans-serif,helvetica;font-size:15px;font-weight:bold;mso-line-height: exactly;line-height:19px;color:#3d3d3d;vertical-align:top;text-align:left;"> </td> 
                                                 </tr> 
+#if( $membershipType.contains("A"))                                                  
                                                 <tr> 
                                                   <td valign="top" style="font-family:'Open Sans',arial,sans-serif,helvetica;font-size:13px;font-weight:normal;mso-line-height: exactly;line-height:${acrLineHeight};color:#3d3d3d;vertical-align:top;text-align:left;"> 
                                                     <div class="mktoText" id="body2-para" mktoname="Paragraph">
                                                       <p style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 14px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left; margin: 0px; padding: 0px;"><span face="Open Sans, arial, helvetica, sans-serif" style="font-family: 'Open Sans', arial, helvetica, sans-serif;"> <strong>${lead.FirstName}, thank you for being a UWAA member!</strong><br /><br />Your membership is up for renewal on </span></p> 
-                                                      <p style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 13px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left; margin: 0px; padding: 0px;"><span face="Open Sans, arial, helvetica, sans-serif" style="font-family: 'Open Sans', arial, helvetica, sans-serif;">{{my.renewalEndOfMonth}}<br /><br />[[renewal.response]]</span></p>
+                                                      <p style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 13px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left; margin: 0px; padding: 0px;"><span face="Open Sans, arial, helvetica, sans-serif" style="font-family: 'Open Sans', arial, helvetica, sans-serif;">${formattedParagraphRenewalDatemember}<br /><br />[[renewal.response]]</span></p>
                                                     </div> </td> 
                                                 </tr> 
+#else        
+<tr> 
+                                                  <td valign="top" style="font-family:'Open Sans',arial,sans-serif,helvetica;font-size:13px;font-weight:normal;mso-line-height: exactly;line-height:${acrLineHeight};color:#3d3d3d;vertical-align:top;text-align:left;"> 
+                                                    <div class="mktoText" id="body2-para" mktoname="Paragraph">
+                                                      <p style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 14px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left; margin: 0px; padding: 0px;"><span face="Open Sans, arial, helvetica, sans-serif" style="font-family: 'Open Sans', arial, helvetica, sans-serif;"> <strong>${lead.FirstName}, thank you for being a UWAA Lifetime member!</strong></span></p> 
+                                                      
+                                                    </div> </td> 
+                                                </tr> 
+#end                                        
                                                 <!-- Extra space --> 
                                                 <tr> 
                                                   <td style="line-height: 1px; font-size: 1px;" height="15">&nbsp;</td> 
