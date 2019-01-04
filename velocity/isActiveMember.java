@@ -69,15 +69,15 @@
 
 #if( $membershipType.contains("A"))
 
-#set($cardBackgroundURL = "http://fpoimg.com/600x400?text=AnnualMember")
+#set($cardBackgroundURL = "https://explore.uw.edu/rs/131-AQO-225/images/2019_MemberCard_Annual_600x310.jpg")
 #elseif( $membershipType.contains("I"))
 
-#set($cardBackgroundURL = "http://fpoimg.com/600x400?text=LifeMember")
+#set($cardBackgroundURL = "https://explore.uw.edu/rs/131-AQO-225/images/2019_MemberCard_Life_600x310.jpg")
 
 
 #elseif( $membershipType.contains("L"))
 
-#set($cardBackgroundURL = "http://fpoimg.com/600x400?text=LifeMember")
+#set($cardBackgroundURL = "https://explore.uw.edu/rs/131-AQO-225/images/2019_MemberCard_Life_600x310.jpg")
 #else
 Error - did not catch anything
 #end
@@ -91,7 +91,7 @@ Error - did not catch anything
                                     <table width="100%" role="Inner Container" style="width: 100%; margin: 0 auto; border-collapse: collapse;" align="center" cellpadding="0" cellspacing="0"> 
                                       <tbody> 
                                         <tr> 
-                                          <td class="member-card block_11f26 center_11f26 padding_bottom_lee1z full-width_fa11fjf1" width="300" height="188" valign="top" style="background-image: url(${cardBackgroundURL});background-repeat:no-repeat;background-position: center;color: #000000;font-family: 'Open Sans', Arial, sans-serif;font-size: 16px;line-height: 20px;"> 
+                                          <td class="member-card block_11f26 center_11f26 padding_bottom_lee1z full-width_fa11fjf1" width="300" height="188" valign="top" style="background-image: url(${cardBackgroundURL});background-repeat:no-repeat;background-position: center;background-size:cover;color: #000000;font-family: 'Open Sans', Arial, sans-serif;font-size: 16px;line-height: 20px;min-height:205px;"> 
                                             <!--[if gte mso 9]>
                                             <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:300px;height:188px;">
                                               <v:fill type="tile" src="${cardBackgroundURL}" color="#efefef" />
@@ -100,7 +100,7 @@ Error - did not catch anything
                                             <table align="bottom" width="100%" cellpadding="0" cellspacing="0" style="width:100%;"> 
                                               <tbody> 
                                                 <tr> 
-                                                  <td class="" style="color: #ffffff;text-align:right; font-size: 11px; text-transform:uppercase;padding:15px 10px 0 0;font-family: 'Open Sans', Arial, sans-serif;">[[Member.type]]</td> 
+                                                  <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="35">&nbsp;</td> 
                                                 </tr> 
                                                 <tr> 
                                                   <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="85">&nbsp;</td> 
