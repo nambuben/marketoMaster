@@ -45,7 +45,6 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
     <!-- End ACR Advanced Modules -->
     
     
-    
     <!-- ACR Be Languge Block (kfqpr) -->
     <meta class="mktoList" id="beLanguageColor" mktoname="Be Language Color" values="#b7a57a, #4b2e83" />
     <meta class="mktoString" id="beLanguage1" mktoname="Action 1" default="connected" mktomodulescope="true" />
@@ -251,6 +250,8 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet" type="text/css" />
     <!--[if gte mso 9]>
         <xml>
@@ -274,19 +275,13 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                     font-family:'Open Sans', Arial, sans-serif !important;
                 }
             </style>
-            <![endif]-->
-            <style>
-                /*import open sans from google fonts */
-                
-                @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic);
-            </style>
+            <![endif]-->            
             <style>
                 #outlook a {
                     padding: 0;
                 }
                 
-                /* Force Outlook to provide a"view in browser" message */
-                
+                                
                 .ReadMsgBody {
                     width: 100%;
                 }
@@ -295,8 +290,7 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                     width: 100%;
                 }
                 
-                /* Force Hotmail to display emails at full width */
-                
+                                
                 .ExternalClass,
                 .ExternalClass p,
                 .ExternalClass span,
@@ -306,8 +300,52 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                     line-height: 100%;
                 }
                 
-                /* Force Hotmail to display normal line spacing */
+                                
+                body,
+                table,
+                td,
+                p,
+                a,
+                li,
+                blockquote {
+                    -webkit-text-size-adjust: 100%;
+                    -ms-text-size-adjust: 100%;
+                    mso-line-height-rule: exactly;
+                }
                 
+                                
+                table,
+                td {
+                    mso-table-lspace: 0pt;
+                    mso-table-rspace: 0pt;
+                }
+                
+                                
+                img {
+                    -ms-interpolation-mode: bicubic;
+                }
+                
+                                
+                                
+                .ReadMsgBody {
+                    width: 100%;
+                }
+                
+                .ExternalClass {
+                    width: 100%;
+                }
+                
+                                
+                .ExternalClass,
+                .ExternalClass p,
+                .ExternalClass span,
+                .ExternalClass font,
+                .ExternalClass td,
+                .ExternalClass div {
+                    line-height: 100%;
+                }
+                
+                                
                 body,
                 table,
                 td,
@@ -319,74 +357,27 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                     -ms-text-size-adjust: 100%;
                 }
                 
-                /* Prevent WebKit and Windows mobile changing default text sizes */
-                
+                                
                 table,
                 td {
                     mso-table-lspace: 0pt;
                     mso-table-rspace: 0pt;
                 }
                 
-                /* Remove spacing between tables in Outlook 2007 and up */
-                
+                                
                 img {
                     -ms-interpolation-mode: bicubic;
                 }
                 
-                /* Allow smoother rendering of resized image in Internet Explorer */
                 
-                /* Force Outlook to provide a"view in browser" message */
-                
-                .ReadMsgBody {
-                    width: 100%;
+                @-ms-viewport {
+                    width: device-width;
                 }
+
+                </style>
+                <style>
                 
-                .ExternalClass {
-                    width: 100%;
-                }
-                
-                /* Force Hotmail to display emails at full width */
-                
-                .ExternalClass,
-                .ExternalClass p,
-                .ExternalClass span,
-                .ExternalClass font,
-                .ExternalClass td,
-                .ExternalClass div {
-                    line-height: 100%;
-                }
-                
-                /* Force Hotmail to display normal line spacing */
-                
-                body,
-                table,
-                td,
-                p,
-                a,
-                li,
-                blockquote {
-                    -webkit-text-size-adjust: 100%;
-                    -ms-text-size-adjust: 100%;
-                }
-                
-                /* Prevent WebKit and Windows mobile changing default text sizes */
-                
-                table,
-                td {
-                    mso-table-lspace: 0pt;
-                    mso-table-rspace: 0pt;
-                }
-                
-                /* Remove spacing between tables in Outlook 2007 and up */
-                
-                img {
-                    -ms-interpolation-mode: bicubic;
-                }
-                
-                /* Allow smoother rendering of resized image in Internet Explorer */
-                
-                /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
-                
+                                
                 body {
                     margin: 0;
                     padding: 0;
@@ -413,22 +404,19 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                     width: 100% !important;
                 }
                 
-                @-ms-viewport {
-                    width: device-width;
-                }
-                
-                /* /\/\/\/\/\/\/ TEMPLATE STYLES /\/\/\/\/\/\/ */
-                
+                </style>
+                <style>
+                                
                 html,
                 body {
                     margin: 0;
                     padding: 0;
-                    min-width: 100%;
-                    mso-line-height-rule: exactly;
+                    min-width: 100%;                    
                 }
                 
-                /* /\/\/\/\/\/\/ TYPOGRAPHIC STYLES /\/\/\/\/\/\/ */
-                
+                </style>
+                <style>
+                                
                 h1 {
                     color: #ffffff;
                     font-family: 'Open Sans', arial, helvetica, sans-serif;
@@ -461,28 +449,25 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                     color: #0088dd;
                     text-decoration: none;
                     cursor: pointer;
-                }
+                }               
                 
-                a:hover,
-                a:focus {
-                    color: #85754d;
-                    border-bottom: 1px solid #BDBDBD;
-                }
                 
-                /* Forces link color to be white, instead of Apple's default blue */
-                
+                                
                 .apple-link-white {
                     color: #ffffff !important;
                 }
                 
-                /* Forces link color to be grey, instead of Apple's default blue */
-                
+                                
                 .apple-link-grey {
                     color: #3d3d3d !important;
                 }
-                
-                /* /\/\/\/\/\/\/ TABLE ELEMENTS /\/\/\/\/\/\/ */
-                
+
+                .member-card-text-life {
+                    color: #FFFFFF !important;
+                }
+                </style>
+                <style>
+                                
                 .column-2 {
                     width: 50%;
                 }
@@ -507,8 +492,7 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                     font-size: 14px;
                     line-height: 1.2;
                     text-transform: uppercase;
-                    color: #ffffff;
-                    vertical-align: middle;
+                    color: #ffffff;                    
                     letter-spacing: 1px;
                     border: none;
                 }
@@ -586,9 +570,9 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                     color: #ffffff !important;
                     text-decoration: none !important;
                 }
-                
-                /* /\/\/\/\/\/\/ TABLE STYLISTIC ELEMENTS /\/\/\/\/\/\/ */
-                
+                </style>
+                <style>
+                                
                 .white-background td {
                     background-color: #ffffff;
                 }
@@ -613,58 +597,53 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                     background-color: #8d9194;
                 }
             </style>
+
+
+            <style>
+                @media only screen and (max-width: 480px) {
+                body,
+                table,
+                td,
+                p,
+                a,
+                li,
+                blockquote {
+                    -webkit-text-size-adjust: none !important;
+                }
+                }
+                </style>
             <style>
                 
-                /* /\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/ */
-                
-                @media only screen and (max-width: 480px) {
-                    /* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBILE STYLES /\/\/\/\/\/\/ */
-                    body,
-                    table,
-                    td,
-                    p,
-                    a,
-                    li,
-                    blockquote {
-                        -webkit-text-size-adjust: none !important;
-                    }
-                    /* Prevent Webkit platforms from changing default text sizes */
-                    body {
+                                
+                                        body {
                         width: 100% !important;
                         min-width: 100% !important;
                     }
-                    /* Prevent iOS Mail from adding padding to the body */
-                    /* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */
-                    #bodyCell {
+                                                            #bodyCell {
                         padding: 10px !important;
                     }
-                }
-                
+                </style>
+                <style>
                 @media only screen and (max-width:550px) {
                     
-                    /* 18avfgj1 - originally 640px */
                     .res { 
                         width:100% !important;
                         display:block;
                     }
                     
-                    /* 18avfgj1 - originally 640px */
                     .iphoneSpace {
                         height:25px !important;
                     }
                     
-                    /* 18avfgj1 - originally 640px */
                     .gallery_center_align {
                         text-align:center !important;
                         margin:0 auto;
                     }
                     
-                    /* fa11fjf1 - originally 640px */
                     .phne_height {
                         height:25px !important;
                     }
                     
-                    /* fa11fjf1 - originally 640px */
                     .full-width_fa11fjf1 {
                         width:100% !important;
                         height:auto !important;
@@ -695,11 +674,10 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                         border-top: none !important;
                     }
                     
-                    /* Added for Checkerboard */
-                    .checkerboard_inner_table {
+                                        .checkerboard_inner_table {
                         width: 90% !important;
                     }
-                    *[class].checkerboard_inner_table {
+                    .checkerboard_inner_table {
                         width: 90% !important;
                     }
                     .checkerboard_center_align {
@@ -710,12 +688,13 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                         display: block !important;
                         box-sizing: border-box;
                     }
-                    *[class].top-pad {
+                    .top-pad {
                         padding-top: 20px !important;
                     }
                     
                 }
-                
+                </style>
+                <style>
                 @media only screen and (max-width:480px) {
                     .stack-column {
                         display: block !important;
@@ -767,59 +746,70 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                     .be-language {
                         text-align: center !important;
                     }
-                }
-                
-                /* 11f26 - Event w/ Date & CTAs  */
-                
+                }                
+                </style>
+               <style>
                 @media only screen and (max-width:550px) {
                     
                     .member-card {
-                        background-size: cover !important;
-                        min-height: 205px;
+                        background-size: 300px auto !important;                        
                     }
                     
                     .member-card-text {
-                        padding-left:10px !important;   
+                        padding-left:37px !important;   
                     }
                     
                     .upper-space-annual {
                         height: 122px !important;
                     }
                     
-                    *[class].deviceWidth_11f26 {
+                    .deviceWidth_11f26 {
                         width: 100% !important;
                         min-width: 100% !important;
                     }
-                    /* *[class].inner_table{width:90% !important;} Potential Redundancy */
-                    *[class].deviceWidth1_11f26 {
+                                        .deviceWidth1_11f26 {
                         width: 90% !important;
                         min-width: 90% !important;
                     }
-                    /* *[class].table_responsive {width:100% !important;} Potential Redundancy*/
-                    *[class].padding_bottom_lee1z {
+                    /* .table_responsive {width:100% !important;} Potential Redundancy*/
+                    .padding_bottom_lee1z {
                         padding-bottom: 20px !important;
                     }
-                    *[class].block_11f26 {
+                    .block_11f26 {
                         width: 100% !important;
                         display: block !important;
                         box-sizing: border-box;
                         clear: both !important;
                     }
-                    *[class].center_11f26 {
+                    .center_11f26 {
                         text-align: center !important;
                     }
-                    *[class].pad-top_11f26 {
+                    .pad-top_11f26 {
                         padding-top: 20px !important;
                     }
-                    *[class].float-none_11f26 {
+                    .float-none_11f26 {
                         float: none !important;
                         margin: 0 auto !important;
                     }
-                    /* *[class].extra-space {height:8px !important;} Potential Redundancy */
-                    *[class].full-width_lee1z img {
+                    /* .extra-space {height:8px !important;} Potential Redundancy */
+                    .full-width_lee1z img {
                         width: 100% !important;
                     }
-                    /* *[class].extra-space2{height:22px !important;} Potential Redundancy */
+                    /* .extra-space2{height:22px !important;} Potential Redundancy */
+                }
+            </style>
+            <style>
+                /*import open sans from google fonts */
+            
+                @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic);
+
+                a[x-apple-data-detectors] {
+                    color: inherit !important;
+                    text-decoration: none !important;
+                    font-size: inherit !important;
+                    font-family: inherit !important;
+                    font-weight: inherit !important;
+                    line-height: inherit !important;
                 }
             </style>
         </head>
@@ -942,25 +932,10 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                                                 <!-- END DIRECTOR MESSAGE -->
                                                 
                                                 <!-- MODULE TEST AREA -->
-                                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="membershipCard" mktoName="UWAA/TPC Member Module">
-                                                    <tr>
-                                                        <td align="center" valign="top" class="text" style="background-color: #4b2e83; color: #ffffff; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 17px; font-weight: 600; line-height: 19px; padding: 10px 15px; vertical-align: middle;">
-                                                            <div class="mktoText" id="cardIntroHeaderText" mktoname="Member Card Module Intro Language">
-                                                                <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;text-transform: uppercase">your
-                                                                    uwaa membership</span>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="center" valign="top" class="text" style="padding: 0; font-family: 'Open Sans', arial, sans-serif; font-weight: 400; font-size: 9px; line-height: 1.7; text-align: center; text-transform: none; -ms-text-size-adjust: none; -webkit-text-size-adjust: none;text-align:center;">
-                                                                <div class="mktoText" id="cardModuleActiveArea" mktoname="Do Not Edit">
-                                                                    <div>
-                                                                        <span style="font-family: arial, helvetica, sans-serif;">{{my.isActiveMember}}</span>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="membershipCard" mktoName="UWAA/TPC Member Module">
+                                                            {{my.isActiveMember}}
+                                                        </table>
+
                                                     <!-- END MODULE TEST AREA -->
                                                     
                                                     <!-- TWO COLUMN HEADLINE IMAGE -->
@@ -3899,21 +3874,21 @@ mktoname="Event w/ Date &amp; CTAs" id="BodySection1" mktoAddByDefault="FALSE">
                             <tbody>
                                 <tr>
                                     <!--UW HOME FOOTER LINK-->
-                                    <td align="center" valign="top" class="text stack-column column-3" style="background-color: #8d9194; padding: 4px 0; font-family:'Open Sans', Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: 1px; font-size: 11px; line-height: 1.2; text-align: center; text-transform: uppercase; vertical-align: middle; width: 33.33%;">
+                                    <td align="center" valign="top" class="text stack-column column-3" style="background-color: #8d9194; padding: 4px 0; font-family:'Open Sans', Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: 1px; font-size: 11px; line-height: 1.2; text-align: center; text-transform: uppercase; vertical-align: middle;">
                                         <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
                                             <a href="${footerLeftLinkURL}" class="apple-link-white"
                                             style="color: #ffffff; text-decoration: none;">${footerLeftLinkText}</a>
                                         </span>
                                     </td>
                                     <!--DEPARTMENT HOME FOOTER LINK-->
-                                    <td align="center" valign="top" class="text stack-column column-3" style="background-color: #8d9194; padding: 4px 0; font-family:'Open Sans', Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: 1px; font-size: 11px; line-height: 1.2; text-align: center; text-transform: uppercase; vertical-align: middle; width: 33.33%;">
+                                    <td align="center" valign="top" class="text stack-column column-3" style="background-color: #8d9194; padding: 4px 0; font-family:'Open Sans', Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: 1px; font-size: 11px; line-height: 1.2; text-align: center; text-transform: uppercase; vertical-align: middle;">
                                         <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
                                             <a href="${footerCenterLinkURL}" class="apple-link-white"
                                             target="_blank" style="color: #ffffff; text-decoration: none;">${footerCenterLinkText}</a>
                                         </span>
                                     </td>
                                     <!--OPTIONAL FOOTER LINK-->
-                                    <td align="center" valign="top" class="text stack-column column-3" style="background-color: #8d9194; padding: 4px 0; font-family:'Open Sans', Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: 1px; font-size: 11px; line-height: 1.2; text-align: center; text-transform: uppercase; vertical-align: middle; width: 33.33%;">
+                                    <td align="center" valign="top" class="text stack-column column-3" style="background-color: #8d9194; padding: 4px 0; font-family:'Open Sans', Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: 1px; font-size: 11px; line-height: 1.2; text-align: center; text-transform: uppercase; vertical-align: middle;">
                                         <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">
                                             <a href="${footerRightLinkURL}" class="apple-link-white"
                                             style="color: #ffffff; text-decoration: none;">${footerRightLinkText}</a>
@@ -3976,7 +3951,7 @@ mktoname="Event w/ Date &amp; CTAs" id="BodySection1" mktoAddByDefault="FALSE">
                                     <tr>
                                         <td align="center" valign="top" class="text apple-link-grey" style=" background-color: #ffffff; padding: 0px 15px 15px 15px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 9px; line-height: 1.2; text-align: center; text-transform: none; color: #3d3d3d; -ms-text-size-adjust: none; -webkit-text-size-adjust: none;">
                                             <div class="mktoText" id="copyrightAndAddress" mktoname="Copyright &amp; Address">
-                                                <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">©2017 University of Washington Alumni Association,
+                                                <span style="font-family:'Open Sans', arial, helvetica, sans-serif;">©2019 University of Washington Alumni Association,
                                                     4333 Brooklyn Ave. NE, Seattle, WA 98195,&nbsp;
                                                     <a href="mailto:alumni@uw.edu" target="_blank">alumni@uw.edu</a>
                                                 </span>
