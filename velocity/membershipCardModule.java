@@ -278,6 +278,5 @@ Not Active Member<br><br>
 
 
 #else
-No Member Object found<br><br>
 
 #end
