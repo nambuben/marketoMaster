@@ -145,13 +145,13 @@ Error - did not catch anything
         <table width="100%" role="Inner Container" style="width: 100%; margin: 0 auto; border-collapse: collapse;" align="center" cellpadding="0" cellspacing="0">           
             <tr>
             <!-- Start Card --> 
-              <td class="member-card block_11f26 center_11f26 column-2 stack-column" width="300" height="165" valign="bottom" style="background-image: url(${cardBackgroundURL});background-repeat:no-repeat;background-position: center bottom;background-size:300px;color: #000000;font-family: 'Open Sans', Arial, sans-serif;font-size: 14px;line-height: 18px;"> 
+              <td class="member-card block_11f26 center_11f26 column-2 stack-column" width="300" height="165" valign="bottom" style="background-image: url(${cardBackgroundURL});background-repeat:no-repeat;background-position: center bottom;background-size:300px;color: #000000;font-family: 'Open Sans', Arial, sans-serif;font-size: 14px;line-height: 18px;width:300px;height:165px;"> 
                   <!--[if (gte mso 9) | (IE)]>
                   <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:300px;height:165px;">
                   <v:fill type="frame" src="${cardBackgroundURL}" color="#FFFFFF" />
                   <v:textbox inset="0,0,0,0">
                   <![endif]--> 
-                <table align="center" width="300" height="155" cellpadding="0" cellspacing="0" style="width:300px;">
+                <table align="center" width="300" height="155" cellpadding="0" cellspacing="0" style="width:300px;height:155px">
                   <tr>
                     <td valign="bottom">
                       <table align="left" width="100%" cellpadding="0" cellspacing="0" style="width:100%;">
@@ -266,9 +266,8 @@ Error - did not catch anything
 </table>
 <tr>
 
-        #else 
+#else 
 
-Not Active Member<br><br>
 
 ##ifMember
 #end
