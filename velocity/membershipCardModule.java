@@ -67,36 +67,6 @@ $cardDateOptions.locale,
 $date.getTimeZone().getTimeZone($cardDateOptions.timezones.lifeInstallmentStopFormat)  
 ) )
 
-
-
-##Set up Member Start Year
-#set( $memberStartDateRaw = $member.membDateJoined )  
-#set( $memberStartDateOptions = {  
-  "formats" : {  
-    "object" : "yyyy-MM-dd",  
-    "display" : "yyyy"
-  },  
-  "timezones" : {  
-    "object" : "America/Los_Angeles",
-    "display" : "America/Los_Angeles"
-  },  
-  "locale" : $date.getLocale()  
-} ) 
-
-#set( $memberStartDate = $convert.parseDate(  
-$memberStartDateRaw,  
-$cardDateOptions.formats.object,  
-$cardDateOptions.locale,  
-$date.getTimeZone().getTimeZone($cardDateOptions.timezones.object)  
-) )  
-#set( $memberStartYear = $date.format(  
-$memberStartDateOptions.formats.display,  
-$memberStartDate,  
-$memberStartDateOptions.locale,  
-$date.getTimeZone().getTimeZone($memberStartDateOptions.timezones.display)  
-) )
-
-
 ##Set up data for installment members, for showing amount paid to date, and the total amount they will pay.
 #set($amountPaid = $member.membAmtPaid)
 #set($amountTotal = $member.membAmountTotal)
@@ -105,23 +75,31 @@ $date.getTimeZone().getTimeZone($memberStartDateOptions.timezones.display)
 ##Does the Life/Annual Check - setting background for the card, and determining which text should appear
 #set($membershipType = $member.membTypeCode)
 #set($renewalStatus = $member.membRenewalStatus)
+#set($isTPC = $member.membRateCode)
+
+##Sets up the number of years since your first year as a member variable
+#set($memberNumberOfYears = $member.membNumberOfYears)
 
 
-#if( $membershipType.contains("A"))
+
+#if( $isTPC.contains("PC"))
+#set($cardBackgroundURL = "https://explore.uw.edu/rs/131-AQO-225/images/2019_MemberCard_TPC-Generic_600x310.jpg")
+#set($cardUpperSpacerHeight = 114)
+#set($cardUpperSpacerHeightClass = "upper-space-tpc")
+
+#elseif( $membershipType.contains("A") )
 
 #set($cardBackgroundURL = "https://explore.uw.edu/rs/131-AQO-225/images/2019_MemberCard_Annual_600x310.jpg")
 #set($cardUpperSpacerHeight = 100)
 #set($cardUpperSpacerHeightClass = "upper-space-annual")
 #set($memberCardTextColor = "#3d3d3d")
 
-#elseif( $membershipType.contains("I") || $membershipType.contains("L"))
+#elseif( $membershipType.contains("I") || $membershipType.contains("L") )
 #set($cardBackgroundURL = "https://explore.uw.edu/rs/131-AQO-225/images/2019_MemberCard_Life_600x310.jpg")
 #set($cardUpperSpacerHeight = 114)
 #set($cardUpperSpacerHeightClass = "upper-space-life")
 #set($memberCardTextColor = "#FFFFFF")
 
-
-#set($cardBackgroundURL = "https://explore.uw.edu/rs/131-AQO-225/images/2019_MemberCard_Life_600x310.jpg")
 #else
 Error - did not catch anything
 #end
@@ -204,7 +182,11 @@ Error - did not catch anything
                     <tr> 
                       <td valign="top" style="padding: 0 10px 0;font-family:'Open Sans',arial,sans-serif,helvetica;font-size:13px;font-weight:normal;mso-line-height: exactly;line-height:18px;color:#3d3d3d;vertical-align:top;text-align:left;">
                         <div class="mktoText" id="body2-para" mktoname="Paragraph">
-                          <span style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 14px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left;"><strong>${lead.FirstName}, thank you for being a member since ${memberStartYear}!</strong></span> 
+                        #if($isTPC.contains("PC"))
+                        <span style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 14px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left;"><strong>${lead.FirstName}, as a President's Circle donor, you enjoy UW Alumni Association annual membership. Thank you for supporting the University of Washington!</strong></span> 
+                        #else
+                        <span style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 14px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left;"><strong>${lead.FirstName}, thank you for being a member for ${memberNumberOfYears} years since your first year as a member!</strong></span> 
+                        #end
                         </div>
                       </td> 
                     </tr>
