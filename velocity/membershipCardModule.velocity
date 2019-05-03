@@ -80,12 +80,21 @@ $date.getTimeZone().getTimeZone($cardDateOptions.timezones.lifeInstallmentStopFo
 ##Sets up the number of years since your first year as a member variable
 #set($memberNumberOfYears = $member.membNumberOfYears)
 
+#set($yearOrYears = "year")
+#if($memberNumberOfYears > 1)
+#set($yearOrYears = "years")
+#end
 
+##Sets up a catchall "membership type" text block for our copy.  Defaults to blank for annual, and "life" for life members.  Note life has a trailing space.
+#set($membershipTypeLong = "")
+#set($cardRenewalOrExpireText = "Renew by")
 
 #if( $isTPC.contains("PC"))
 #set($cardBackgroundURL = "https://explore.uw.edu/rs/131-AQO-225/images/2019_MemberCard_TPC-Generic_600x310.jpg")
 #set($cardUpperSpacerHeight = 114)
+#set($memberCardTextColor = "#3d3d3d")
 #set($cardUpperSpacerHeightClass = "upper-space-tpc")
+#set($cardRenewalOrExpireText = "Expires")
 
 #elseif( $membershipType.contains("A") )
 
@@ -99,6 +108,7 @@ $date.getTimeZone().getTimeZone($cardDateOptions.timezones.lifeInstallmentStopFo
 #set($cardUpperSpacerHeight = 114)
 #set($cardUpperSpacerHeightClass = "upper-space-life")
 #set($memberCardTextColor = "#FFFFFF")
+#set($membershipTypeLong = "life ")
 
 #else
 Error - did not catch anything
@@ -138,34 +148,39 @@ Error - did not catch anything
                             <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="${cardUpperSpacerHeight}">&nbsp;</td>
                           </tr> 
                           <tr>
-                            <td class="member-card-text" style="padding-left:36px;text-align: left;line-height:15px;"> 
+                            <td class="member-card-text" style="padding-left:36px;text-align: left;line-height:15px;font-size: 12px;font-family: 'Open Sans', Arial, sans-serif;color:${memberCardTextColor}"> 
                               <div class="mktoText" id="memberNumber" mktoname="Member Number">
-                                <span style="font-size: 12px;font-family: 'Open Sans', Arial, sans-serif;color:#000000">${lead.advanceID}</span>
+                                ${lead.advanceID}
                               </div>
                             </td>
                           </tr> 
                           <tr> 
                             <td class="member-card-text" style="padding-left:36px;text-align: left;font-family: 'Open Sans', Arial, sans-serif;font-weight: bold;color:${memberCardTextColor};line-height:15px;"> 
                               <div class="mktoText" id="memberName" mktoname="Member Name">
-                                <span style="font-size: 12px;font-family: 'Open Sans', Arial, sans-serif;">${lead.FirstName} ${lead.LastName}</span>
+                                ${lead.FirstName} ${lead.LastName}
                               </div>
                             </td> 
                         </tr>
                         #if( $membershipType.contains("A"))
                         <tr>
-                          <td class="member-card-text" style="padding-left:36px;text-align: left;font-family: 'Open Sans', Arial, sans-serif;line-height:15px;"> 
+                          <td class="member-card-text" style="padding-left:36px;text-align: left;font-family: 'Open Sans', Arial, sans-serif;line-height:15px;font-size:11px;color:${memberCardTextColor};"> 
                             <div class="mktoText" id="memberRenew" mktoname="Member Renew Date">
-                              <span style="font-size: 11px;color:#000000">Renew by ${formattedCardRenewalDatemember}</span>
+                              ${cardRenewalOrExpireText} ${formattedCardRenewalDatemember}
                             </div>
                           </td> 
                         </tr>
                         #end
                       </table>
                     </td>
-                  </tr>                  
+                  </tr>
+                  #if( $membershipType.contains("I") || $membershipType.contains("L") )
+                  <tr>
+                    <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="10">&nbsp;</td>
+                  </tr>
+                  #end
                   <tr>
                     <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="5">&nbsp;</td>
-                  </tr>                            
+                  </tr>
                 </table>    
               <!--[if (gte mso 9) | (IE)]>
               </v:textbox>
@@ -180,29 +195,34 @@ Error - did not catch anything
                       <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="11">&nbsp;</td> 
                     </tr> 
                     <tr> 
-                      <td valign="top" style="padding: 0 10px 0;font-family:'Open Sans',arial,sans-serif,helvetica;font-size:13px;font-weight:normal;mso-line-height: exactly;line-height:18px;color:#3d3d3d;vertical-align:top;text-align:left;">
+                      <td valign="top" class="member-card-renewal-copy" style="padding: 0 10px 0;font-family:'Open Sans',arial,sans-serif,helvetica;font-size:13px;font-weight:normal;mso-line-height: exactly;line-height:18px;color:#3d3d3d;vertical-align:top;text-align:left;">
                         <div class="mktoText" id="body2-para" mktoname="Paragraph">
                         #if($isTPC.contains("PC"))
-                        <span style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 14px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left;"><strong>${lead.FirstName}, as a President's Circle donor, you enjoy UW Alumni Association annual membership. Thank you for supporting the University of Washington!</strong></span> 
+                        <span style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 13px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left;">${lead.FirstName}, as a President's Circle donor, you enjoy UW Alumni Association annual membership. Thank you for supporting the University of Washington!</span> 
                         #else
-                        <span style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 14px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left;"><strong>${lead.FirstName}, thank you for being a member for ${memberNumberOfYears} years since your first year as a member!</strong></span> 
+                        #if($memberNumberOfYears == "1")
+                        <span style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 13px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left;">${lead.FirstName}, thank you for supporting the University of Washington as a valued UWAA member during your first year of membership.</span>
+                        #else
+                        <span style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 13px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left;">${lead.FirstName}, it’s been ${memberNumberOfYears} ${yearOrYears} since you first joined the UWAA. Thank you for supporting the University of Washington as a valued UWAA ${membershipTypeLong}member!</span> 
+                        #end 
+
                         #end
                         </div>
                       </td> 
                     </tr>
                     <tr> 
-                      <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="15">&nbsp;</td> 
+                      <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="12">&nbsp;</td> 
                     </tr> 
                     #if( $membershipType.contains("A"))                                                  
                     <tr> 
-                      <td valign="top" style="padding: 0 10px 0;font-family:'Open Sans',arial,sans-serif,helvetica;font-size:13px;font-weight:normal;mso-line-height: exactly;line-height:18px;color:#3d3d3d;vertical-align:top;text-align:left;"> 
+                      <td valign="top" class="member-card-renewal-copy" style="padding: 0 10px 0;font-family:'Open Sans',arial,sans-serif,helvetica;font-size:13px;font-weight:normal;mso-line-height: exactly;line-height:18px;color:#3d3d3d;vertical-align:top;text-align:left;"> 
                       #if($renewalStatus == "1" || $renewalStatus == "2" && !$membershipType.contains("L") )
                       <div class="mktoText" id="body2-para" mktoname="Paragraph">
-                        <span style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 13px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left;">Your membership is up for renewal on <strong>${formattedParagraphRenewalDatemember}. </strong> </span> <br>
+                        <span style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 13px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left;">Your membership expires <strong>${formattedParagraphRenewalDatemember}. </strong> </span> <br>
                       </td>
                     </tr>
                     <tr> 
-                      <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="15">&nbsp;</td> 
+                      <td class="extra-space2" style="line-height: 1px; font-size: 1px;" height="12">&nbsp;</td> 
                     </tr>
                     <tr>
                       <td style="padding: 0 10px 0;">
@@ -225,9 +245,9 @@ Error - did not catch anything
                   #end                                        
                   #if($membershipType.contains("I"))
                   <tr> 
-                    <td valign="top" style="padding: 0 10px 0;font-family:'Open Sans',arial,sans-serif,helvetica;font-size:13px;font-weight:normal;mso-line-height: exactly;line-height:18px;color:#3d3d3d;vertical-align:top;text-align:left;"> 
+                    <td class="member-card-renewal-copy" valign="top" style="padding: 0 10px 0;font-family:'Open Sans',arial,sans-serif,helvetica;font-size:13px;font-weight:normal;mso-line-height: exactly;line-height:18px;color:#3d3d3d;vertical-align:top;text-align:left;"> 
                       <div class="mktoText" id="body2-para" mktoname="Paragraph">
-                        <span style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 14px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left;">You have paid $${amountPaid} toward your pledge of $${amountTotal}, becoming a paid-in-full life member.  Your last payment will be in ${lifeInstallmentStop}.</span>
+                        <span style="font-family: 'Open Sans',arial,sans-serif,helvetica; font-size: 13px; font-weight: normal; color: #3d3d3d; vertical-align: top; text-align: left;">You have paid $${amountPaid} toward your pledge of $${amountTotal} to become a paid-in-full life member.  Your last payment will be in ${lifeInstallmentStop}.</span>
                       </div>
                     </td> 
                   </tr> 
