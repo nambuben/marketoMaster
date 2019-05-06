@@ -1,0 +1,40 @@
+## Use this value to adjust the background color.
+## You can choose from only the following options: '#4b2e83' or 'e8e3d3'
+#set($addressVerificationBackgroundColor = "#e8e3d3")
+
+##Do not edit any code below this point.
+#set($addressVerificationTextColor = "#3d3d3d")
+#set($addressVerificationTitleColor = "#4b2e83")
+
+
+#if($addressVerificationBackgroundColor == "#4b2e83")
+#set($addressVerificationTextColor = "#FFFFFF")
+#set($addressVerificationTitleColor = "#FFFFFF")
+end
+
+
+## Only show an address if we have all the fields to display.  Otherwise, show nothing.
+#if (!$lead.aDVFirstName.isEmpty() || !$lead.aDVLastName.isEmpty() || !$lead.homeAddress1.isEmpty() || !$lead.homeCity.isEmpty() ||!$lead.homeCountry.isEmpty() ) 
+
+<tr>
+<td align="center" valign="top" class="text" style="background-color: ${addressVerificationBackgroundColor}; color: ${addressVerificationTitleColor}; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 16px; font-weight: 600; line-height: 19px; padding: 10px 15px; vertical-align: middle;">
+Does this look right?
+</td>
+</tr>
+<tr>
+  <td align="center" valign="top" class="text" style="background-color: ${addressVerificationBackgroundColor}; color: ${addressVerificationTextColor}; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 14px; font-weight: 600; line-height: 19px; padding: 10px 15px; vertical-align: middle;">
+    <div class="mktoText" id="addressVerificationText" mktoname="Address Veification Checker">
+Before you go, please take a moment to review the address we have on file for you. <br />
+<br />
+ <strong>${lead.aDVFirstName} ${lead.aDVLastName}<br />
+ ${lead.homeAddress1}<br />
+ ${lead.homeCity}, ${lead.homeCountry}</strong> <br />
+<br />
+ If this information is incorrect, please help us stay connected by <strong><a href="http://www.washington.edu/alumni/services/update/" style="color: #0088dd; font-family: 'Open Sans', arial, helvetica, sans-serif; text-decoration: none;">updating it here</a></strong>. 
+
+</div>
+  </td>
+</tr>
+#else    
+
+#end

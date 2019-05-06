@@ -888,10 +888,16 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                       <!-- END DIRECTOR MESSAGE -->
                       
                       <!-- MEMBER CARD MODULE -->
-                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="membershipCard" mktoName="UWAA/TPC Member Module">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="membershipCard" mktoName="UWAA/TPC Member Module" mktoAddByDefault="FALSE">
                         {{my.isActiveMember}}
                       </table>
-                      <!-- END MEMBER CARD MODULE -->                    
+                      <!-- END MEMBER CARD MODULE -->
+
+                      <!-- MEMBER CARD MODULE -->
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="addressUpdate" mktoName="Address Update Module" mktoAddByDefault="FALSE">
+                        {{my.addressUpdate}}
+                      </table>
+                      <!-- END MEMBER CARD MODULE -->   
                       
                       <!-- TWO COLUMN HEADLINE IMAGE -->
                       <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRTwoColumnHeadline" mktoName="ACR 2 Column Headline Block" mktoAddByDefault="FALSE">
