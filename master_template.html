@@ -191,6 +191,10 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
   <meta class="mktoList" id="btnTextColor" mktoname="Button Text Color" values="#ffffff,#4b2e83,#b7a57a,#e8e3d3,#5a5a5a" mktomodulescope="true" />
   <meta class="mktoList" id="btnColor" mktoname="Button Color" values="#4b2e83,#ffffff,#b7a57a,#e8e3d3" mktomodulescope="true" />
   <meta class="mktoList" id="ctaArrow" mktoname="Arrow Color" values="purple,tan,gold" mktomodulescope="true" />
+
+  <!-- HR Padding -->
+  <meta mktomodulescope="true" class="mktoNumber" id="hr-top-margin" mktoname="Top Margin" default="10" />
+  <meta mktomodulescope="true" class="mktoNumber" id="hr-bottom-margin" mktoname="Bottom Margin" default="10" />
   
   
   <!--END OF MARKETO VARIABLES-->
@@ -618,7 +622,7 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
         }
         
         .column-3 table .text {
-          text-align: center !important;
+          text-align: left !important;
         }
         
         .acr-sponsor-td-row {
@@ -674,12 +678,12 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
         
         .item-head {
           padding: 5px 10px 0px 10px !important;
-          text-align: center !important;
+          text-align: left !important;
         }
         
         .item-paragraph {
           padding: 5px 10px 15px 10px !important;
-          text-align: center !important;
+          text-align: left !important;
         }
         
         .callout-head {
@@ -703,9 +707,10 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
           line-height: 2 !important;
         }
         
-        .be-language {
+        .be-language, .mobile-center-align {
           text-align: center !important;
         }
+
       }
     </style>
     <style>
@@ -822,6 +827,24 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                         </tr>
                       </table>
                       <!--END PURPLE HEADER-->
+
+                      <!--PURPLE HEADER-->
+                      <table border="0" cellspacing="0" cellpadding="0" width="100%" class="purple-header mktoModule" id="purpleHeaderUWMagazine"
+                        mktoName="UW Magazine Header" role="presentation">
+                        <tr>
+                          <td valign="top" style="background-color: #4b2e83; padding: 12px 0;">
+                            <div class="mktoImg" id="uwaaBrandHeaderImg" mktoname="UWAA Header Logo" mktolockimgsize="false"
+                              mktolockimgstyle="true">
+                              <a href="https://magazine.washington.edu">
+                                <img src="https://explore.uw.edu/rs/131-AQO-225/images/UW-Mag-Marketo_Header_Logo.gif" width="254"
+                                  alt="University of Washington Magazine"
+                                  style="display: block; text-align: left; font-family: 'Open Sans', arial, helvetica, sans-serif; font-weight: 700; font-size: 14px; line-height: 1.2; text-transform: uppercase; color: #ffffff; vertical-align: middle; letter-spacing: 1px; border: none;" />
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                      <!--END PURPLE HEADER-->
                     
                       <!--UNIT NAME-->
                       <table border="0" cellspacing="0" cellpadding="0" width="100%" class="mktoModule" id="unitName" mktoName="Subbrand-Text" role="presentation">
@@ -893,11 +916,25 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                       </table>
                       <!-- END MEMBER CARD MODULE -->
 
-                      <!-- MEMBER CARD MODULE -->
+                      <!-- ADDRESS UPDATE MODULE -->
                       <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="addressUpdate" mktoName="Address Update Module" mktoAddByDefault="FALSE">
                         {{my.addressUpdate}}
                       </table>
-                      <!-- END MEMBER CARD MODULE -->   
+                      <!-- END ADDRESS UPDATE MODULE -->
+
+                      <!-- GENERIC VELOCITY TOKEN MODULE -->
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mktoModule" id="genericVelocity"
+                        mktoName="Generic Velocity Module" mktoAddByDefault="FALSE">
+                        {{my.tokenToBeUpdate}}
+                      </table>
+                      <!-- END GENERIC VELOCITY TOKEN MODULE -->
+
+                      <!-- GENERIC VELOCITY TOKEN MODULE -->
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="white-background mktoModule" id="VaribleMemberGramHeader"
+                        mktoName="Variable Content Membergram Header" mktoAddByDefault="FALSE">
+                        {{my.variableMembergramSubhead}}
+                      </table>
+                      <!-- END GENERIC VELOCITY TOKEN MODULE -->
                       
                       <!-- TWO COLUMN HEADLINE IMAGE -->
                       <table border="0" cellpadding="0" cellspacing="0" width="100%" class="white-background mktoModule" id="ACRTwoColumnHeadline" mktoName="ACR 2 Column Headline Block" mktoAddByDefault="FALSE">
@@ -917,7 +954,7 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                                 <td class="column-2 stack-column" style="width: 50%; background-color: #4b2e84;">
                                   <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
-                                      <td class="text item-head purple-background" style="vertical-align: middle; text-align: center; line-height: 36px; font-size: 28px; color: #ffffff; font-family: 'Open Sans', arial, helvetica, sans-serif; padding: 24px 0px 24px 0px;background-color: #4b2e84;">
+                                      <td class="text item-head purple-background" style="vertical-align: middle; text-align: center; line-height: 36px; font-size: 28px; color: #ffffff; font-family: 'Open Sans', arial, helvetica, sans-serif; padding: 24px 6px 24px 6px;background-color: #4b2e84;">
                                         <div class="mktoText" id="headlineTwoColumnText" mktoName="Two Column Headline Text">
                                           Travel e-News
                                         </div>
@@ -1039,8 +1076,8 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                                   <!--COLUMN #1 CONTENT-->
                                   <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
                                     <tr>
-                                      <td align="center" style="background-color: #ffffff;">
-                                        <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="{alt}" style="display: block; background-color: #ffffff; width: 175px; height: auto; border: 2px solid #ffffff; color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 15px; font-weight: 700; line-height: 1.2; text-align: left; vertical-align: middle;" class="mktoImg" id="threeColImgOne" mktoName="Column 1 - Image" mktoLockImgStyle="true" />
+                                      <td align="center" class="stretch-image" style="background-color: #ffffff;">
+                                        <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" width="175" alt="{alt}" style="display: block; background-color: #ffffff; width: 175px; height: auto; border: 2px solid #ffffff; color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 15px; font-weight: 700; line-height: 1.2; text-align: left; vertical-align: middle;" class="mktoImg" id="threeColImgOne" mktoName="Column 1 - Image" mktoLockImgStyle="true" />
                                       </td>
                                     </tr>
                                     <tr>
@@ -1069,8 +1106,8 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                                   <!--COLUMN #2 CONTENT-->
                                   <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
                                     <tr>
-                                      <td align="center" style="background-color: #ffffff;">
-                                        <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="{alt}" style="display: block; background-color: #ffffff; width: 175px; height: auto; border: 2px solid #ffffff; color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 15px; font-weight: 700; line-height: 1.2; text-align: left; vertical-align: middle;" class="mktoImg" id="threeColImgTwo" mktoName="Column 2 - Image" mktoLockImgStyle="true" />
+                                      <td align="center" class="stretch-image" style="background-color: #ffffff;">
+                                        <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" width="175" alt="{alt}" style="display: block; background-color: #ffffff; width: 175px; height: auto; border: 2px solid #ffffff; color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 15px; font-weight: 700; line-height: 1.2; text-align: left; vertical-align: middle;" class="mktoImg" id="threeColImgTwo" mktoName="Column 2 - Image" mktoLockImgStyle="true" />
                                       </td>
                                     </tr>
                                     <tr>
@@ -1099,8 +1136,8 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                                   <!--COLUMN #3 CONTENT-->
                                   <table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
                                     <tr>
-                                      <td align="center" style="background-color: #ffffff;">
-                                        <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="{alt}" style="display: block; background-color: #ffffff; width: 175px; height: auto; border: 2px solid #ffffff; color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 15px; font-weight: 700; line-height: 1.2; text-align: left; vertical-align: middle;" class="mktoImg" id="threeColImgThree" mktoName="Column 3 - Image" mktoLockImgStyle="true" />
+                                      <td align="center" class="stretch-image" style="background-color: #ffffff;">
+                                        <img src="http://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" width="175" alt="{alt}" style="display: block; background-color: #ffffff; width: 175px; height: auto; border: 2px solid #ffffff; color: #3d3d3d; font-family: 'Open Sans', arial, helvetica, sans-serif; font-size: 15px; font-weight: 700; line-height: 1.2; text-align: left; vertical-align: middle;" class="mktoImg" id="threeColImgThree" mktoName="Column 3 - Image" mktoLockImgStyle="true" />
                                       </td>
                                     </tr>
                                     <tr>
@@ -1141,9 +1178,9 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                             <!--COLUMN #1 CONTENT-->
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
-                                <td align="center" style="background-color: #ffffff;">
+                                <td align="center" class="stretch-image" style="background-color: #ffffff;">
                                   <a href="${ACRLectureThreeColumnImageLink1}">
-                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="{alt}" class="mktoImg" id="LecturethreeColImgOne" mktoName="Left Column - Image" mktoLockImgStyle="true" style="display: block; background-color: #ffffff; width: 175px; height: 175px; border: 2px solid #ffffff;" />
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" width="175" alt="{alt}" class="mktoImg" id="LecturethreeColImgOne" mktoName="Left Column - Image" mktoLockImgStyle="true" style="display: block; background-color: #ffffff; width: 175px; height: auto; border: 2px solid #ffffff;" />
                                   </a>
                                 </td>
                               </tr>
@@ -1186,9 +1223,9 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                             <!--COLUMN #2 CONTENT-->
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
-                                <td align="center" style="background-color: #ffffff;">
+                                <td align="center" class="stretch-image" style="background-color: #ffffff;">
                                   <a href="${ACRLectureThreeColumnImageLink2}">
-                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="{alt}" class="mktoImg" id="LecturethreeColImgTwo" mktoName="Center Column - Image" mktoLockImgStyle="true" style="display: block; background-color: #ffffff; width: 175px; height: 175px; border: 2px solid #ffffff;"
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" width="175" alt="{alt}" class="mktoImg" id="LecturethreeColImgTwo" mktoName="Center Column - Image" mktoLockImgStyle="true" style="display: block; background-color: #ffffff; width: 175px; height: auto; border: 2px solid #ffffff;"
                                     />
                                   </a>
                                 </td>
@@ -1230,9 +1267,9 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                             <!--COLUMN #3 CONTENT-->
                             <table border="0" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
-                                <td align="center" style="background-color: #ffffff;">
+                                <td align="center" class="stretch-image" style="background-color: #ffffff;">
                                   <a href="${ACRLectureThreeColumnImageLink3}">
-                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="{alt}" class="mktoImg" id="LecturethreeColImgThree" mktoName="Right Column - Image" mktoLockImgStyle="true" style="display: block; background-color: #ffffff; width: 175px; height: 175px; border: 2px solid #ffffff;"
+                                    <img src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" width="175" alt="{alt}" class="mktoImg" id="LecturethreeColImgThree" mktoName="Right Column - Image" mktoLockImgStyle="true" style="display: block; background-color: #ffffff; width: 175px; height: auto; border: 2px solid #ffffff;"
                                     />
                                   </a>
                                 </td>
@@ -2153,7 +2190,7 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                                 <td colspan="2" height="${checker-left-top-space}" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                               </tr>
                               <tr>
-                                <td class="checkerboard_block2 checkerboard_center_align" valign="top" width="175" style="width:175px; text-align: left; padding-bottom: 10px">
+                                <td class="checkerboard_block2 checkerboard_center_align stretch-image" valign="top" width="175" style="width:175px; text-align: left; padding-bottom: 10px">
                                   <div class="mktoImg" id="body4-img" mktoName="Image">
                                     <img align="absbottom" src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="Presentaion Image3" border="0" width="175" />
                                   </div>
@@ -2220,7 +2257,7 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                                   </table>
                                 </td>
                                 <td class="checkerboard_block2 none" valign="top" width="10" style="width:10px;">&nbsp;</td>
-                                <td class="checkerboard_block2 checkerboard_center_align top-pad" valign="top" width="175" style="width:175px; text-align: right; padding-bottom: 10px">
+                                <td class="checkerboard_block2 checkerboard_center_align top-pad stretch-image" valign="top" width="175" style="width:175px; text-align: right; padding-bottom: 10px">
                                   <div class="mktoImg" id="body5-img" mktoName="Image">
                                     <img align="absbottom" src="https://explore.uw.edu/rs/131-AQO-225/images/ImagePlaceholder_175x175.jpg" alt="Presentaion Image2" border="0" width="175" />
                                   </div>
@@ -2335,7 +2372,7 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                                       <td height="10" style="line-height:1px; font-size:1px;">&nbsp;</td>
                                     </tr>
                                     <tr>
-                                      <td class="text body-copy" style="font-family:'Open Sans',Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; color:#3d3d3d; font-weight:normal; text-align:center;">
+                                      <td class="text body-copy mobile-center-align" style="font-family:'Open Sans',Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; color:#3d3d3d; font-weight:normal; text-align:center;">
                                         <div class="mktoText" id="body1-text1" mktoName="Col-1 Paragraph">
                                           Sample subhead and body text for use
                                             in many many many samples.
@@ -2373,12 +2410,12 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                                       <td height="10" style="line-height:1px; font-size:1px;">&nbsp;</td>
                                     </tr>
                                     <tr>
-                                      <td class="text body-copy" style="font-family:'Open Sans',Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; color:#3d3d3d; font-weight:normal; text-align:center;">
+                                      <td class="text body-copy mobile-center-align" style="font-family:'Open Sans',Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; color:#3d3d3d; font-weight:normal; text-align:center;">
                                         <div class="mktoText" id="body1-text2" mktoName="Col-2 Paragraph">
-                                          <p>
+                                          
                                             Sample subhead and body text for use
                                             in many many many samples.
-                                          </p>
+                                          
                                         </div>
                                       </td>
                                     </tr>
@@ -2426,11 +2463,11 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                                       <td height="10" style="line-height:1px; font-size:1px;">&nbsp;</td>
                                     </tr>
                                     <tr>
-                                      <td class="text body-copy" style="font-family:'Open Sans',Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; color:#3d3d3d; font-weight:normal; text-align:center;">
+                                      <td class="text body-copy mobile-center-align" style="font-family:'Open Sans',Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; color:#3d3d3d; font-weight:normal; text-align:center;">
                                         <div class="mktoText" id="body2-text1" mktoName="Col-1 Paragraph">
-                                          <p>Sample subhead and body text for use
+                                          Sample subhead and body text for use
                                             in many many many samples.
-                                          </p>
+                                          
                                         </div>
                                       </td>
                                     </tr>
@@ -2465,12 +2502,12 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                                       <td height="10" style="line-height:1px; font-size:1px;">&nbsp;</td>
                                     </tr>
                                     <tr>
-                                      <td class="text body-copy" style="font-family:'Open Sans',Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; color: #3d3d3d; font-weight:normal; text-align:center;">
+                                      <td class="text body-copy mobile-center-align" style="font-family:'Open Sans',Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; color: #3d3d3d; font-weight:normal; text-align:center;">
                                         <div class="mktoText" id="body2-text2" mktoName="Col-2 Paragraph">
-                                          <p>
+                                          
                                             Sample subhead and body text for use
                                             in many many many samples.
-                                          </p>
+                                          
                                         </div>
                                       </td>
                                     </tr>
@@ -3401,6 +3438,28 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                         </tr>
                       </table>
                       <!--Three Column, UW CTA Button ends here-->
+
+                      <!--1 PX HR  MODULE -->
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100% !important;"
+                        class="white-background mktoModule" id="hrModule" mktoName="Horizontal Rule" mktoAddByDefault="FALSE">
+                      
+                        <tr>
+                          <td>
+                            <table cellspacing="0" cellpadding="0" border="0" width="100%"
+                              style="width: 100% !important;margin-top: ${hr-top-margin}px !important; margin-bottom: ${hr-bottom-margin}px !important"
+                              class="white-background">
+                              <tr>
+                                <td align="left" valign="top" width="100%" height="1"
+                                  style="background-color: #bcbec0; border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 1px;">
+                                  <!--[if gte mso 15]>&nbsp;<![endif]-->
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                      
+                        </tr>
+                      </table>
+                      <!--END 1 PX HR MODULE -->
                       
                       <!--FOOTER LINK ROW GREY BAR WRAPPER-->
                       <table border="0" cellspacing="0" cellpadding="0" width="100%" class="cool-grey-background grey-bar-footer mktoModule" id="footerLinkRow" mktoName="Link Row" role="presentation">
@@ -3455,12 +3514,11 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                               <a href="https://twitter.com/UWalum" style="text-decoration: none;">
                                 <img src="https://explore.uw.edu/rs/131-AQO-225/images/twitter-GREY.png" alt="Twitter" style="color: #FFFFFF; display: inline-block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 9px; font-weight: 600; text-align: center; text-transform: uppercase; vertical-align: middle; width: auto;" />
                               </a>
-                              &nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;
                               <a href="https://www.instagram.com/uwalum/" style="text-decoration: none;">
                                 <img src="https://explore.uw.edu/rs/131-AQO-225/images/instagram-GREY.png" alt="Instagram" style="color: #FFFFFF; display: inline-block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 9px; font-weight: 600; text-align: center; text-transform: uppercase; vertical-align: middle; width: auto;" />
                               </a>
-                              &nbsp;&nbsp;
-                              
+                              &nbsp;&nbsp;&nbsp;
                               <a href="https://www.linkedin.com/groups/40422/profile" style="text-decoration: none;">
                                 <img src="https://explore.uw.edu/rs/131-AQO-225/images/linkedin-GREY.png" alt="LinkedIn" style="color: #FFFFFF; display: inline-block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 9px; font-weight: 600; text-align: center; text-transform: uppercase; vertical-align: middle; width: auto;" />
                               </a>
@@ -3507,7 +3565,7 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                             <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
                               <tr>
                                 <td align="center" valign="top" class="text" style="padding: 0 15px 15px 15px; font-family: 'Open Sans', arial, sans-serif; font-weight: 400; font-size: 9px; line-height: 1.7; text-align: center; text-transform: none; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; color: #3d3d3d;text-align:center;">
-                                  This email was sent to <a href="mailto:{{lead.Email Address}}" class="apple-link-grey" style="color: #3d3d3d; text-decoration: none;">{{lead.EmailAddress}}</a>
+                                  This email was sent to <a href="mailto:{{lead.Email Address}}" class="apple-link-grey" style="color: #3d3d3d; text-decoration: none;">{{lead.Email Address}}</a>
                                   <br>
                                   <a href="https://subscribe.gifts.washington.edu/SubscriptionManagement/Email?SubscriberToken={{lead.SubscriberToken}}&ProgramID={{program.id}}"
                                     class="apple-link-grey" style="color: #3d3d3d; text-decoration: none;">Unsubscribe
@@ -3553,12 +3611,11 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                               <a href="https://twitter.com/UWalum" style="text-decoration: none;">
                                 <img src="https://explore.uw.edu/rs/131-AQO-225/images/twitter-WHITE.png" alt="Twitter" style="color: #FFFFFF; display: inline-block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 9px; font-weight: 600; text-align: center; text-transform: uppercase; vertical-align: middle; width: auto;" />
                               </a>
-                              &nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;
                               <a href="https://www.instagram.com/uwalum/" style="text-decoration: none;">
                                 <img src="https://explore.uw.edu/rs/131-AQO-225/images/instagram-WHITE.png" alt="Instagram" style="color: #FFFFFF; display: inline-block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 9px; font-weight: 600; text-align: center; text-transform: uppercase; vertical-align: middle; width: auto;" />
                               </a>
-                              &nbsp;&nbsp;
-                              
+                              &nbsp;&nbsp;&nbsp;
                               <a href="https://www.linkedin.com/groups/40422/profile" style="text-decoration: none;">
                                 <img src="https://explore.uw.edu/rs/131-AQO-225/images/linkedin-WHITE.png" alt="LinkedIn" style="color: #FFFFFF; display: inline-block; font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 9px; font-weight: 600; text-align: center; text-transform: uppercase; vertical-align: middle; width: auto;" />
                               </a>
@@ -3605,7 +3662,7 @@ xmlns:w="urn:schemas-microsoft-com:office:word" style="width: 100%;">
                             <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
                               <tr>
                                 <td align="center" valign="top" class="text" style="padding: 0 15px 15px 15px; font-family: 'Open Sans', arial, sans-serif; font-weight: 400; font-size: 9px; line-height: 1.7; text-align: center; text-transform: none; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; color: #ffffff;text-align:center;">
-                                  This email was sent to <a href="mailto:{{lead.Email Address}}" class="apple-link-white" style="color: #ffffff; text-decoration: none;">{{lead.EmailAddress}}</a>
+                                  This email was sent to <a href="mailto:{{lead.Email Address}}" class="apple-link-white" style="color: #ffffff; text-decoration: none;">{{lead.Email Address}}</a>
                                   <br>
                                   <a href="https://subscribe.gifts.washington.edu/SubscriptionManagement/Email?SubscriberToken={{lead.SubscriberToken}}&ProgramID={{program.id}}" class="apple-link-white" style="color: #ffffff; text-decoration: none;">Unsubscribe
                                     or
