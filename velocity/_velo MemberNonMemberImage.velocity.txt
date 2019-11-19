@@ -1,0 +1,62 @@
+    ##UWAA Join-The-Pack Velocity Module
+
+    ## Use this variable to control which image is displayed to members by this module.
+    ## Choose between "withDawgs" or "withoutDawgs"
+
+
+    #set($moduleVersion = "withDawgs")
+    #set($moduleLandingPage = "https://www.washington.edu/cms/alumni/membership/be-a-member/")    
+
+
+    ## UTM Setup
+    ## Here we could have CMES set email UTM variables and have them work in the message
+
+    ##Do not touch anything below this point, you could break the script.
+
+    #set($imageURL = "https://explore.uw.edu/rs/131-AQO-225/images/2019_JoinThePack_Dawgs_600w.jpg")
+
+    #if ( $moduleVersion == "withoutDawgs")
+
+    #set($imageURL = "https://explore.uw.edu/rs/131-AQO-225/images/2019_JoinThePack_600w.jpg")
+
+    #end
+
+    ##Membership Status Checks Below
+    #set($isMember = "false")
+    #set($activeMemberCode = "A")
+
+    #if ( !$uWAAMembership_cList.isEmpty() )
+
+
+    #foreach($member in $uWAAMembership_cList)
+
+
+
+    #if( $member.membStatusCode.equals($activeMemberCode) )
+
+    #set($isMember = "true")
+
+    #else
+    Error - did not catch anything
+    #end
+
+    ##close the loop
+    #end
+
+    #end
+
+    #if( $isMember.equals("false"))
+
+    ## Content here is displayed to non-members.
+
+     <tr>
+    <td align="center" valign="top" style="background-color: #ffffff;">
+    <a href="${moduleLandingPage}">
+    <img src="${imageURL}" alt="Join the pack -- become a member of UWAA Today" width="600" class="mktoImg" id="joinThePackImage" mktoName="Join The Pack Image"
+    mktoLockImgStyle="true" style="color: #444444; display: block; height: auto; line-height: 1.2; width: 100% !important; text-align: center; vertical-align: middle;" />
+    </a>
+    </td>
+    </tr>
+
+
+    #end
