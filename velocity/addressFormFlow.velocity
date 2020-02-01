@@ -1,21 +1,21 @@
 ## Use this value to adjust the background color.
-## You can choose from only the following options: '#4b2e83' or 'e8e3d3' or '#FFFFFF'
-#set($addressVerificationBackgroundColor = "#4b2e83")
+## You can choose from only the following options: '#f6b221' or 'e8e3d3' or '#FFFFFF'
+#set($addressVerificationBackgroundColor = "#f6b221")
 
 ##Do not edit any code below this point.
 #set($addressVerificationTextColor = "#3d3d3d")
-#set($addressVerificationTitleColor = "#4b2e83")
+#set($addressVerificationTitleColor = "#f6b221")
 #set($addressVerificationLinkColor = "#0088DD")
 
-#if($addressVerificationBackgroundColor == "#4b2e83")
+#if($addressVerificationBackgroundColor == "#f6b221")
 #set($addressVerificationTextColor = "#FFFFFF")
 #set($addressVerificationTitleColor = "#FFFFFF")
-#set($addressVerificationLinkColor = "#59befd")
+#set($addressVerificationLinkColor = "#4e869f")
 #end
 
 #if($addressVerificationBackgroundColor == "#FFFFFF")
 #set($addressVerificationTextColor = "#3d3d3d")
-#set($addressVerificationTitleColor = "#4b2e83")
+#set($addressVerificationTitleColor = "#f6b221")
 #set($addressVerificationLinkColor = "#0088DD")
 #end
 

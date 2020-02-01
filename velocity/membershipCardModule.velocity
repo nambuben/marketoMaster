@@ -1,7 +1,7 @@
 ##UWAA Membership Card Velocity Module
 
 ## Use these two values to change the visual appearance of the intro header.
-#set($memberCardModuleIntroTextBackground = "#4b2e83")
+#set($memberCardModuleIntroTextBackground = "#f6b221")
 #set($memberCardModuleIntroText = "your uwaa membership")
 
 ##Do not touch anything below this point, you could break the script.
@@ -231,7 +231,7 @@ Error - did not catch anything
                         <table role="Member Renewal Button" align="left" class="center_11f26" border="0" cellpadding="0" cellspacing="0" width="100%"> 
                           <tbody> 
                             <tr> 
-                              <td style="background-color:#4b2e83; font-family: 'Open Sans',Arial, Helvetica, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 14px; text-align: center; vertical-align: middle; color: #ffffff;display: inline-block; padding: 10px 20px;font-weight:bold;text-transform:uppercase" valign="middle"> 
+                              <td style="background-color:#f6b221; font-family: 'Open Sans',Arial, Helvetica, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 14px; text-align: center; vertical-align: middle; color: #ffffff;display: inline-block; padding: 10px 20px;font-weight:bold;text-transform:uppercase" valign="middle"> 
                                 <a aria-label="Renew Button" style="text-decoration: none;color: #ffffff; font-family: 'Open Sans',Arial, Helvetica, sans-serif;outline: none;" href="https://uw.edu/alumni/membership/be-a-member/join-or-renew?renew=true"> 
                                   <span style="font-family: 'Open Sans', arial, helvetica, sans-serif;">Renew Today</span> 
                                 </a> 
